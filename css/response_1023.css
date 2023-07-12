@@ -1,0 +1,1688 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 100%;
+        --font_size_title: 42px;
+    }
+
+
+    .content_flex .content
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 24px;
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tab_content.active
+    {
+        padding: 40px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-right: 60px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+    .accordion_item .head .icon
+    {
+        right: 0;
+
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .logo img
+    {
+        width: 200px;
+    }
+
+
+
+    header .slogan
+    {
+        display: none;
+    }
+
+
+
+    header .callback_btn
+    {
+        font-size: 14px;
+
+        margin-left: 28px;
+    }
+
+
+    header .callback_btn span
+    {
+        padding: 12px 32px;
+    }
+
+
+
+    header .main_menu
+    {
+        width: calc(100% - 288px);
+    }
+
+    header .main_menu .item + .item
+    {
+        margin-left: 24px;
+    }
+
+
+
+    header .search
+    {
+        width: 200px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_title
+    {
+        font-size: 56px;
+
+        margin-top: 20px;
+    }
+
+    .page_title br
+    {
+        display: none;
+    }
+
+
+
+    .page_head .add_question_btn
+    {
+        margin-top: 20px;
+        padding: 20px 48px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside
+    {
+        margin-bottom: 40px;
+    }
+
+
+
+    aside .anchors .btn br,
+    aside .links a br
+    {
+        display: none;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .title
+    {
+        line-height: calc(100% + 8px);
+    }
+
+
+    .block_head .sub_title
+    {
+        font-size: 24px;
+        line-height: 32px;
+
+        margin-top: 28px;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .columns
+    {
+        --form_columns_offset: 40px;
+    }
+
+
+    .form .columns > *.width1of3
+    {
+        width: calc(50% - var(--form_columns_offset));
+    }
+
+
+    .form .cols
+    {
+        margin-left: -40px;
+    }
+
+    .form .cols .col,
+    .form .cols .col.big_w
+    {
+        width: calc(50% - 40px);
+        margin-left: 40px;
+    }
+
+
+    .form .field + .field
+    {
+        margin-top: 12px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block h1
+    {
+        font-size: 44px;
+        line-height: 54px;
+
+        margin-bottom: 24px !important;
+    }
+
+    .text_block h2
+    {
+        font-size: 38px;
+        line-height: 46px;
+
+        margin-bottom: 24px !important;
+    }
+
+    .text_block h3
+    {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .text_block h4
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .text_block * + h2,
+    .text_block * + h3,
+    .text_block * + h4
+    {
+        margin-top: 48px;
+    }
+
+    .text_block * + h5,
+    .text_block * + h6
+    {
+        margin-top: 32px;
+    }
+
+
+    .text_block img
+    {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+
+    .text_block .quote
+    {
+        padding: 28px;
+    }
+
+
+    .text_block .quote .name
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+    .text_block .quote .text
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .cont
+    {
+        min-height: 360px;
+    }
+
+    .main_slider .cont.no_pad
+    {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+    .main_slider .data
+    {
+        width: 480px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 52px;
+    }
+
+
+    .main_slider .sub_title
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .main_slider .btn
+    {
+        margin-top: 32px;
+        padding: 18px 40px;
+    }
+
+
+    .main_slider .img
+    {
+        bottom: 48px;
+
+        width: 424px;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .swiper-slide
+    {
+        width: 324px;
+    }
+
+
+    .steps .swiper-pagination
+    {
+        bottom: -36px;
+
+        display: flex !important;
+    }
+
+
+
+    /*----------------
+        Coordinate
+    ----------------*/
+    .coordinate
+    {
+        padding-bottom: 0;
+    }
+
+
+    .coordinate .item .data
+    {
+        width: calc(100% - 360px);
+    }
+
+
+    .coordinate .item .title
+    {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+
+    .coordinate .item .desc
+    {
+        margin-top: 20px;
+    }
+
+
+    .coordinate .item .image
+    {
+        width: 320px;
+    }
+
+
+
+    /*--------------------
+        No bureaucracy
+    --------------------*/
+    .no_bureaucracy .data
+    {
+        width: 280px;
+    }
+
+
+    .no_bureaucracy .data .title
+    {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+
+    .no_bureaucracy .image
+    {
+        width: calc(100% - 320px);
+    }
+
+
+
+    /*--------------
+        Headache
+    --------------*/
+    .headache .cont
+    {
+        padding-bottom: 60px;
+    }
+
+
+    .headache .item > div
+    {
+        padding: 40px 24px 100px;
+    }
+
+
+    .headache .item .title
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    .headache .item .thumb
+    {
+        bottom: -52px;
+
+        height: 132px;
+    }
+
+
+
+    /*------------
+        Prices
+    ------------*/
+    .prices .row > *
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .prices .item
+    {
+        padding: 24px;
+    }
+
+
+    .prices .item .name,
+    .prices .item .price,
+    .prices .item:hover .price
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .prices .item .name{
+        margin-bottom: 24px;
+    }
+
+    .prices .item .price
+    {
+        
+    }
+
+
+    .prices .item .link
+    {
+        margin-top: 24px;
+    }
+
+
+
+    /*-----------------
+        Order block
+    -----------------*/
+    .order_block .title
+    {
+        font-size: 38px;
+    }
+
+
+    .order_block .form
+    {
+        width: 100%;
+        margin-top: 28px;
+        margin-left: 0;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .review .author
+    {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+
+    .reviews .review .name
+    {
+        font-size: 21px;
+        line-height: 29px;
+    }
+
+
+    .reviews .controls .count
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .data
+    {
+        padding: 40px;
+    }
+
+
+    .certs .info
+    {
+        width: 352px;
+        padding-top: 0;
+        padding-bottom: 52px;
+    }
+
+
+    .certs .name
+    {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+
+    .certs .desc
+    {
+        margin-top: 24px;
+    }
+
+
+    .certs .thumb
+    {
+        width: 240px;
+        height: 300px;
+    }
+
+
+    .certs .controls
+    {
+        bottom: 40px;
+        left: 40px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .tags
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .projects .items > *
+    {
+        width: calc(33.333% - 24px);
+    }
+
+
+    .projects .project .name
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
+    /*-----------------
+        Specialists
+    -----------------*/
+    .specialists .swiper
+    {
+        padding-bottom: 32px;
+    }
+
+    .specialists .swiper-horizontal > .swiper-pagination-bullets,
+    .specialists .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .specialists .swiper-pagination-custom,
+    .specialists .swiper-pagination-fraction
+    {
+        bottom: 0;
+
+        display: flex !important;
+    }
+
+
+    .specialists .person,
+    .specialists .person:hover
+    {
+        padding: 24px;
+
+        text-align: center;
+
+        border-radius: 24px;
+        background: #e9f8f8;
+        box-shadow: none;
+    }
+
+    .specialists .person:before,
+    .specialists .person:after
+    {
+        display: none;
+
+        border-radius: 24px;
+    }
+
+
+    .specialists .person .photo
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        width: 128px;
+        height: 128px;
+        margin: 0 auto 16px;
+
+        border-radius: 32px;
+        background: #0ef3bf;
+        box-shadow: 0 0 69px rgba(14, 243, 191, .33);
+    }
+
+    .specialists .person .photo + *
+    {
+        width: 100%;
+    }
+
+    .specialists .person:hover .photo img
+    {
+        transform: none;
+    }
+
+
+    .specialists .person .name
+    {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+    .specialists .person .name br
+    {
+        display: none;
+    }
+
+
+    .specialists .person .slogan
+    {
+        color: #f32100;
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+
+    .specialists .person .desc
+    {
+        font-size: 13px;
+        line-height: 19px;
+
+        margin-top: 12px;
+    }
+
+
+    .specialists .person .email
+    {
+        margin-top: 12px;
+    }
+
+    .specialists .person .email a
+    {
+        color: #008ff3;
+
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    .specialists .person,
+    .specialists .person .photo img
+    {
+        transition: .2s linear .35s;
+    }
+
+
+    .specialists .swiper-slide.active .person
+    {
+        box-shadow: 0 0 69px rgba(14, 243, 191, .33);
+    }
+
+    .specialists .swiper-slide.active .person .photo img
+    {
+        transform: scale(1.1);
+    }
+
+
+
+    .specialists .add_question
+    {
+        margin-top: 60px;
+    }
+
+
+    .specialists .add_question .title
+    {
+        font-size: 28px;
+        line-height: 36px;
+
+        width: 100%;
+        margin-bottom: 28px;
+    }
+
+
+    .specialists .add_question .form
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .sub_title
+    {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+
+    .articles .tags
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 48px);
+        margin: 0 -24px 24px;
+        padding: 0 24px;
+
+        white-space: nowrap;
+
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .articles .tags::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .articles .tags::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .articles .tags > *,
+    .articles .tags > *.hide
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+    }
+
+    .articles .tags > * + *
+    {
+        margin-left: 4px !important;
+    }
+
+
+    .articles .tags .more_btn
+    {
+        display: none;
+    }
+
+
+    .articles .col
+    {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .articles .col .block_title
+    {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .articles .col .link
+    {
+        display: none;
+    }
+
+    .articles .col + .swiper
+    {
+        width: 100%;
+    }
+
+
+    .articles .swiper-slide
+    {
+        visibility: visible;
+
+        width: 332px;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .articles .article .name
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+    .articles .controls .count
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
+    .articles .big_article
+    {
+        padding: 24px;
+    }
+
+
+    .articles .big_article .date
+    {
+        font-size: 14px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .articles .big_article .views,
+    .articles .big_article .comments_count,
+    .articles .big_article .duration
+    {
+        margin-bottom: 16px;
+        margin-left: 24px;
+    }
+
+
+    .articles .big_article .name
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+
+    .articles .big_article .desc
+    {
+        width: calc(100% - 232px);
+    }
+
+
+    .articles .big_article .link
+    {
+        font-size: 14px;
+    }
+
+
+    .articles .big_article .tags
+    {
+        width: calc(100% + 48px);
+        margin-bottom: 0;
+    }
+
+
+
+    /*---------------
+        Subscribe
+    ---------------*/
+    .subscribe
+    {
+        padding: 28px;
+    }
+
+
+    .subscribe .title
+    {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .faq .form
+    {
+        width: 300px;
+    }
+
+
+    .faq .accordion
+    {
+        width: calc(100% - 340px);
+    }
+
+
+    .faq .all_link
+    {
+        margin-top: 16px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info aside
+    {
+        margin-top: 40px;
+        margin-bottom: 0;
+
+        order: 2;
+    }
+
+
+    .article_info .author
+    {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .article_info .author .label
+    {
+        width: 100%;
+    }
+
+
+    .article_info .author .photo + *
+    {
+        width: calc(100% - 104px);
+    }
+
+
+    .article_info .author .name
+    {
+        margin-top: 0;
+    }
+
+
+    .article_info .author .stats
+    {
+        width: 100%;
+        padding-left: 104px;
+    }
+
+
+    .article_info .author .stats > *
+    {
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .article_info .author .stats .icon
+    {
+        margin-right: 4px;
+    }
+
+
+
+    .article_info .article_title
+    {
+        font-size: 60px;
+        line-height: 68px;
+    }
+
+
+    .article_info .text_block
+    {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
+
+    /*----------------
+        Error info
+    ----------------*/
+    .error_info .data
+    {
+        width: 50%;
+        padding-top: 24px;
+    }
+
+
+    .error_info .code
+    {
+        font-size: 52px;
+    }
+
+
+    .error_info .desc
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+    .error_info .search .title
+    {
+        font-size: 38px;
+    }
+
+
+
+    /*-----------------
+        Search info
+    -----------------*/
+    .search_info .tags
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 48px);
+        margin: 0 -24px 24px;
+        padding: 0 24px;
+
+        white-space: nowrap;
+
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .search_info .tags::-webkit-scrollbar
+    {
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .search_info .tags::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .search_info .tags > *,
+    .search_info .tags > *.hide
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+    }
+
+    .search_info .tags > * + *
+    {
+        margin-left: 8px;
+    }
+
+
+    .search_info .tags .more_btn
+    {
+        display: none;
+    }
+
+
+    .search_info .result .item
+    {
+        padding: 20px;
+    }
+
+
+    .search_info .result .data
+    {
+        width: calc(100% - 356px);
+    }
+
+
+    .search_info .result .name
+    {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+
+    .search_info .result .info
+    {
+        width: 140px;
+    }
+
+
+
+    /*------------------
+        Individually
+    ------------------*/
+    .individually .data
+    {
+        padding: 40px;
+    }
+
+
+    .individually .info
+    {
+        width: 300px;
+    }
+
+
+    .individually .title
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+
+    .individually .image
+    {
+        width: calc(100% - 340px);
+    }
+
+
+
+    /*-------------
+        History
+    -------------*/
+    .history
+    {
+        padding-top: 20px;
+    }
+
+
+    .history .image
+    {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+
+    .history .data
+    {
+        width: 100%;
+    }
+
+
+    .history .year
+    {
+        font-size: 48px;
+        line-height: 52px;
+
+        display: inline-block;
+
+        vertical-align: top;
+
+        background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
+        -webkit-background-clip: text;
+                background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+                text-fill-color: transparent;
+    }
+
+
+    .history .title
+    {
+        font-size: 25px;
+        line-height: 29px;
+    }
+
+
+    .history .years .swiper
+    {
+        padding-right: 64px;
+        padding-left: 64px;
+    }
+
+
+
+    /*------------------
+        Projects map
+    ------------------*/
+    .projects_map .map_wrap
+    {
+        margin-top: 40px;
+    }
+
+
+    .projects_map .map_wrap .desc
+    {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .projects_map .map_wrap .desc br
+    {
+        display: none;
+    }
+
+
+
+    /*--------------
+        Comments
+    --------------*/
+    .comments .block_title
+    {
+        font-size: 36px;
+        line-height: 40px;
+
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+
+    .comments .data
+    {
+        width: 100%;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .phone
+    {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+
+    .contacts_info .sub_title
+    {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+
+    .contacts_info .data .row
+    {
+        margin-bottom: -32px;
+        margin-left: -48px;
+    }
+
+    .contacts_info .data .row > *
+    {
+        width: calc(50% - 48px);
+        margin-bottom: 32px;
+        margin-left: 48px;
+    }
+
+
+    .contacts_info .data .label
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+    .contacts_info .data .val
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+
+    /*-----------
+        Forum
+    -----------*/
+    .forum .search
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .forum .tags
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 48px);
+        margin: 0 -24px 24px;
+        padding: 0 24px;
+
+        white-space: nowrap;
+
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .forum .tags::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .forum .tags::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .forum .tags > *,
+    .forum .tags > *.hide
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+    }
+
+    .forum .tags > * + *
+    {
+        margin-left: 8px;
+    }
+
+
+    .forum .tags .more_btn
+    {
+        display: none;
+    }
+
+
+    .forum .count
+    {
+        font-size: 16px;
+        line-height: 22px;
+
+        margin-bottom: 24px;
+    }
+
+
+    .forum .items .row > *
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .forum .items .item
+    {
+        min-height: 260px;
+    }
+
+
+    .forum .items .item .name
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+
+    /*-----------------------
+        Add question form
+    -----------------------*/
+    .add_question_form .form, .add_question_form .wpcf7 
+    {
+        width: 100%;
+    }
+
+
+    .add_question_form .image
+    {
+        display: none;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .images
+    {
+        width: 100%;
+        margin-bottom: 64px;
+    }
+
+
+    .project_info .data
+    {
+        width: 100%;
+
+        order: 2;
+    }
+
+
+    .project_info .item + .item
+    {
+        margin-top: 20px;
+    }
+
+
+    .project_info .item > .icon
+    {
+        width: 28px;
+        height: 28px;
+    }
+
+    .project_info .item > .icon + *
+    {
+        font-size: 18px;
+        line-height: 26px;
+
+        width: calc(100% - 40px);
+    }
+
+
+    .project_info .map_link
+    {
+        font-size: 15px;
+
+        padding: 12px;
+    }
+
+
+    .project_info .item.files > .icon + * > * + *
+    {
+        margin-top: 20px;
+    }
+
+    .project_info .file img
+    {
+        width: 40px;
+        height: 50px;
+    }
+
+    .project_info .file span
+    {
+        width: calc(100% - 56px);
+    }
+
+
+
+    /*------------------
+        Project data
+    ------------------*/
+    .project_data .block_title
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .project_data .features
+    {
+        display: flex;
+
+        margin-bottom: -24px;
+        margin-left: -24px;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .project_data .features > *
+    {
+        width: calc(50% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .project_data .feature + .feature
+    {
+        margin-top: 0;
+    }
+
+
+    .project_data .feature ul li + li
+    {
+        margin-top: 4px;
+    }
+
+
+
+    /*----------
+        Calc
+    ----------*/
+    .calc .form .steps_info
+    {
+        display: block;
+    }
+
+
+    .calc .form .step2,
+    .calc .form .step3
+    {
+        display: none;
+    }
+
+    .calc .form .step2 + .step2
+    {
+        margin-top: 4px;
+    }
+
+
+    .calc .form .columns > *.width1of3
+    {
+        width: calc(100% - var(--form_columns_offset));
+    }
+
+
+    .calc .form .label
+    {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .calc .form .label.tablet_hide
+    {
+        display: none;
+    }
+
+
+    .calc .form .files
+    {
+        margin-left: -40px;
+    }
+
+    .calc .form .files > *,
+    .calc .form .files .exp
+    {
+        width: calc(50% - 40px);
+        margin-left: 40px;
+    }
+
+
+    .calc .form .cols
+    {
+        margin-top: 0;
+    }
+
+    .form .cols .col,
+    .form .cols .col.big_w
+    {
+        width: calc(100% - 40px);
+    }
+
+
+    .calc .form .agree .checkbox
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .calc .form .submit_btn
+    {
+        padding: 20px;
+    }
+
+
+    .calc .form .next_btn
+    {
+        display: block;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        position: relative;
+
+        padding: 0 0 40px;
+    }
+
+
+
+    footer .contacts
+    {
+        width: 200px;
+    }
+
+    footer .contacts + .contacts
+    {
+        position: absolute;
+        top: 194px;
+        right: 24px;
+    }
+
+
+    footer .messengers
+    {
+        display: none;
+    }
+
+
+
+    footer .notice
+    {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        width: 480px;
+        padding: 44px;
+    }
+
+
+    .modal_title
+    {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+
+    .modal .form
+    {
+        margin-top: 12px;
+    }
+
+    .order_block_body{
+        width: 100%;
+    }
+
+    .time .info.show{
+        top: 50% !important; 
+        left: 50% !important; 
+        transform: translate(-50%,-50%) !important; 
+        text-wrap: nowrap;
+    }
+}

@@ -1,0 +1,1958 @@
+@media print,
+(max-width: 1247px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 220px;
+        --font_size_title: 52px;
+    }
+
+
+    html.custom_scroll ::-webkit-scrollbar
+    {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    .content_flex .content
+    {
+        width: calc(100% - var(--sidebar_width) - 40px);
+    }
+
+
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction
+    {
+        bottom: 0;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 32px;
+    }
+
+
+    .fancybox__content > .carousel__button.is-close
+    {
+        top: 20px;
+        right: 20px;
+    }
+
+
+
+    /*--------------
+        All link
+    --------------*/
+    .all_link
+    {
+        margin-top: 40px;
+    }
+
+
+    .all_link .more_btn
+    {
+        font-size: 15px;
+
+        padding: 22px 48px;
+    }
+
+
+    .all_link a
+    {
+        font-size: 15px;
+    }
+
+    .all_link a span
+    {
+        padding: 20px 48px;
+    }
+
+
+    .all_link a:hover span
+    {
+        padding: 19px 47px;
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tabs
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 48px);
+        margin: 0 -24px 12px;
+        padding: 0 24px;
+
+        white-space: nowrap;
+
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .tabs::-webkit-scrollbar
+    {
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .tabs::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .tabs button
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+        padding: 8px 0;
+
+        vertical-align: top;
+
+        border-radius: 0;
+    }
+
+    .tabs button:after
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: 0;
+        height: 4px;
+        margin: auto;
+
+        content: '';
+        transition: width .3s linear;
+    }
+
+    .tabs button.color1:after
+    {
+        background: #cfcbff;
+    }
+
+    .tabs button.color2:after
+    {
+        background: #ffbb83;
+    }
+
+    .tabs button.color3:after
+    {
+        background: #e9f8f8;
+    }
+
+    .tabs button.color4:after
+    {
+        background: #6efff6;
+    }
+
+    .tabs button.color5:after
+    {
+        background: #3bffd0;
+    }
+
+    .tabs button.color6:after
+    {
+        background: #9bebff;
+    }
+
+
+    .tabs button.other
+    {
+        width: auto;
+    }
+
+
+    .tabs button:hover
+    {
+        background: none;
+        box-shadow: none;
+    }
+
+
+    .tabs button.color1.active,
+    .tabs button.color2.active,
+    .tabs button.color3.active,
+    .tabs button.color4.active,
+    .tabs button.color5.active,
+    .tabs button.color6.active
+    {
+        background: none !important;
+    }
+
+
+    .tabs button:hover:after,
+    .tabs button.active:after
+    {
+        width: 100%;
+    }
+
+
+    .tabs button + button
+    {
+        margin-left: 24px !important;
+    }
+
+
+    .tab_content.active
+    {
+        padding: 48px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-right: 80px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    .accordion_item .head .icon
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .cont + .cont
+    {
+        margin-top: 20px;
+    }
+
+
+    header .data
+    {
+        padding: 16px 0;
+    }
+
+
+
+    header .slogan
+    {
+        margin-left: 40px;
+    }
+
+
+
+    header .callback_btn
+    {
+        font-size: 15px;
+
+        margin-left: 40px;
+    }
+
+    header .callback_btn span
+    {
+        padding: 16px 40px;
+    }
+
+
+
+    header .main_menu
+    {
+        width: calc(100% - 328px);
+    }
+
+
+    header .main_menu .sub_menu
+    {
+        left: -24px;
+
+        width: 100vw;
+        margin-top: 16px;
+    }
+
+
+    header .main_menu .dropdown
+    {
+        right: -24px;
+
+        padding: 24px;
+    }
+
+
+
+    header .search
+    {
+        width: 240px;
+    }
+
+
+    header .search form.open
+    {
+        width: calc(100vw - 100px);
+    }
+
+
+    header .search .result > * + *
+    {
+        margin-top: 0;
+    }
+
+
+    header .search .all_link a span
+    {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    header .search .all_link a:hover span
+    {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+
+
+    header .mode
+    {
+        margin-left: 24px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        padding-top: 24px;
+    }
+
+
+    .page_title
+    {
+        font-size: 68px;
+        line-height: calc(100% + 8px);
+
+        margin-top: 24px;
+    }
+
+
+    .page_head .add_question_btn
+    {
+        margin-top: 24px;
+        padding: 24px 60px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head,
+    .block_head.big_m,
+    .block_head.small_m
+    {
+        margin-bottom: 48px;
+    }
+
+
+    .block_head .sub_title
+    {
+        font-size: 28px;
+        line-height: 36px;
+
+        margin-top: 40px;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .submit_btn
+    {
+        font-size: 15px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block h1
+    {
+        font-size: 56px;
+        line-height: 64px;
+
+        margin-bottom: 28px !important;
+    }
+
+    .text_block h2
+    {
+        font-size: 56px;
+        line-height: 64px;
+
+        margin-bottom: 28px !important;
+    }
+
+    .text_block h3
+    {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+
+    .text_block * + h2,
+    .text_block * + h3,
+    .text_block * + h4
+    {
+        margin-top: 48px;
+    }
+
+    .text_block * + h5,
+    .text_block * + h6
+    {
+        margin-top: 32px;
+    }
+
+
+    .text_block img
+    {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+
+    .text_block .columns
+    {
+        column-gap: 40px;
+    }
+
+
+    .text_block .quote
+    {
+        margin-top: 48px;
+        margin-right: 0;
+        margin-bottom: 48px;
+        margin-left: 0;
+        padding: 32px;
+    }
+
+    .text_block .quote:after
+    {
+        right: -24px;
+
+        width: 28px;
+        height: 28px;
+
+        border-width: 14px;
+    }
+
+
+    .text_block .quote .text
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .text_block .inform
+    {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 32px;
+        padding-right: 100px;
+    }
+
+    .text_block .inform:after
+    {
+    }
+
+
+    .text_block .slider
+    {
+        width: 100%;
+        margin-top: 48px;
+        margin-right: 0;
+        margin-bottom: 48px;
+        margin-left: 0;
+        padding: 0 0 24px;
+    }
+
+
+    .text_block .slider .swiper-button-next,
+    .text_block .slider .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+    .text_block figcaption
+    {
+        padding: 0 40px;
+    }
+
+
+    .text_block .get_quike_consult
+    {
+        width: 100%;
+        margin-top: 48px;
+        margin-right: 0;
+        margin-bottom: 48px;
+        margin-left: 0;
+        padding: 16px 40px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .main_slider .cont
+    {
+        min-height: 440px;
+    }
+
+
+    .main_slider .data
+    {
+        width: 540px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 64px;
+        line-height: calc(100% + 8px);
+    }
+
+
+    .main_slider .sub_title
+    {
+        font-size: 28px;
+        line-height: 36px;
+
+        margin-top: 20px;
+    }
+
+
+    .main_slider .btn
+    {
+        font-size: 15px;
+
+        padding: 20px 56px;
+    }
+
+
+    .main_slider .img
+    {
+        right: -24px;
+        bottom: 52px;
+
+        width: 564px;
+        margin-right: 0;
+    }
+
+
+
+    /*----------------------
+        First text block
+    ----------------------*/
+    .first_text_block
+    {
+        margin-bottom: 64px;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .item
+    {
+        padding: 40px 32px 32px;
+    }
+
+
+    .steps .item .name
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    .steps .item .thumb
+    {
+        padding: 0;
+    }
+
+
+
+    /*----------------
+        Coordinate
+    ----------------*/
+    .coordinate
+    {
+        padding-bottom: 40px;
+    }
+
+
+    .coordinate .items
+    {
+        padding: 0;
+    }
+
+
+    .coordinate .item + .item
+    {
+        margin-top: 52px;
+    }
+
+
+    .coordinate .item .title
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .coordinate .item .image
+    {
+        width: 380px;
+    }
+
+
+
+    .coordinate .subscribe
+    {
+        width: 100%;
+        margin: 52px 0;
+    }
+
+
+
+    /*--------------------
+        No bureaucracy
+    --------------------*/
+    .no_bureaucracy .data
+    {
+        width: 320px;
+        margin-left: 0;
+    }
+
+
+    .no_bureaucracy .data .title
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .no_bureaucracy .image
+    {
+        width: calc(100% - 368px);
+    }
+
+
+
+    /*--------------
+        Headache
+    --------------*/
+    .headache .cont
+    {
+        padding-bottom: 68px;
+    }
+
+
+    .headache .item > div
+    {
+        padding: 48px 48px 100px;
+    }
+
+
+    .headache .item .title
+    {
+        font-size: 22px;
+        line-height: 30px;
+
+        margin-bottom: 20px;
+    }
+
+
+
+    /*-----------
+        Logos
+    -----------*/
+    .logos
+    {
+        padding: 0;
+
+        background: none;
+        box-shadow: none;
+    }
+
+
+    .logos .bg
+    {
+        display: none;
+    }
+
+    .logos .mob_bg
+    {
+        display: block;
+    }
+
+
+    .logos .row
+    {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .logos .row > *
+    {
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+
+    .logos .item
+    {
+        display: block;
+
+        height: auto;
+    }
+
+    .logos .item > img,
+    .dark_theme .logos .item > img + img
+    {
+        display: none;
+    }
+
+
+    .logos .item .info
+    {
+        color: #0e1821;
+        font-size: 12px;
+        line-height: 18px;
+
+        position: relative;
+        top: 0 !important;
+        left: 0 !important;
+
+        display: block;
+
+        width: 100%;
+        margin: 0;
+
+        border-radius: 24px;
+        background: #e9f8f8;
+        box-shadow: 1px 2px 4px rgba(14, 24, 33, .05);
+    }
+
+
+    .logos .item .info .logo img
+    {
+        display: none;
+    }
+
+    .logos .item .info .logo img + img
+    {
+        display: block;
+    }
+
+
+    .logos .swiper
+    {
+        padding-bottom: 40px;
+    }
+
+    .logos .swiper-horizontal > .swiper-pagination-bullets,
+    .logos .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .logos .swiper-pagination-custom,
+    .logos .swiper-pagination-fraction
+    {
+        display: flex !important;
+    }
+
+
+
+    /*------------
+        Prices
+    ------------*/
+    .prices .row
+    {
+        margin-bottom: -32px;
+        margin-left: -24px;
+    }
+
+    .prices .row > *
+    {
+        width: calc(33.333% - 24px);
+        margin-bottom: 32px;
+        margin-left: 24px;
+    }
+
+
+    .prices .item
+    {
+        padding: 24px;
+    }
+
+
+    .prices .item .stickers
+    {
+        margin-bottom: 20px;
+    }
+
+    .prices .item .sticker
+    {
+        font-size: 13px;
+    }
+
+
+    .prices .item .name,
+    .prices .item .price,
+    .prices .item:hover .price
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .prices .item .name{
+        margin-bottom: 28px;
+    }
+
+    .prices .item .price
+    {
+        
+    }
+
+
+    .prices .item .link
+    {
+        margin-top: 28px;
+    }
+
+    .prices .item .link a
+    {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+
+
+    /*-----------------
+        Order block
+    -----------------*/
+    .order_block .data
+    {
+        padding: 48px;
+    }
+
+
+    .order_block .title
+    {
+        font-size: 40px;
+    }
+
+
+    .order_block .form
+    {
+        width: 401px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .review .author
+    {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+
+    .reviews .review .name
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .reviews .review .link a
+    {
+        font-size: 15px;
+    }
+
+
+    .reviews .controls
+    {
+        margin-top: 40px;
+    }
+
+
+    .reviews .controls .count
+    {
+        font-size: 17px;
+        line-height: 23px;
+
+        width: 80px;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .certs .data
+    {
+        padding: 48px 80px;
+    }
+
+
+    .certs .info
+    {
+        padding-top: 28px;
+    }
+
+
+    .certs .name
+    {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+
+    .certs .desc
+    {
+        margin-top: 28px;
+    }
+
+
+    .certs .thumb
+    {
+        width: 280px;
+        height: 372px;
+    }
+
+
+    .certs .controls
+    {
+        bottom: 72px;
+        left: 80px;
+    }
+
+    .certs .controls .count
+    {
+        width: 80px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .tags
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .projects .tags .row
+    {
+        margin-bottom: -8px;
+        margin-left: -8px;
+    }
+
+    .projects .tags .row > *
+    {
+        font-size: 13px;
+
+        margin-bottom: 8px;
+        margin-left: 8px;
+    }
+
+
+    .projects .tags label:hover div
+    {
+        background: #e9f8f8;
+    }
+
+
+    .projects .items
+    {
+        margin-left: -24px;
+    }
+
+    .projects .items > *
+    {
+        width: calc(25% - 24px);
+        margin-left: 24px;
+    }
+
+
+    .projects .project .stickers
+    {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .projects .project .sticker
+    {
+        font-size: 13px;
+    }
+
+
+    .projects .project .name
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    .projects .project .link a
+    {
+        font-size: 15px;
+    }
+
+
+
+    /*-----------------
+        Specialists
+    -----------------*/
+    .specialists .row
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+    .specialists .row > *
+    {
+        width: calc(50% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+        padding-left: 40px;
+    }
+
+
+    .specialists .person
+    {
+        padding: 40px 40px 40px 160px;
+    }
+
+
+    .specialists .person .photo
+    {
+        top: 40px;
+        left: -40px;
+
+        width: 176px;
+        height: 176px;
+
+        border-radius: 40px;
+    }
+
+
+    .specialists .person .name
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .specialists .person .slogan
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
+    .specialists .add_question .title
+    {
+        font-size: 30px;
+        line-height: 36px;
+
+        width: 328px;
+    }
+
+
+    .specialists .add_question .form
+    {
+        width: calc(100% - 368px);
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .sub_title
+    {
+        font-size: 48px;
+        line-height: 54px;
+    }
+
+
+    .articles .col
+    {
+        width: 240px;
+    }
+
+    .articles .col .block_title
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .articles .swiper-slide
+    {
+        width: 440px;
+    }
+
+    .articles .col + .swiper
+    {
+        width: calc(100% - 288px);
+    }
+
+
+    /*.articles .tags a:hover
+    {
+        color: #0e1845;
+
+        background: #e9f8f8;
+    }
+
+    .articles .tags a:hover span
+    {
+        color: #008ff3;
+    }*/
+
+
+    .articles .article .stickers
+    {
+        bottom: 12px;
+        left: 12px;
+    }
+
+    .articles .article .sticker
+    {
+        font-size: 13px;
+    }
+
+
+    .articles .article .name
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    .articles .article .link a
+    {
+        font-size: 15px;
+    }
+
+
+    .articles .controls .count
+    {
+        font-size: 17px;
+        line-height: 23px;
+
+        width: 80px;
+    }
+
+
+
+    .articles .big_article
+    {
+        padding: 32px;
+    }
+
+
+    .articles .big_article .date
+    {
+        font-size: 16px;
+        line-height: 20px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .articles .big_article .views,
+    .articles .big_article .comments_count,
+    .articles .big_article .duration
+    {
+        font-size: 12px;
+
+        margin-bottom: 20px;
+    }
+
+    .articles .big_article .name
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .articles .big_article .desc
+    {
+        width: calc(100% - 248px);
+    }
+
+
+    .articles .big_article .link
+    {
+        font-size: 15px;
+    }
+
+
+    .articles .big_article .tags
+    {
+        margin-top: 24px;
+    }
+
+
+    .articles .big_article:hover
+    {
+        background: #fff;
+        box-shadow: 0 0 32px rgba(0, 143, 243, .1);
+    }
+
+    .articles .big_article:hover .name a
+    {
+        color: currentColor;
+    }
+
+
+
+    /*---------------
+        Subscribe
+    ---------------*/
+    .subscribe
+    {
+        padding: 32px;
+    }
+
+
+    .subscribe .title
+    {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .faq .form
+    {
+        width: 360px;
+    }
+
+
+    .faq .accordion
+    {
+        width: calc(100% - 400px);
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .head
+    {
+        padding: 0;
+    }
+
+
+    .article_info .article_title
+    {
+        font-size: 68px;
+        line-height: 76px;
+    }
+
+
+    .article_info .text_block
+    {
+        font-size: 15px;
+        line-height: 28px;
+
+        padding: 0;
+    }
+
+
+    .article_info .text_block h1
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+
+
+    .article_info .tags
+    {
+        padding: 0;
+    }
+
+
+    .article_info .tags a:hover
+    {
+        color: #0e1845;
+
+        background: #e9f8f8;
+    }
+
+    .article_info .tags a:hover span
+    {
+        color: #008ff3;
+    }
+
+
+
+    /*----------------
+        Error info
+    ----------------*/
+    .error_info .code
+    {
+        font-size: 64px;
+        line-height: calc(100% + 8px);
+    }
+
+
+    .error_info .desc
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    .error_info .search
+    {
+        margin-top: 40px;
+    }
+
+    .error_info .search .title
+    {
+        font-size: 40px;
+        line-height: calc(100% + 8px);
+    }
+
+
+    .error_info .image
+    {
+        width: calc(50% + 24px);
+        margin-right: -48px;
+    }
+
+
+
+    /*-----------------
+        Search info
+    -----------------*/
+    .search_info .tags a:hover
+    {
+        color: #0e1845;
+
+        background: #e9f8f8;
+    }
+
+    .search_info .tags a:hover span
+    {
+        color: #008ff3;
+    }
+
+
+    .search_info .result .item,
+    .search_info .result .item:hover
+    {
+        padding: 24px;
+
+        border-radius: 24px;
+        background: #f3fffa;
+        box-shadow: 0 0 33px rgba(14, 243, 191, .33);
+    }
+
+
+    .search_info .result .data
+    {
+        width: calc(100% - 400px);
+    }
+
+
+    .search_info .result .name
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+
+    /*------------------
+        Individually
+    ------------------*/
+    .individually .data
+    {
+        padding: 48px;
+    }
+
+
+    .individually .info
+    {
+        width: 340px;
+    }
+
+
+    .individually .title
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .individually .image
+    {
+        width: calc(100% - 400px);
+    }
+
+
+
+    /*-------------
+        History
+    -------------*/
+    .history
+    {
+        padding-top: 24px;
+    }
+
+
+    .history .swiper-button-prev
+    {
+        left: 24px;
+
+        margin-left: 0;
+    }
+
+    .history .swiper-button-next
+    {
+        right: 24px;
+
+        margin-right: 0;
+    }
+
+
+    .history .image
+    {
+        width: calc(100% - 480px);
+        max-width: 100%;
+    }
+
+
+    .history .data
+    {
+        width: 440px;
+    }
+
+
+    .history .year
+    {
+        font-size: 56px;
+        line-height: 60px;
+    }
+
+
+    .history .title
+    {
+        font-size: 28px;
+    }
+
+
+    .history .years .swiper
+    {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+
+
+
+    /*------------------
+        Projects map
+    ------------------*/
+    .projects_map .map_wrap .desc
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+
+    /*--------------
+        Comments
+    --------------*/
+    .comments .block_title
+    {
+        font-size: 40px;
+        line-height: 44px;
+
+        width: 276px;
+    }
+
+
+    .comments .data
+    {
+        width: calc(100% - 316px);
+    }
+
+
+    .comments .comment .name
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .phone
+    {
+        font-size: 54px;
+        line-height: 62px;
+    }
+
+
+    .contacts_info .sub_title
+    {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+
+    .contacts_info .data .row
+    {
+        margin-bottom: -40px;
+        margin-left: -40px;
+    }
+
+    .contacts_info .data .row > *
+    {
+        width: calc(25% - 40px);
+        margin-bottom: 40px;
+        margin-left: 40px;
+    }
+
+
+    .contacts_info .data .label
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    .contacts_info .data .val
+    {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+
+
+    /*-----------
+        Forum
+    -----------*/
+    .forum .search
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .forum .tags
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .forum .tags a:hover
+    {
+        color: #0e1845;
+
+        background: #e9f8f8;
+    }
+
+    .forum .tags a:hover span
+    {
+        color: #008ff3;
+    }
+
+
+    .forum .count
+    {
+        font-size: 17px;
+        line-height: 23px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .forum .items .row
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+    .forum .items .row > *
+    {
+        width: calc(33.333% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .forum .items .item
+    {
+        min-height: 300px;
+        padding: 24px;
+    }
+
+    .forum .items .item:hover:before
+    {
+        opacity: 1;
+    }
+
+    .forum .items .item:hover:after
+    {
+        opacity: 0;
+    }
+
+
+    .forum .items .item .name
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+
+    /*-----------------------
+        Add question form
+    -----------------------*/
+    .add_question_form .form, .add_question_form .wpcf7 
+    {
+        width: 384px;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .item > .icon
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project_info .item > .icon + *
+    {
+        font-size: 20px;
+        line-height: 28px;
+
+        width: calc(100% - 56px);
+    }
+
+
+
+    .project_info .file img
+    {
+        width: 48px;
+        height: 60px;
+    }
+
+    .project_info .file span
+    {
+        width: calc(100% - 64px);
+    }
+
+
+
+    .project_info .images .thumbs
+    {
+        margin-top: 32px;
+        padding: 0 64px;
+    }
+
+    .project_info .images .thumbs .swiper-button-prev
+    {
+        left: -64px;
+    }
+
+    .project_info .images .thumbs .swiper-button-next
+    {
+        right: -64px;
+    }
+
+
+    .project_info .images .thumbs .image
+    {
+        border-radius: 12px;
+    }
+
+    .project_info .images .thumbs .image:after
+    {
+        border-radius: 11px;
+    }
+
+
+    .project_info .images .thumbs .swiper-horizontal > .swiper-pagination-bullets,
+    .project_info .images .thumbs .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .project_info .images .thumbs .swiper-pagination-custom,
+    .project_info .images .thumbs .swiper-pagination-fraction
+    {
+        bottom: -32px;
+    }
+
+
+
+    /*------------------
+        Project data
+    ------------------*/
+    .project_data .block_title
+    {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+
+    .project_data .feature .val
+    {
+        line-height: 24px;
+
+        margin-top: 8px;
+    }
+
+
+    .project_data .feature ul li + li
+    {
+        margin-top: 8px;
+    }
+
+    .project_data .feature ul li:before
+    {
+        top: 10px;
+    }
+
+
+
+    /*------------------
+        Service text
+    ------------------*/
+    .service_text
+    {
+        --sidebar_width: 0;
+    }
+
+
+    .service_text .img
+    {
+        display: none;
+    }
+
+
+
+    /*----------
+        Calc
+    ----------*/
+    .calc .form
+    {
+        padding: 40px;
+    }
+
+
+    .calc .form .label
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+    .calc .form .files label
+    {
+        font-size: 15px;
+
+        padding: 12px;
+    }
+
+
+    .calc .form .agree .checkbox
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        padding: 40px 0;
+    }
+
+
+    footer .menu,
+    footer .location
+    {
+        width: auto;
+    }
+
+
+    footer .services
+    {
+        width: 160px;
+    }
+
+
+    footer .callback_btn,
+    footer .feedback_btn
+    {
+        font-size: 15px;
+
+        min-width: 0;
+    }
+
+
+    footer .callback_btn span,
+    footer .feedback_btn span
+    {
+        padding: 16px 32px;
+    }
+
+
+
+    footer .bottom_links > * + *
+    {
+        margin-left: 28px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        width: 532px;
+        padding: 48px;
+    }
+
+
+    .modal_title
+    {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+
+    .modal_desc
+    {
+        font-size: 15px;
+        line-height: 23px;
+
+        margin-top: -8px;
+    }
+
+
+    .modal .form
+    {
+        margin-top: 16px;
+    }
+
+
+    .modal .close_btn
+    {
+        font-size: 15px;
+
+        padding: 16px 40px;
+    }
+
+
+
+    #location_modal .cities
+    {
+        font-size: 15px;
+
+        padding-top: 8px;
+    }
+
+
+
+    /*--------------------------------------------------------------
+        Dark theme
+    --------------------------------------------------------------*/
+
+    /*----------
+        Tabs
+    ----------*/
+    .dark_theme .tabs button:hover
+    {
+        background: none;
+        box-shadow: none;
+    }
+
+    .dark_theme .tabs button.active
+    {
+        color: #f3fffa;
+    }
+
+    .order_block_body{
+        width: calc(100% - 401px - 48px);
+    }
+}

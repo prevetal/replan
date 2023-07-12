@@ -1,0 +1,1221 @@
+@media (max-width: 479px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title: 25px;
+    }
+
+
+    .main
+    {
+        padding-top: 56px;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 16px;
+    }
+
+
+    .fancybox__content > .carousel__button.is-close
+    {
+        top: 12px;
+        right: 12px;
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tab_content.active
+    {
+        padding: 24px;
+    }
+
+
+
+    /*--------------
+        All link
+    --------------*/
+    .all_link
+    {
+        margin-top: 32px;
+    }
+
+
+    .all_link a span
+    {
+        padding: 20px;
+    }
+
+
+    .all_link a:hover span
+    {
+        padding: 19px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-right: 44px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .accordion_item .head .icon
+    {
+        width: 28px;
+        height: 28px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    .header_wrap
+    {
+        padding-top: 56px;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header .logo img
+    {
+        height: 24px;
+    }
+
+
+
+    .mob_header .callback_btn
+    {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+
+        border-radius: 4px;
+    }
+
+
+    .mob_header .callback_btn span
+    {
+        display: none;
+    }
+
+
+    .mob_header .callback_btn .icon
+    {
+        margin: 0;
+    }
+
+
+
+    .mob_header .mob_menu_btn
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        margin-bottom: 48px;
+    }
+
+
+    .page_title
+    {
+        font-size: 38px;
+
+        margin-top: 16px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .sub_title
+    {
+        font-size: 19px;
+        line-height: 27px;
+
+        margin-top: 24px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block h1
+    {
+        font-size: 28px;
+        line-height: 36px;
+
+        margin-bottom: 20px !important;
+    }
+
+    .text_block h2
+    {
+        font-size: 28px;
+        line-height: 36px;
+
+        margin-bottom: 20px !important;
+    }
+
+    .text_block h3
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .text_block h4
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .text_block h5,
+    .text_block h6
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+    .text_block * + h2,
+    .text_block * + h3,
+    .text_block * + h4
+    {
+        margin-top: 32px;
+    }
+
+
+    .text_block img
+    {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+
+    .text_block .quote
+    {
+        border-radius: 16px 0 16px 16px;
+    }
+
+
+    .text_block .quote .avatar
+    {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 8px;
+    }
+
+    .text_block .quote .avatar + div
+    {
+        width: 100%;
+    }
+
+
+    .text_block .quote .name
+    {
+        font-size: 14px;
+        line-height: 24px;
+
+        padding-left: 52px;
+    }
+
+
+    .text_block .quote .post
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        margin-top: 0;
+        padding-left: 52px;
+    }
+
+
+    .text_block .quote .text
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .text_block .get_quike_consult
+    {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+
+    .text_block ul li:before
+    {
+        top: 11px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .cont
+    {
+        padding-top: 32px;
+        padding-bottom: 88px;
+    }
+
+
+    .main_slider .data
+    {
+        text-align: left;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+
+    .main_slider .sub_title
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+    .main_slider .btn
+    {
+        margin-top: 268px;
+    }
+
+
+    .main_slider .img
+    {
+        height: 216px;
+    }
+
+
+
+    .main_slider .bg
+    {
+        top: 120px;
+    }
+
+
+
+    /*----------------
+        Coordinate
+    ----------------*/
+    .coordinate .item + .item
+    {
+        margin-top: 32px;
+    }
+
+
+    .coordinate .item .title
+    {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+
+    .coordinate .item .desc
+    {
+        font-size: 13px;
+        line-height: 19px;
+
+        margin-top: 8px;
+    }
+
+
+    .coordinate .item .image
+    {
+        margin-top: 16px;
+    }
+
+
+    .coordinate .subscribe
+    {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+
+
+    /*--------------------
+        No bureaucracy
+    --------------------*/
+    .no_bureaucracy .tab_content,
+    .no_bureaucracy .tab_content.active
+    {
+        padding: 24px;
+    }
+
+
+    .no_bureaucracy .data .title
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .no_bureaucracy .image
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    /*--------------
+        Headache
+    --------------*/
+    .headache .item > div
+    {
+        padding: 24px 24px 100px;
+    }
+
+
+    .headache .item .title
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+
+    /*-----------
+        Logos
+    -----------*/
+    .logos .swiper-slide
+    {
+        width: calc(100vw - 48px);
+    }
+
+
+    .logos .item .info
+    {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+
+
+    /*------------
+        Prices
+    ------------*/
+    .prices .item
+    {
+        padding: 24px;
+    }
+
+    .prices .item .name,
+    .prices .item .price,
+    .prices .item:hover .price
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+
+    /*-----------------
+        Order block
+    -----------------*/
+    .order_block .data
+    {
+        padding: 24px;
+    }
+
+
+    .order_block .title
+    {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .swiper-slide
+    {
+        visibility: visible;
+
+        width: calc(100vw - 48px);
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .reviews .review .name
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+    .reviews .controls
+    {
+        margin-top: 32px;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .swiper
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .certs .data
+    {
+        padding: 24px;
+    }
+
+
+    .certs .name
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    .certs .thumb
+    {
+        width: 112px;
+        height: 148px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .items
+    {
+        margin-left: 0;
+    }
+
+    .projects .items > *
+    {
+        display: flex;
+
+        width: 100%;
+        margin-left: 0;
+
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .projects .project .thumb
+    {
+        width: 100%;
+    }
+
+
+    .projects .project .name
+    {
+        font-size: 16px;
+        line-height: 22px;
+
+        width: 100%;
+    }
+
+
+    .projects .project .duration
+    {
+        opacity: .5;
+    }
+
+
+    .projects .project .price
+    {
+        margin-left: 20px;
+
+        opacity: .5;
+    }
+
+
+    .projects .project .link
+    {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .sub_title
+    {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+
+
+    .articles .big_article .date
+    {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+
+    .articles .big_article .views
+    {
+        margin-left: 0;
+    }
+
+
+    .articles .big_article .name
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+
+    /*-----------------
+        Specialists
+    -----------------*/
+    .specialists .person .name
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+    .specialists .person .slogan
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+
+    .specialists .add_question .title
+    {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .faq .form
+    {
+        width: 100%;
+        margin-top: 40px;
+
+        order: 2;
+    }
+
+
+    .faq .accordion
+    {
+        width: 100%;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .author .photo
+    {
+        width: 56px;
+        height: 56px;
+
+        border-radius: 16px;
+    }
+
+    .article_info .author .photo + *
+    {
+        width: calc(100% - 72px);
+    }
+
+
+    .article_info .author .name
+    {
+        font-size: 16px;
+    }
+
+
+    .article_info .author .desc
+    {
+        margin-top: 0;
+    }
+
+
+    .article_info .author .stats
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        margin-top: 16px;
+        margin-left: -28px;
+        padding: 0;
+    }
+
+    .article_info .author .stats > *
+    {
+        margin-left: 28px;
+    }
+
+
+    .article_info .author .stats .icon,
+    .article_info .author .stats .icon svg
+    {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    .article_info .article_title
+    {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+
+    .article_info .date,
+    .article_info .duration
+    {
+        margin-top: 26px;
+    }
+
+
+    .article_info .duration
+    {
+        margin-left: 24px;
+    }
+
+    .article_info .duration span span
+    {
+        display: none;
+    }
+
+
+
+    /*----------------
+        Error info
+    ----------------*/
+    .error_info .search .title
+    {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+
+
+    /*-----------------
+        Search info
+    -----------------*/
+    .search_info .result .data
+    {
+        margin-top: 8px;
+    }
+
+
+    .search_info .result .item
+    {
+        padding: 16px;
+    }
+
+
+    .search_info .result .thumb
+    {
+        width: 140px;
+        height: 68px;
+    }
+
+
+    .search_info .result .info
+    {
+        width: calc(100% - 160px);
+    }
+
+
+
+    /*------------------
+        Individually
+    ------------------*/
+    .individually .data
+    {
+        padding: 24px;
+    }
+
+
+    .individually .wtahsapp_link span
+    {
+        max-width: 124px;
+    }
+
+
+
+    /*-------------
+        History
+    -------------*/
+    .history .swiper-pagination-bullet + .swiper-pagination-bullet
+    {
+        margin-left: 12px !important;
+    }
+
+
+    .history .image
+    {
+        height: 185px;
+    }
+
+
+    .history .year
+    {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+
+    .history .title
+    {
+        font-size: 20px;
+        line-height: 26px;
+
+        margin-top: 12px;
+    }
+
+
+    .history .text_block
+    {
+        margin-top: 12px;
+    }
+
+
+
+    /*------------------
+        Projects map
+    ------------------*/
+    .projects_map .map_wrap
+    {
+        margin-top: 16px;
+    }
+
+
+    .projects_map .map_wrap .desc
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*--------------
+        Comments
+    --------------*/
+    .comments .block_title
+    {
+        font-size: 26px;
+        line-height: 32px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .comments .list > * + *
+    {
+        margin-top: 24px;
+    }
+
+
+    .comments .answers, .comment_wrap .children
+    {
+        margin-top: 24px;
+        padding-left: 0;
+    }
+
+
+    .comments .comment .name
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+
+    .comments .comment .text,
+    .comments .comment .btns,
+    .comments .comment .mob_exp,
+    .comments .comment_wrap .add_comment
+    {
+        width: calc(100% + 72px);
+        margin-left: -72px;
+    }
+
+
+    .comments .comment_wrap .add_comment
+    {
+        margin-top: 0;
+        padding-left: 72px;
+    }
+
+    .comment_wrap + .add_comment{
+        padding-left: 0
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .phone
+    {
+        font-size: 28px;
+        line-height: 36px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .contacts_info .sub_title
+    {
+        font-size: 22px;
+        line-height: 30px;
+
+        margin-bottom: 24px;
+    }
+
+
+    .contacts_info .data .row
+    {
+        margin-bottom: -24px;
+        margin-left: 0;
+    }
+
+    .contacts_info .data .row > *
+    {
+        width: 100%;
+        margin-bottom: 24px;
+        margin-left: 0;
+    }
+
+
+    .contacts_info .data .val
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+
+    /*-----------
+        Forum
+    -----------*/
+    .forum .items .item .name
+    {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .forum .items .item .answers
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .item + .item
+    {
+        margin-top: 16px;
+    }
+
+
+    .project_info .item > .icon + *
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .project_info .map_link
+    {
+        font-size: 14px;
+    }
+
+
+    .project_info .file
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+    .project_info .file img
+    {
+        width: 24px;
+        height: 30px;
+
+        align-self: flex-start;
+    }
+
+    .project_info .file span
+    {
+        width: calc(100% - 36px);
+    }
+
+
+
+    /*------------------
+        Project data
+    ------------------*/
+    .project_data .block_title
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+
+    .project_data .features
+    {
+        margin-left: 0;
+    }
+
+    .project_data .features > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .project_data .feature .label
+    {
+        font-size: 15px;
+    }
+
+
+
+    .project_data .text_block
+    {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .project_data .text_block > *
+    {
+        margin-bottom: 20px;
+    }
+
+
+
+    .project_data .tags
+    {
+        display: none;
+    }
+
+
+
+    /*----------
+        Calc
+    ----------*/
+    .calc .form
+    {
+        padding: 24px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .line.mob_line
+    {
+        display: block;
+    }
+
+
+    footer .menu,
+    footer .services,
+    footer .location,
+    footer .contacts
+    {
+        width: 100%;
+    }
+
+
+    footer .menu
+    {
+        order: 1;
+    }
+
+
+    footer .services
+    {
+        margin-top: 24px;
+
+        order: 2;
+    }
+
+
+    footer .logo + .line
+    {
+        margin-top: 24px;
+        margin-bottom: 0;
+
+        order: 3;
+    }
+
+
+    footer .logo
+    {
+        margin-top: 24px;
+        margin-bottom: 0;
+
+        order: 4;
+    }
+
+
+    footer .location
+    {
+        margin-top: 24px;
+
+        order: 5;
+    }
+
+
+    footer .contacts
+    {
+        margin-top: 24px;
+
+        order: 6;
+    }
+
+
+    footer .phone .label
+    {
+        display: none;
+    }
+
+
+    footer .feedback_btn
+    {
+        width: 100%;
+    }
+
+
+    footer .socials
+    {
+        margin-bottom: 24px;
+    }
+
+
+    footer .bottom_links
+    {
+        margin-top: 24px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding: 32px;
+    }
+
+
+    .modal_title
+    {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+
+    .text_block .inform:after{
+        right: 20px;
+    }
+
+    .text_block .inform{
+        padding-right: 60px;
+    }
+
+    .modal[id^='answer_modal']{
+        padding:16px 24px;
+    }
+
+    .asnwer_modal_subtitle{
+        line-height: 16px;
+    }
+
+    .asnwer_modal_title{
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0E1821;
+        margin-bottom: 16px;
+    }
+    .answer_modal_text{
+        font-size: 10px;
+        line-height: 16px;
+        margin-top: 8px;
+    }
+
+    .text_block_map ul li:before{
+        top:14px;
+    }
+
+    .ballon_img {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+        display: none;
+    }
+}
