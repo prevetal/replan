@@ -11,26 +11,26 @@ headerWrap = document.querySelector('.header_wrap')
 document.addEventListener('DOMContentLoaded', function () {
 
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
-		if ( '270' == event.detail.contactFormId ) {		   
+		if ( '270' == event.detail.contactFormId ) {
 		    Fancybox.close()
 			Fancybox.show([{
 				src: '#success_modal2',
 				type: 'inline'
-			}])      		   
+			}])
 		}
 		else
-		{			
+		{
 		    Fancybox.close()
 			Fancybox.show([{
 				src: '#success_modal',
 				type: 'inline'
-			}])      
-		}  
-	}, false ); 
+			}])
+		}
+	}, false );
 
 	$(".wpcf7").addClass("form");
 
-	$(".calc .wpcf7 input[type='checkbox']:not(input[name='agree[]'])").on('change', function (e) {		
+	$(".calc .wpcf7 input[type='checkbox']:not(input[name='agree[]'])").on('change', function (e) {
 		//$(this).closest(".wpcf7").find(".wpcf7-form-control-wrap:not(span[data-name='agree'])").removeClass("checked");
 		$(this).closest(".wpcf7-form-control-wrap").toggleClass("checked");
 	});
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					setHeight(swiper.el.querySelectorAll('.data'))
 				},
 				resize: swiper => {
-					setHeight(swiper.el.querySelectorAll('.data'))	
+					setHeight(swiper.el.querySelectorAll('.data'))
 				}
 			}
 		})
@@ -335,12 +335,12 @@ document.addEventListener('DOMContentLoaded', function () {
 					setTimeout(() => {
 						let totalSlides = swiper.slides.length - 2
 
-						$(swiper.$el).find('.count .total').text(totalSlides)						
+						$(swiper.$el).find('.count .total').text(totalSlides)
 					})
 					setTimeout(() => {
 						setHeight(swiper.el.querySelectorAll('.data'))
 					}, 1000);
-					
+
 				},
 				resize: swiper => {
 					setTimeout(() => {
@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		projectThumbsSliders.push(new Swiper('.project_thumb_s' + i, options))
-		
+
 		if (numOfSlides == 1) {
 			options.loop = false
 			options.simulateTouch = true
@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Сдайжер в тексте
+	// Слайдер в тексте
 	const textSliders = [],
 		textSlider = document.querySelectorAll('.text_block .slider .swiper')
 
@@ -547,6 +547,122 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		textSliders.push(new Swiper('.text_slider_s' + i, options))
+	})
+
+
+	// Галерея
+	const textGallerySliders = [],
+		textGallerySlider = document.querySelectorAll('.text_block .gallery_slider .swiper')
+
+	textGallerySlider.forEach(function (el, i) {
+		el.classList.add('text_gallery_slider_s' + i)
+
+		let options = {
+			loop: el.querySelectorAll('.swiper-slide').length > el.getAttribute('data-slides-count') ? true : false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 8
+				},
+				768: {
+					spaceBetween: 24,
+					slidesPerView: el.getAttribute('data-slides-count')
+				}
+			}
+		}
+
+		textGallerySliders.push(new Swiper('.text_gallery_slider_s' + i, options))
+	})
+
+
+	// Этапы технического обследования
+	const inspectionStepsSliders = [],
+		inspectionStepsSlider = document.querySelectorAll('.inspection_steps .items.swiper')
+
+	inspectionStepsSlider.forEach(function (el, i) {
+		el.classList.add('inspection_steps_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			autoHeight: true,
+			scrollbar: {
+				draggable: true,
+				el: '.swiper-scrollbar',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			spaceBetween: 24,
+			breakpoints: {
+				0: {
+					slidesPerView: 1
+				},
+				768: {
+					slidesPerView: 2
+				},
+				1024: {
+					slidesPerView: 3
+				}
+			}
+		}
+
+		inspectionStepsSliders.push(new Swiper('.inspection_steps_s' + i, options))
+	})
+
+
+	// Этапы технического обследования
+	const inspectionStagesSliders = [],
+		inspectionStagesSlider = document.querySelectorAll('.inspection_stages .swiper')
+
+	inspectionStagesSlider.forEach(function (el, i) {
+		el.classList.add('inspection_stages_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 24,
+			slidesPerView: 1,
+			autoHeight: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+		}
+
+		inspectionStagesSliders.push(new Swiper('.inspection_stages_s' + i, options))
 	})
 
 
@@ -704,30 +820,32 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 		e.preventDefault();
 	})
-	const clipboard = new ClipboardJS('header .contacts .time a')
-
-	clipboard.on('success', (e) => {
-		$("html").addClass("copied");	
-
-		$("html").mousemove(function(y){			
-			$(".time").find('.info').css({
-				left: y.clientX+20,
-				top: y.clientY+20
-			})
-		})
-
-		$(".time").find('.info').addClass("show");	
-
-		setTimeout(() => {
-			$("html").removeClass('copied');
-			$(".time").find('.info').removeClass("show");
-			$( "html" ).off("mousemove");
-		}, 3000);
-		e.clearSelection()		
-	})
 
 
-	// Логотипы	
+	// const clipboard = new ClipboardJS('header .contacts .time a')
+
+	// clipboard.on('success', (e) => {
+	// 	$("html").addClass("copied");
+
+	// 	$("html").mousemove(function(y){
+	// 		$(".time").find('.info').css({
+	// 			left: y.clientX+20,
+	// 			top: y.clientY+20
+	// 		})
+	// 	})
+
+	// 	$(".time").find('.info').addClass("show");
+
+	// 	setTimeout(() => {
+	// 		$("html").removeClass('copied');
+	// 		$(".time").find('.info').removeClass("show");
+	// 		$( "html" ).off("mousemove");
+	// 	}, 3000);
+	// 	e.clearSelection()
+	// })
+
+
+	// Логотипы
 	$('.logos .item').mousemove(function(e){
 		$(this).find('.info').css({
 			left: e.offsetX,
@@ -751,7 +869,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let _self = $(this)
 
 		setTimeout(() => {
-			
+
 			if(_self.find('input').prop('checked'))
 			{
 				_self.parent().css({ order: parseInt(_self.data('count')) * -1 })
@@ -759,7 +877,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			else
 			{
 				_self.parent().css({ order: 'initial' })
-			}					
+			}
 		})
 	})
 
@@ -945,7 +1063,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 		else
 		{
-			setCookie('dark', '1', {'max-age': 360000});	
+			// setCookie('dark', '1', {'max-age': 360000});
 		}
 		$(this).toggleClass('dark')
 		$('html').toggleClass('dark_theme')
@@ -1092,7 +1210,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).addClass('active')
 	})
 
-	$(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
+	// $(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
 
 	$(".menu-item-has-children .hide").removeClass("hide");
 
@@ -1104,9 +1222,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			e.preventDefault();
 			$(this).next().addClass("show");
 		});
-		
+
 		$("header .main_menu .sub_menu .row").prepend("<a class='back_menu'><svg class='icon hide'><use xlink:href='https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_arr_ver'></use></svg>Все услуги</a>")
-		
+
 		$('body').on('click', '.back_menu', function (e) {
 	    	e.preventDefault()
 			$(".sub_menu").removeClass("show");
@@ -1467,7 +1585,7 @@ function initAjaxProject()
 
 	projectThumbs.forEach(function (el, i) {
 		el.classList.add('project_thumb_s' + i)
-        let numOfSlides 
+        let numOfSlides
 		let options = {
 			loop: true,
 			speed: 500,
@@ -1505,7 +1623,7 @@ function initAjaxProject()
 		}
 
 		projectThumbsSliders.push(new Swiper('.project_thumb_s' + i, options))
-		
+
 		if (numOfSlides == 1) {
 			options.loop = false
 			options.simulateTouch = true

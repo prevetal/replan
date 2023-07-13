@@ -7,6 +7,7 @@
     :root
     {
         --font_size_title: 30px;
+        --font_size_title_small: 28px;
     }
 
 
@@ -570,6 +571,13 @@
     }
 
 
+    .text_block .inform.big p
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
     .text_block .get_quike_consult
     {
         margin-top: 40px;
@@ -599,6 +607,29 @@
     .text_block .get_quike_consult .form .submit_btn
     {
         margin-top: 16px;
+    }
+
+
+    .text_block .gallery_slider .swiper
+    {
+        padding-bottom: 24px;
+    }
+
+    .text_block .gallery_slider .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+    .text_block .gallery_slider .swiper-horizontal > .swiper-pagination-bullets,
+    .text_block .gallery_slider .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .text_block .gallery_slider .swiper-pagination-custom,
+    .text_block .gallery_slider .swiper-pagination-fraction
+    {
+        display: flex;
     }
 
 
@@ -665,6 +696,7 @@
         width: 100%;
         margin: auto;
         margin-top: 332px;
+
         text-align: center;
     }
 
@@ -921,6 +953,205 @@
         height: auto;
         min-height: 100px;
         margin: 0;
+    }
+
+
+
+    /*-------------------
+        Redevelopment
+    -------------------*/
+    .redevelopment .item .title
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+    .redevelopment .item .desc
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .text_block.big
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .text_block.big
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+    .documents .row
+    {
+        margin-bottom: -24px;
+        margin-left: 0;
+        padding: 32px 0;
+    }
+
+    .documents .row > *
+    {
+        width: 100%;
+        margin-bottom: 24px;
+        margin-left: 0;
+    }
+
+
+    .documents .document .thumb
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+    .documents .document .thumb + *
+    {
+        width: calc(100% - 100px);
+    }
+
+
+    .documents .document .name
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+
+    /*-------------------------
+        Which redevelopment
+    -------------------------*/
+    .which_redevelopment .text_block.big
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+    .which_redevelopment .narrow
+    {
+        width: 100%;
+    }
+
+
+    .which_redevelopment .row
+    {
+        margin-bottom: -32px;
+        margin-left: -24px;
+        padding: 32px 0;
+    }
+
+    .which_redevelopment .row > *,
+    .which_redevelopment .narrow .row > *
+    {
+        width: calc(50% - 24px);
+        margin-bottom: 32px;
+        margin-left: 24px;
+    }
+
+
+    .which_redevelopment .item .thumb
+    {
+        width: 104px;
+        height: 104px;
+    }
+
+
+    .which_redevelopment .item .name
+    {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
+
+    /*----------------------
+        Inspection steps
+    ----------------------*/
+    .inspection_steps .text_block.big
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+    .inspection_steps .step .name
+    {
+        font-size: 17px;
+    }
+
+
+    .inspection_steps .items.swiper
+    {
+        margin-top: 48px;
+        margin-bottom: 32px;
+    }
+
+
+    .inspection_steps .swiper-horizontal > .swiper-pagination-bullets,
+    .inspection_steps .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .inspection_steps .swiper-pagination-custom,
+    .inspection_steps .swiper-pagination-fraction
+    {
+        bottom: 0;
+    }
+
+
+
+    /*----------------------
+        Inspection stages
+    ----------------------*/
+    .inspection_stages .text_block.big
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+    .inspection_stages .slider
+    {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding: 0 0 24px;
+    }
+
+
+
+    .inspection_stages .stage
+    {
+        padding: 32px;
+    }
+
+
+    .inspection_stages .stage .number
+    {
+        font-size: 16px;
+    }
+
+
+    .inspection_stages .stage .name
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
+    .inspection_stages .stage .gallery > * + *
+    {
+        margin-left: 20px;
     }
 
 
@@ -1688,7 +1919,8 @@
     /*---------------
         Subscribe
     ---------------*/
-    .subscribe
+    .subscribe,
+    .subscribe .data
     {
         padding: 24px;
     }
@@ -2611,90 +2843,116 @@
         margin-left: 0;
     }
 
-    .subscribe .wpcf7-form-control-wrap{
+    .subscribe .wpcf7-form-control-wrap
+    {
         width: 100%;
     }
 
-    .text_block .get_quike_consult .form .form > *{
+    .text_block .get_quike_consult .form .form > *
+    {
         width: 100%;
     }
 
-    header .main_menu .item .sub_menu, header .main_menu .item:hover .sub_menu{
+    header .main_menu .item .sub_menu,
+    header .main_menu .item:hover .sub_menu
+    {
         display: block;
     }
 
-    header .main_menu .item .sub_menu{
+    header .main_menu .item .sub_menu
+    {
         left: 100%;
-        transition: transform .3s linear;
+
         display: block;
+
+        transition: transform .3s linear;
     }
 
-    header .main_menu .item .sub_menu{
+    header .main_menu .item .sub_menu
+    {
+        z-index: 100;
         top: 0;
+
         visibility: visible;
+
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        pointer-events: all;
+
         opacity: 1;
         background: #f3fffa;
-        margin: 0;
-        height: 100%;
-        pointer-events: all;
-        z-index: 100;
-        padding:0;
     }
 
-    header .main_menu .item .sub_menu.show{        
+    header .main_menu .item .sub_menu.show
+    {
         transform: translateX(calc(-100% + 24px));
     }
 
 
-    header .main_menu .sub_menu .row{
+    header .main_menu .sub_menu .row
+    {
         display: block;
     }
 
-    header .main_menu .sub_menu .item + .item{
+    header .main_menu .sub_menu .item + .item
+    {
         margin-left: 24px;
     }
 
-    header .main_menu{
+    header .main_menu
+    {
         overflow: hidden;
     }
 
-    header .main_menu .sub_menu .back_menu{
-        padding-left: 36px;
+    header .main_menu .sub_menu .back_menu
+    {
+        color: #949494;
         font-size: 14px;
         line-height: 24px;
-        letter-spacing: -0.02em;
-        color: #949494;
-        border-bottom: 1px solid #949494;
+
         width: 100%;
-        text-align: left;
+        margin-bottom: 6px !important;
         padding-bottom: 10px;
-    	margin-bottom: 6px !important;
+        padding-left: 36px;
+
+        text-align: left;
+        letter-spacing: -.02em;
+
+        border-bottom: 1px solid #949494;
     }
 
-    .back_menu .icon {
+    .back_menu .icon
+    {
         color: #949494;
+
         position: absolute;
         top: 2px;
-        left: 24px;
         bottom: 0;
+        left: 24px;
+
         display: block;
+
         width: 24px;
         height: 24px;
+
         transform: rotate(-270deg);
     }
 
-    header .main_menu .sub_menu .row > *{
-        margin-bottom:0px;
+    header .main_menu .sub_menu .row > *
+    {
+        margin-bottom: 0;
     }
 
-    header .main_menu .sub_menu a{
+    header .main_menu .sub_menu a
+    {
         font-size: 14px;
         line-height: 24px;
     }
 
-    header .main_menu .item:not(.menu-item-has-children) > a .icon.hide{
+    header .main_menu .item:not(.menu-item-has-children) > a .icon.hide
+    {
         display: none;
     }
-
-    
 }

@@ -6,6 +6,7 @@
     :root
     {
         --font_size_title: 25px;
+        --font_size_title_small: 20px;
     }
 
 
@@ -275,6 +276,24 @@
     }
 
 
+    .text_block .inform
+    {
+        padding: 86px 22px 22px;
+    }
+
+    .text_block .inform:after
+    {
+        right: auto;
+        left: 22px;
+    }
+
+    .text_block .inform.big p
+    {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
     .text_block .get_quike_consult
     {
         margin-top: 32px;
@@ -374,6 +393,219 @@
     {
         margin-top: 40px;
         margin-bottom: 40px;
+    }
+
+
+
+    /*-------------------
+        Redevelopment
+    -------------------*/
+    .redevelopment .item .desc
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        text-align: left;
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .text_block.big
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        text-align: left;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .block_head
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .documents .text_block.big
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        text-align: left;
+    }
+
+
+    .documents .row
+    {
+        margin-bottom: -16px;
+        padding: 20px 0;
+    }
+
+    .documents .row > *
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .documents .document .thumb
+    {
+        width: 56px;
+        height: 56px;
+
+        border-radius: 16px;
+
+        align-self: center;
+    }
+
+    .documents .document .thumb + *
+    {
+        width: calc(100% - 72px);
+    }
+
+
+    .documents .document .name
+    {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+
+    /*-------------------------
+        Which redevelopment
+    -------------------------*/
+    .which_redevelopment .block_head
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .which_redevelopment .text_block.big
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        text-align: left;
+    }
+
+
+    .which_redevelopment .row
+    {
+        margin-bottom: -16px;
+        margin-left: 0;
+        padding: 20px 0;
+    }
+
+    .which_redevelopment .row > *,
+    .which_redevelopment .narrow .row > *
+    {
+        width: 100%;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+
+    .which_redevelopment .item .thumb
+    {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+
+
+
+    /*----------------------
+        Inspection steps
+    ----------------------*/
+    .inspection_steps .block_head
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .inspection_steps .text_block.big
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        text-align: left;
+    }
+
+
+    .inspection_steps .step
+    {
+        padding: 48px 24px;
+    }
+
+
+    .inspection_steps .step .number
+    {
+        font-size: 14px;
+    }
+
+
+    .inspection_steps .step .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*----------------------
+        Inspection stages
+    ----------------------*/
+    .inspection_stages .text_block.big
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        text-align: left;
+    }
+
+
+    .inspection_steps .swiper
+    {
+        margin-top: 28px;
+    }
+
+
+    .inspection_stages .slider
+    {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding: 0 0 24px;
+    }
+
+
+
+    .inspection_stages .stage
+    {
+        padding: 24px;
+    }
+
+
+    .inspection_stages .stage .number
+    {
+        font-size: 14px;
+    }
+
+
+    .inspection_stages .stage .name
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .inspection_stages .stage .gallery > * + *
+    {
+        margin-left: 10px;
     }
 
 
@@ -874,7 +1106,8 @@
     }
 
 
-    .comments .answers, .comment_wrap .children
+    .comments .answers,
+    .comment_wrap .children
     {
         margin-top: 24px;
         padding-left: 0;
@@ -904,8 +1137,9 @@
         padding-left: 72px;
     }
 
-    .comment_wrap + .add_comment{
-        padding-left: 0
+    .comment_wrap + .add_comment
+    {
+        padding-left: 0;
     }
 
 
@@ -1179,43 +1413,55 @@
     }
 
 
-    .text_block .inform:after{
+    /* .text_block .inform:after
+    {
         right: 20px;
     }
 
-    .text_block .inform{
+    .text_block .inform
+    {
         padding-right: 60px;
+    } */
+
+    .modal[id^='answer_modal']
+    {
+        padding: 16px 24px;
     }
 
-    .modal[id^='answer_modal']{
-        padding:16px 24px;
-    }
-
-    .asnwer_modal_subtitle{
+    .asnwer_modal_subtitle
+    {
         line-height: 16px;
     }
 
-    .asnwer_modal_title{
-        margin-top: 8px;
+    .asnwer_modal_title
+    {
+        color: #0e1821;
         font-size: 16px;
         line-height: 24px;
-        color: #0E1821;
+
+        margin-top: 8px;
         margin-bottom: 16px;
     }
-    .answer_modal_text{
+    .answer_modal_text
+    {
         font-size: 10px;
         line-height: 16px;
+
         margin-top: 8px;
     }
 
-    .text_block_map ul li:before{
-        top:14px;
+    .text_block_map ul li:before
+    {
+        top: 14px;
     }
 
-    .ballon_img {
+    .ballon_img
+    {
+        display: none;
+
         width: 100%;
         height: 80px;
+
         object-fit: cover;
-        display: none;
     }
 }

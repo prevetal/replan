@@ -8,6 +8,7 @@
     {
         --sidebar_width: 100%;
         --font_size_title: 42px;
+        --font_size_title_small: 36px;
     }
 
 
@@ -285,6 +286,13 @@
     }
 
 
+    .text_block .inform.big p
+    {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+
 
     /*-----------------
         Main slider
@@ -296,6 +304,7 @@
 
     .main_slider .cont.no_pad
     {
+        min-height: 360px;
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -389,6 +398,171 @@
 
 
 
+    /*-------------------
+        Redevelopment
+    -------------------*/
+    .redevelopment .item .desc
+    {
+        line-height: 22px;
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .text_block.big
+    {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .text_block.big
+    {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    .documents .row
+    {
+        margin-bottom: -32px;
+        margin-left: -32px;
+        padding: 40px 0;
+    }
+
+    .documents .row > *
+    {
+        width: calc(50% - 32px);
+        margin-bottom: 32px;
+        margin-left: 32px;
+    }
+
+
+    .documents .document .thumb
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    .documents .document .thumb + *
+    {
+        width: calc(100% - 120px);
+    }
+
+
+
+    /*-------------------------
+        Which redevelopment
+    -------------------------*/
+    .which_redevelopment .text_block.big
+    {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    .which_redevelopment .narrow
+    {
+        width: 600px;
+    }
+
+
+    .which_redevelopment .row
+    {
+        margin-bottom: -40px;
+        margin-left: -32px;
+        padding: 40px 0;
+    }
+
+    .which_redevelopment .row > *
+    {
+        width: calc(33.333% - 32px);
+        margin-bottom: 40px;
+        margin-left: 32px;
+    }
+
+    .which_redevelopment .narrow .row > *
+    {
+        width: calc(50% - 32px);
+    }
+
+
+    .which_redevelopment .item .thumb
+    {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .which_redevelopment .item .name
+    {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+
+    /*----------------------
+        Inspection steps
+    ----------------------*/
+    .inspection_steps .text_block.big
+    {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    .inspection_steps .step .name
+    {
+        font-size: 17px;
+    }
+
+
+
+    /*----------------------
+        Inspection stages
+    ----------------------*/
+    .inspection_stages .text_block.big
+    {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    .inspection_stages .slider
+    {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+
+
+    .inspection_stages .stage
+    {
+        padding: 40px;
+    }
+
+
+    .inspection_stages .stage .name
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    .inspection_stages .stage .gallery > * + *
+    {
+        margin-left: 24px;
+    }
+
+
+
     /*--------------------
         No bureaucracy
     --------------------*/
@@ -466,13 +640,13 @@
         line-height: 28px;
     }
 
-    .prices .item .name{
+    .prices .item .name
+    {
         margin-bottom: 24px;
     }
 
     .prices .item .price
     {
-        
     }
 
 
@@ -912,7 +1086,8 @@
     /*---------------
         Subscribe
     ---------------*/
-    .subscribe
+    .subscribe,
+    .subscribe .data
     {
         padding: 28px;
     }
@@ -1407,7 +1582,8 @@
     /*-----------------------
         Add question form
     -----------------------*/
-    .add_question_form .form, .add_question_form .wpcf7 
+    .add_question_form .form,
+    .add_question_form .wpcf7
     {
         width: 100%;
     }
@@ -1675,14 +1851,17 @@
         margin-top: 12px;
     }
 
-    .order_block_body{
+    .order_block_body
+    {
         width: 100%;
     }
 
-    .time .info.show{
-        top: 50% !important; 
-        left: 50% !important; 
-        transform: translate(-50%,-50%) !important; 
+    .time .info.show
+    {
+        top: 50% !important;
+        left: 50% !important;
+
+        transform: translate(-50%,-50%) !important;
         text-wrap: nowrap;
     }
 }

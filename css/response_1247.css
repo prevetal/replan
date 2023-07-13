@@ -8,6 +8,7 @@
     {
         --sidebar_width: 220px;
         --font_size_title: 52px;
+        --font_size_title_small: 44px;
     }
 
 
@@ -482,6 +483,7 @@
         line-height: 28px;
     }
 
+
     .text_block .inform
     {
         margin-right: 0;
@@ -490,12 +492,15 @@
         padding-right: 100px;
     }
 
-    .text_block .inform:after
+    .text_block .inform.big p
     {
+        font-size: 18px;
+        line-height: 28px;
     }
 
 
-    .text_block .slider
+    .text_block .slider,
+    .text_block .slider.full_w
     {
         width: 100%;
         margin-top: 48px;
@@ -543,6 +548,13 @@
     .main_slider .cont
     {
         min-height: 440px;
+    }
+
+    .main_slider .cont.no_pad
+    {
+        min-height: 440px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
 
@@ -659,6 +671,178 @@
     {
         width: 100%;
         margin: 52px 0;
+    }
+
+
+
+    /*-------------------
+        Redevelopment
+    -------------------*/
+    .redevelopment .item .data
+    {
+        width: 542px;
+    }
+
+
+    .redevelopment .item .desc
+    {
+        line-height: 24px;
+    }
+
+
+    .redevelopment .item .image
+    {
+        width: 380px;
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .text_block.big
+    {
+        line-height: 24px;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .row
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+    .documents .text_block.big
+    {
+        line-height: 24px;
+    }
+
+
+
+    /*-------------------------
+        Which redevelopment
+    -------------------------*/
+    .which_redevelopment .text_block.big
+    {
+        line-height: 24px;
+    }
+
+
+    .which_redevelopment .narrow
+    {
+        width: 680px;
+    }
+
+
+    .which_redevelopment .item .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*----------------------
+        Inspection steps
+    ----------------------*/
+    .inspection_steps .text_block.big
+    {
+        line-height: 24px;
+    }
+
+
+    .inspection_steps .step
+    {
+        padding: 48px 32px;
+    }
+
+
+    .inspection_steps .step .number
+    {
+        font-size: 16px;
+    }
+
+
+    .inspection_steps .step .name
+    {
+        font-size: 16px;
+    }
+
+    .inspection_steps .step .items
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+    .inspection_steps .items.swiper
+    {
+        margin-bottom: 40px;
+        padding-bottom: 32px;
+    }
+
+
+    .inspection_steps .swiper-scrollbar
+    {
+        display: none;
+    }
+
+    .inspection_steps .swiper-horizontal > .swiper-pagination-bullets,
+    .inspection_steps .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .inspection_steps .swiper-pagination-custom,
+    .inspection_steps .swiper-pagination-fraction
+    {
+        display: flex;
+    }
+
+
+
+    /*----------------------
+        Inspection stages
+    ----------------------*/
+    .inspection_stages .text_block.big
+    {
+        line-height: 24px;
+    }
+
+
+    .inspection_stages .slider
+    {
+        padding-right: 64px;
+        padding-left: 64px;
+    }
+
+    .inspection_stages .swiper-button-prev
+    {
+        left: -64px;
+    }
+
+    .inspection_stages .swiper-button-next
+    {
+        right: -64px;
+    }
+
+
+    .inspection_stages .stage
+    {
+        padding: 48px;
+    }
+
+
+    .inspection_stages .stage .name
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .inspection_stages .stage .gallery > * + *
+    {
+        margin-left: 40px;
     }
 
 
@@ -852,13 +1036,13 @@
         line-height: 30px;
     }
 
-    .prices .item .name{
+    .prices .item .name
+    {
         margin-bottom: 28px;
     }
 
     .prices .item .price
     {
-        
     }
 
 
@@ -1275,7 +1459,8 @@
     /*---------------
         Subscribe
     ---------------*/
-    .subscribe
+    .subscribe,
+    .subscribe .data
     {
         padding: 32px;
     }
@@ -1684,7 +1869,8 @@
     /*-----------------------
         Add question form
     -----------------------*/
-    .add_question_form .form, .add_question_form .wpcf7 
+    .add_question_form .form,
+    .add_question_form .wpcf7
     {
         width: 384px;
     }
@@ -1952,7 +2138,8 @@
         color: #f3fffa;
     }
 
-    .order_block_body{
+    .order_block_body
+    {
         width: calc(100% - 401px - 48px);
     }
 }
