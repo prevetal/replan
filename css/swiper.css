@@ -139,3 +139,7 @@
 {
     margin: 0;
 }
+
+.swiper[dir="rtl"] .swiper-pagination-bullet + .swiper-pagination-bullet {
+    margin-right: 16px !important;
+}

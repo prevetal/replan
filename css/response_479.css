@@ -799,10 +799,19 @@
         width: 100%;
     }
 
+    .projects .project .img{
+        border-radius: 16px;
+    }
+
 
     .projects .project .duration
     {
         opacity: .5;
+    }
+
+    .projects .project .name + .duration{
+        width: 100%;
+        align-items: flex-start;
     }
 
 
@@ -1464,4 +1473,10 @@
 
         object-fit: cover;
     }
+
+    .squads_new .squad_new{
+        max-width: 100%;
+    }
+
+    
 }

@@ -11,26 +11,26 @@ headerWrap = document.querySelector('.header_wrap')
 document.addEventListener('DOMContentLoaded', function () {
 
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
-		if ( '270' == event.detail.contactFormId ) {
+		if ( '270' == event.detail.contactFormId ) {		   
 		    Fancybox.close()
 			Fancybox.show([{
 				src: '#success_modal2',
 				type: 'inline'
-			}])
+			}])      		   
 		}
 		else
-		{
+		{			
 		    Fancybox.close()
 			Fancybox.show([{
 				src: '#success_modal',
 				type: 'inline'
-			}])
-		}
-	}, false );
+			}])      
+		}  
+	}, false ); 
 
 	$(".wpcf7").addClass("form");
 
-	$(".calc .wpcf7 input[type='checkbox']:not(input[name='agree[]'])").on('change', function (e) {
+	$(".calc .wpcf7 input[type='checkbox']:not(input[name='agree[]'])").on('change', function (e) {		
 		//$(this).closest(".wpcf7").find(".wpcf7-form-control-wrap:not(span[data-name='agree'])").removeClass("checked");
 		$(this).closest(".wpcf7-form-control-wrap").toggleClass("checked");
 	});
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					setHeight(swiper.el.querySelectorAll('.data'))
 				},
 				resize: swiper => {
-					setHeight(swiper.el.querySelectorAll('.data'))
+					setHeight(swiper.el.querySelectorAll('.data'))	
 				}
 			}
 		})
@@ -335,12 +335,12 @@ document.addEventListener('DOMContentLoaded', function () {
 					setTimeout(() => {
 						let totalSlides = swiper.slides.length - 2
 
-						$(swiper.$el).find('.count .total').text(totalSlides)
+						$(swiper.$el).find('.count .total').text(totalSlides)						
 					})
 					setTimeout(() => {
 						setHeight(swiper.el.querySelectorAll('.data'))
 					}, 1000);
-
+					
 				},
 				resize: swiper => {
 					setTimeout(() => {
@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		projectThumbsSliders.push(new Swiper('.project_thumb_s' + i, options))
-
+		
 		if (numOfSlides == 1) {
 			options.loop = false
 			options.simulateTouch = true
@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Слайдер в тексте
+	// Сдайжер в тексте
 	const textSliders = [],
 		textSlider = document.querySelectorAll('.text_block .slider .swiper')
 
@@ -561,7 +561,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			loop: el.querySelectorAll('.swiper-slide').length > el.getAttribute('data-slides-count') ? true : false,
 			speed: 500,
 			watchSlidesProgress: true,
-			slideActiveClass: 'active',
+			slideActiveClass: 'active',           
 			slideVisibleClass: 'visible',
 			preloadImages: false,
 			lazy: {
@@ -584,7 +584,13 @@ document.addEventListener('DOMContentLoaded', function () {
 				768: {
 					spaceBetween: 24,
 					slidesPerView: el.getAttribute('data-slides-count')
-				}
+				},
+                1024: {
+                    noSwiping: true,
+                    noSwipingClass: 'swiper-slide',
+                    slidesPerView: el.getAttribute('data-slides-count'),
+                    spaceBetween: 24,
+                }
 			}
 		}
 
@@ -664,6 +670,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		inspectionStagesSliders.push(new Swiper('.inspection_stages_s' + i, options))
 	})
+
 
 
 	// История компании
@@ -800,7 +807,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.responsive_menu').responsiveMenu({
 		containerClass: 'main_menu',
 		itemClass: 'item',
-		linkText: '<svg class="icon"><use xlink:href="images/sprite.svg#ic_menu"></use></svg>'
+		linkText: '<svg class="icon"><use xlink:href="https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_menu"></use></svg>'
 	})
 
 	$('header .responsive_menu').mouseleave(function() {
@@ -820,32 +827,30 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 		e.preventDefault();
 	})
+	const clipboard = new ClipboardJS('header .contacts .time a')
+
+	clipboard.on('success', (e) => {
+		$("html").addClass("copied");	
+
+		$("html").mousemove(function(y){			
+			$(".time").find('.info').css({
+				left: y.clientX+20,
+				top: y.clientY+20
+			})
+		})
+
+		$(".time").find('.info').addClass("show");	
+
+		setTimeout(() => {
+			$("html").removeClass('copied');
+			$(".time").find('.info').removeClass("show");
+			$( "html" ).off("mousemove");
+		}, 3000);
+		e.clearSelection()		
+	})
 
 
-	// const clipboard = new ClipboardJS('header .contacts .time a')
-
-	// clipboard.on('success', (e) => {
-	// 	$("html").addClass("copied");
-
-	// 	$("html").mousemove(function(y){
-	// 		$(".time").find('.info').css({
-	// 			left: y.clientX+20,
-	// 			top: y.clientY+20
-	// 		})
-	// 	})
-
-	// 	$(".time").find('.info').addClass("show");
-
-	// 	setTimeout(() => {
-	// 		$("html").removeClass('copied');
-	// 		$(".time").find('.info').removeClass("show");
-	// 		$( "html" ).off("mousemove");
-	// 	}, 3000);
-	// 	e.clearSelection()
-	// })
-
-
-	// Логотипы
+	// Логотипы	
 	$('.logos .item').mousemove(function(e){
 		$(this).find('.info').css({
 			left: e.offsetX,
@@ -869,7 +874,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let _self = $(this)
 
 		setTimeout(() => {
-
+			
 			if(_self.find('input').prop('checked'))
 			{
 				_self.parent().css({ order: parseInt(_self.data('count')) * -1 })
@@ -877,7 +882,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			else
 			{
 				_self.parent().css({ order: 'initial' })
-			}
+			}					
 		})
 	})
 
@@ -1040,7 +1045,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		phoneInputs.forEach(el => {
 			IMask(el, {
 				mask: '+{7} (000) 000-00-00',
-				lazy: false,
+				lazy: true,
 			})
 		})
 	}
@@ -1063,7 +1068,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 		else
 		{
-			// setCookie('dark', '1', {'max-age': 360000});
+			setCookie('dark', '1', {'max-age': 360000});	
 		}
 		$(this).toggleClass('dark')
 		$('html').toggleClass('dark_theme')
@@ -1210,7 +1215,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).addClass('active')
 	})
 
-	// $(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
+	$(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
 
 	$(".menu-item-has-children .hide").removeClass("hide");
 
@@ -1222,9 +1227,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			e.preventDefault();
 			$(this).next().addClass("show");
 		});
-
+		
 		$("header .main_menu .sub_menu .row").prepend("<a class='back_menu'><svg class='icon hide'><use xlink:href='https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_arr_ver'></use></svg>Все услуги</a>")
-
+		
 		$('body').on('click', '.back_menu', function (e) {
 	    	e.preventDefault()
 			$(".sub_menu").removeClass("show");
@@ -1585,7 +1590,7 @@ function initAjaxProject()
 
 	projectThumbs.forEach(function (el, i) {
 		el.classList.add('project_thumb_s' + i)
-        let numOfSlides
+        let numOfSlides 
 		let options = {
 			loop: true,
 			speed: 500,
@@ -1623,7 +1628,7 @@ function initAjaxProject()
 		}
 
 		projectThumbsSliders.push(new Swiper('.project_thumb_s' + i, options))
-
+		
 		if (numOfSlides == 1) {
 			options.loop = false
 			options.simulateTouch = true

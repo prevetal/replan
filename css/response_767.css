@@ -1133,6 +1133,7 @@
     .inspection_stages .stage
     {
         padding: 32px;
+        border-radius: 24px;
     }
 
 
@@ -2954,5 +2955,78 @@
     header .main_menu .item:not(.menu-item-has-children) > a .icon.hide
     {
         display: none;
+    }
+
+    .text_block_column{
+        display: block;
+    }
+
+    .text_block_column .column{
+        width: 100%;
+    }
+
+    .new_form{
+        flex-direction: column;
+    }
+
+    .new_form .input{
+        width: 100%;
+    }
+    .new_form .submit_btn{
+        margin-top: 16px;
+    }
+
+    .wrap_new_form.full .wpcf7-form-control-wrap{
+        width: 100%;
+    }
+
+    .squads{
+        gap:24px;
+    }
+
+    .squads .squad{
+        max-width: 100%;
+        padding: 24px;
+        gap:16px;
+        aspect-ratio: 1/0.8;        
+        border-radius: 24px;
+    }
+
+    .squads .squad .title{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .rectangls .rectangle{
+        padding: 24px;
+        border-radius: 24px;        
+        flex-direction: column;
+    }
+
+    .rectangle_img{
+        margin: 16px auto 0;
+    }
+
+    .rectangle_wrap{
+        gap:16px;
+    }
+
+    .rectangls .rectangle .title{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .rectangle_number{
+        position: initial;
+    }
+
+    .squads_new{
+        gap:24px;
+    }
+
+    .squads_new .squad_new{
+        padding: 24px;
+        max-width: calc(100% /2 - 12px);
+        border-radius: 24px;;
     }
 }

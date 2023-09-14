@@ -796,7 +796,7 @@
     .inspection_steps .swiper-pagination-custom,
     .inspection_steps .swiper-pagination-fraction
     {
-        display: flex;
+        display: flex !important;
     }
 
 
@@ -1485,7 +1485,7 @@
 
     .faq .accordion
     {
-        width: calc(100% - 400px);
+        width: calc(100%);
     }
 
 
@@ -2141,5 +2141,9 @@
     .order_block_body
     {
         width: calc(100% - 401px - 48px);
+    }
+
+    .squads_new .squad_new {
+        max-width: calc(100% /2 - 24px);
     }
 }
