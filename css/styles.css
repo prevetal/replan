@@ -3,19 +3,6 @@
 -----------*/
 @font-face
 {
-    font-family: 'Igra Sans';
-    font-weight: normal;
-    font-style: normal;
-
-    font-display: swap;
-    src: url('../fonts/igrasans.woff2') format('woff2'),
-    url('../fonts/igrasans.woff') format('woff'),
-    url('../fonts/igrasans.ttf') format('truetype');
-}
-
-
-@font-face
-{
     font-family: 'PF Bague Round Pro';
     font-weight: 900;
     font-style: normal;
@@ -139,7 +126,7 @@ input[type=number]
     --font_size: 14px;
     --font_size_title: 64px;
     --font_size_title_small: 48px;
-    --font_family: 'Igra Sans', 'Arial', sans-serif;
+    --font_family: 'Montserrat', 'Arial', sans-serif;
 }
 
 
@@ -194,6 +181,7 @@ body
 {
     color: var(--text_color);
     font: var(--font_size) var(--font_family);
+    font-weight: 500;
 
     height: 100%;
     min-height: -moz-available;
@@ -406,7 +394,7 @@ button
 
     transition: .2s linear;
     white-space: nowrap;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 24px 24px 0 0;
 }
@@ -543,7 +531,7 @@ button
 .accordion_item .head .title
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 }
 
@@ -573,7 +561,7 @@ button
 
     display: none;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -604,7 +592,7 @@ button
     padding: 24px 64px;
 
     transition: .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
@@ -629,7 +617,7 @@ button
     transition: .2s linear;
     text-align: center;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.32px;
 
     border-radius: 16px;
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
@@ -767,7 +755,7 @@ header .top
 
     padding: 4px 0;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.24px;
 
     background: #0e1845;
 }
@@ -904,7 +892,7 @@ header .slogan
     margin-right: auto;
     margin-left: 48px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
     -webkit-background-clip: text;
@@ -924,7 +912,7 @@ header .contacts
     margin-left: auto;
 
     text-align: right;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -939,7 +927,7 @@ header .contacts .phone a
     vertical-align: top;
     white-space: nowrap;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -955,7 +943,7 @@ header .callback_btn
     padding: 2px;
 
     transition: .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
@@ -1033,7 +1021,7 @@ header .main_menu .item > a
 
     transition: color .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -1202,10 +1190,10 @@ header .main_menu .item > a.touch_link + .sub_menu.show
 {
     visibility: visible;
 
+    transition: .2s linear;
     pointer-events: auto;
 
     opacity: 1;
-    transition: .2s linear;
 }
 
 
@@ -1234,7 +1222,7 @@ header .main_menu .sub_menu a
     display: block;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -1330,6 +1318,8 @@ header .search .input
     height: 32px;
     padding: 0 12px 0 40px;
 
+    letter-spacing: -.28px;
+
     border: none;
     border-radius: 8px;
     background: #008ff3;
@@ -1364,7 +1354,7 @@ header .search .empty
 
     padding: 16px 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -1431,7 +1421,7 @@ header .search .result .item .thumb + *
     width: calc(100% - 104px);
     margin-left: auto;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -1683,7 +1673,7 @@ header.fixed
     margin-left: 8px;
     padding: 6px 20px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 8px;
     background: #0ef3bf;
@@ -1817,7 +1807,7 @@ header.fixed
     margin-bottom: -8px;
     margin-left: -8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -1871,7 +1861,7 @@ header.fixed
     margin: 0 -24px;
     padding: 8px 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     background: #008ff3;
 }
@@ -1907,14 +1897,14 @@ header.fixed
 .page_title
 {
     font-size: 80px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: calc(100% + 12px);
 
     display: block;
 
     margin-top: 32px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     align-self: center;
 }
@@ -1939,7 +1929,7 @@ header.fixed
     padding: 38px 102px;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
@@ -1984,7 +1974,7 @@ aside .anchors .btn
 
     transition: color .2s linear;
     text-align: left;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -2012,7 +2002,7 @@ aside .links a
 
     transition: color .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -2052,13 +2042,13 @@ aside .links a.active
 .block_head .title
 {
     font-size: var(--font_size_title);
-    font-weight: 400;
+    font-weight: 500;
     line-height: calc(100% + 10px);
 
     display: block;
 
     transition: color .2s linear;
-    letter-spacing: -.03em;
+    letter-spacing: -1.28px;
 }
 
 .block_head .title.small
@@ -2084,13 +2074,13 @@ aside .links a.active
 {
     color: #008ff3;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     margin-top: 48px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.64px;
 }
 
 
@@ -2214,6 +2204,7 @@ aside .links a.active
     color: var(--text_color);
     font-family: var(--font_family);
     font-size: var(--font_size);
+    font-weight: 500;
 
     display: block;
 
@@ -2239,6 +2230,7 @@ aside .links a.active
     color: var(--text_color);
     font-family: var(--font_family);
     font-size: var(--font_size);
+    font-weight: 500;
 
     display: block;
 
@@ -2277,6 +2269,7 @@ aside .links a.active
 .form .checkbox
 {
     font-size: 12px;
+    font-weight: 400;
     line-height: 16px;
 
     position: relative;
@@ -2287,7 +2280,7 @@ aside .links a.active
     padding-left: 32px;
 
     cursor: pointer;
-    letter-spacing: -.02em;
+    letter-spacing: -.24px;
 
     justify-content: flex-start;
     align-items: center;
@@ -2417,7 +2410,7 @@ aside .links a.active
 
     cursor: pointer;
     white-space: nowrap;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
     text-overflow: ellipsis;
 
     border: 1px solid #e9f8f8;
@@ -2504,7 +2497,7 @@ aside .links a.active
     padding: 12px 24px;
 
     transition: .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.32px;
 
     border-radius: 16px;
     background: #0e1821;
@@ -2553,7 +2546,7 @@ aside .links a.active
 
     transition: color .2s linear;
     text-align: justify;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -2592,51 +2585,51 @@ aside .links a.active
 .text_block h1
 {
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 74px;
 
     margin-bottom: 32px !important;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .text_block h2
 {
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 74px;
 
     margin-bottom: 24px !important;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .text_block h3
 {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 56px;
 
     margin-bottom: 20px !important;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .text_block h4
 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     margin-bottom: 20px !important;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .text_block h5
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     margin-bottom: 16px !important;
@@ -2645,7 +2638,7 @@ aside .links a.active
 .text_block h6
 {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     margin-bottom: 16px !important;
@@ -2825,7 +2818,7 @@ aside .links a.active
 
     margin-top: 4px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -3177,13 +3170,14 @@ aside .links a.active
     margin-top: 16px;
     padding: 0 48px;
 
-    letter-spacing: -.02em;
+    text-align: center;
+    letter-spacing: -.28px;
 
     opacity: .5;
-    text-align: center;
 }
 
-.text_block figcaption.podpis{
+.text_block figcaption.podpis
+{
     margin-top: 50px;
 }
 
@@ -3218,7 +3212,7 @@ aside .links a.active
     width: 216px;
     max-width: 100%;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -3372,11 +3366,11 @@ aside .links a.active
 .main_slider .title
 {
     font-size: 80px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 92px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -1.6px;
 }
 
 .main_slider .title.small
@@ -3388,12 +3382,12 @@ aside .links a.active
 .main_slider .sub_title
 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     margin-top: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.64px;
 
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
     -webkit-background-clip: text;
@@ -3417,7 +3411,7 @@ aside .links a.active
 
     transition: box-shadow .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.32px;
 
     border-radius: 16px;
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
@@ -3616,7 +3610,7 @@ aside .links a.active
     margin-right: auto;
     margin-left: auto;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.36px;
 }
 
 
@@ -3654,7 +3648,7 @@ aside .links a.active
     max-width: 100%;
     margin: 24px auto 0;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -3747,10 +3741,10 @@ aside .links a.active
 .coordinate .item .title
 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.64px;
 }
 
 
@@ -3762,7 +3756,7 @@ aside .links a.active
     margin-top: 24px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -3880,8 +3874,8 @@ aside .links a.active
 .redevelopment .item .desc
 {
     color: #0e1821;
-    line-height: 32px;
     font-size: 16px;
+    line-height: 32px;
 }
 
 
@@ -3921,7 +3915,7 @@ aside .links a.active
     padding-top: 12px;
 
     text-align: center;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .no_bureaucracy .mob_title:before
@@ -3980,10 +3974,10 @@ aside .links a.active
 .no_bureaucracy .data .title
 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.64px;
 }
 
 
@@ -3993,7 +3987,7 @@ aside .links a.active
 
     margin-top: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .7;
 }
@@ -4016,7 +4010,7 @@ aside .links a.active
     display: flex;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.32px;
 
     justify-content: flex-start;
     align-items: center;
@@ -4147,7 +4141,7 @@ aside .links a.active
 .headache .item .title
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     margin-bottom: 16px;
@@ -4174,13 +4168,13 @@ aside .links a.active
     min-height: 40px;
     padding-left: 48px;
 
-    letter-spacing: -.02em;
+    text-align: left;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    text-align: left;
 }
 
 .headache .item .items > * + *
@@ -4397,7 +4391,7 @@ aside .links a.active
     padding: 32px;
 
     transition: background .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
     pointer-events: none;
 
     border-radius: 24px;
@@ -4572,7 +4566,7 @@ aside .links a.active
 
     transition: .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: rgba(14, 24, 33, .2);
@@ -4611,7 +4605,7 @@ aside .links a.active
 .prices .item .name
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     margin-bottom: 32px;
@@ -4642,7 +4636,7 @@ aside .links a.active
 .prices .item .price
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     margin-top: auto;
@@ -4861,10 +4855,10 @@ aside .links a.active
 .order_block .title
 {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 100%;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.96px;
 }
 
 
@@ -5073,7 +5067,7 @@ aside .links a.active
     margin-left: auto;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.24px;
 
     justify-content: flex-start;
     align-items: center;
@@ -5103,7 +5097,7 @@ aside .links a.active
     margin-bottom: 16px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.36px;
 
     justify-content: flex-start;
     align-items: center;
@@ -5131,7 +5125,7 @@ aside .links a.active
 .reviews .review .name
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     width: 100%;
@@ -5145,7 +5139,7 @@ aside .links a.active
     width: 100%;
     margin-top: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .75;
 }
@@ -5168,7 +5162,7 @@ aside .links a.active
     display: flex;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.32px;
 
     justify-content: flex-start;
     align-items: center;
@@ -5221,7 +5215,7 @@ aside .links a.active
     width: 87px;
 
     text-align: center;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -5393,10 +5387,10 @@ aside .links a.active
 .certs .name
 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.64px;
 }
 
 
@@ -5406,7 +5400,7 @@ aside .links a.active
 
     margin-top: 32px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -5473,7 +5467,7 @@ aside .links a.active
     width: 94px;
 
     text-align: center;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -5555,7 +5549,7 @@ aside .links a.active
     padding: 4px 16px;
 
     transition: .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #e9f8f8;
@@ -5710,7 +5704,7 @@ aside .links a.active
     padding: 4px 8px;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #f32100;
@@ -5746,7 +5740,7 @@ aside .links a.active
     font-size: 18px;
     line-height: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.36px;
 }
 
 
@@ -5769,7 +5763,7 @@ aside .links a.active
 
     margin-top: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -5795,7 +5789,7 @@ aside .links a.active
 
     margin-top: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -5830,7 +5824,7 @@ aside .links a.active
     display: flex;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -6059,7 +6053,7 @@ aside .links a.active
 .specialists .person .name
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 }
 
@@ -6073,7 +6067,7 @@ aside .links a.active
     margin-top: 16px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.36px;
 }
 
 
@@ -6083,7 +6077,7 @@ aside .links a.active
 
     margin-top: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -6104,7 +6098,7 @@ aside .links a.active
 
     transition: color .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -6173,13 +6167,13 @@ aside .links a.active
 .specialists .add_question .title
 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     width: 368px;
     max-width: 100%;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -6283,13 +6277,13 @@ aside .links a.active
 {
     color: #008ff3;
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 74px;
 
     margin-bottom: 32px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -6329,7 +6323,7 @@ aside .links a.active
 
     transition: .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #e9f8f8;
@@ -6374,7 +6368,7 @@ aside .links a.active
     padding: 4px 8px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .articles .tags .more_btn.active
@@ -6409,7 +6403,7 @@ aside .links a.active
     font-size: 16px;
     line-height: 100%;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     align-self: center;
 }
@@ -6424,7 +6418,7 @@ aside .links a.active
     padding: 16px;
 
     transition: .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 24px;
 }
@@ -6570,7 +6564,7 @@ aside .links a.active
 
     padding: 4px 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #f32100;
@@ -6635,7 +6629,7 @@ aside .links a.active
     line-height: 24px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.36px;
 }
 
 
@@ -6656,7 +6650,7 @@ aside .links a.active
 
     margin-top: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .7;
 }
@@ -6680,7 +6674,7 @@ aside .links a.active
     display: flex;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -6722,7 +6716,7 @@ aside .links a.active
     margin-top: 16px;
     margin-left: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .3;
 
@@ -6752,7 +6746,7 @@ aside .links a.active
     margin-top: 16px;
     margin-left: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .3;
 
@@ -6818,7 +6812,7 @@ aside .links a.active
     width: 87px;
 
     text-align: center;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -6865,7 +6859,7 @@ aside .links a.active
     margin-bottom: 24px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -6880,7 +6874,7 @@ aside .links a.active
     margin-left: 32px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -6909,7 +6903,7 @@ aside .links a.active
     margin-left: 32px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -6938,7 +6932,7 @@ aside .links a.active
     margin-left: 32px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -6960,7 +6954,7 @@ aside .links a.active
 {
     color: #0e1845;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     display: block;
@@ -6969,7 +6963,7 @@ aside .links a.active
     margin-bottom: 24px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .articles .big_article .name a
@@ -7023,7 +7017,7 @@ aside .links a.active
     margin-left: auto;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     align-self: flex-start;
 }
@@ -7046,7 +7040,7 @@ aside .links a.active
     display: flex;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -7118,7 +7112,7 @@ aside .links a.active
 .articles .col .block_title
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 }
 
@@ -7135,7 +7129,7 @@ aside .links a.active
     padding: 12px 32px;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #0ef3bf;
@@ -7391,7 +7385,7 @@ aside .links a.active
     margin-top: 8px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -7404,7 +7398,7 @@ aside .links a.active
     margin-top: 8px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -7420,7 +7414,7 @@ aside .links a.active
     margin-left: -32px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: flex-start;
@@ -7475,7 +7469,7 @@ aside .links a.active
 .article_info .article_title
 {
     font-size: 80px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 92px;
 
     display: block;
@@ -7483,7 +7477,7 @@ aside .links a.active
     width: 100%;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -7495,7 +7489,7 @@ aside .links a.active
 
     transition: .2s linear;
     white-space: nowrap;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .5;
 }
@@ -7512,7 +7506,7 @@ aside .links a.active
 
     transition: .2s linear;
     white-space: nowrap;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .5;
 
@@ -7589,7 +7583,7 @@ aside .links a.active
 
     transition: .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #e9f8f8;
@@ -7726,12 +7720,12 @@ aside .links a.active
 {
     color: #0e1821;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     margin-bottom: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.64px;
 }
 
 
@@ -7742,7 +7736,7 @@ aside .links a.active
 
     margin-bottom: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -7806,13 +7800,13 @@ aside .links a.active
 .comments .block_title
 {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 56px;
 
     width: 368px;
     max-width: 100%;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -7863,7 +7857,7 @@ aside .links a.active
 {
     color: #f3fffa;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 64px;
 
     width: 64px;
@@ -7893,7 +7887,7 @@ aside .links a.active
 
     margin-bottom: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .5;
 
@@ -7933,7 +7927,7 @@ aside .links a.active
     font-size: 18px;
     line-height: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .comments .comment .name span
@@ -7956,7 +7950,7 @@ aside .links a.active
 
     margin-top: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .75;
 }
@@ -7973,7 +7967,7 @@ aside .links a.active
 
     margin-top: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     opacity: .75;
 }
@@ -7998,7 +7992,7 @@ aside .links a.active
 
     display: flex;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: center;
@@ -8158,7 +8152,7 @@ aside .links a.active
     font-size: 32px;
     line-height: 40px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -8168,7 +8162,7 @@ aside .links a.active
 
     margin-top: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -8185,7 +8179,7 @@ aside .links a.active
 
     text-align: center;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #0e1821;
@@ -8360,12 +8354,12 @@ aside .links a.active
 .history .year
 {
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 74px;
 
     display: block;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -8373,7 +8367,7 @@ aside .links a.active
 {
     color: #008ff3;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     display: block;
@@ -8381,7 +8375,7 @@ aside .links a.active
     margin-top: 16px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -8443,7 +8437,7 @@ aside .links a.active
     cursor: pointer;
     transition: .2s linear;
     text-align: center;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .history .years .btn:after
@@ -8564,7 +8558,7 @@ aside .links a.active
 {
     color: #008ff3;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     display: block;
@@ -8643,11 +8637,11 @@ aside .links a.active
 {
     color: #0ef3bf;
     font-size: 80px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 92px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -8670,13 +8664,13 @@ aside .links a.active
 {
     color: #008ff3;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 56px;
 
     margin-bottom: 8px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -8713,6 +8707,7 @@ aside .links a.active
 {
     color: var(--text_color);
     font-family: var(--font_family);
+    font-weight: 500;
     line-height: 20px;
 
     display: block;
@@ -8721,7 +8716,7 @@ aside .links a.active
     height: 40px;
     padding: 0 43px 0 15px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border: 1px solid #e9f8f8;
     border-radius: 8px;
@@ -8865,6 +8860,7 @@ aside .links a.active
 {
     color: var(--text_color);
     font-family: var(--font_family);
+    font-weight: 500;
     line-height: 20px;
 
     display: block;
@@ -8873,7 +8869,7 @@ aside .links a.active
     height: 40px;
     padding: 0 43px 0 15px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border: 1px solid #e9f8f8;
     border-radius: 8px;
@@ -8951,7 +8947,7 @@ aside .links a.active
 
     transition: .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #e9f8f8;
@@ -8996,7 +8992,7 @@ aside .links a.active
     padding: 4px 8px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .search_info .tags .more_btn.active
@@ -9015,7 +9011,7 @@ aside .links a.active
     margin-bottom: 8px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -9086,7 +9082,7 @@ aside .links a.active
 .search_info .result .name
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     display: block;
@@ -9110,7 +9106,7 @@ aside .links a.active
 
     margin-top: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -9126,7 +9122,7 @@ aside .links a.active
     line-height: 20px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -9138,7 +9134,7 @@ aside .links a.active
 
     margin-top: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -9199,7 +9195,7 @@ aside .links a.active
 
     margin-bottom: 32px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .contacts_info .phone a
@@ -9214,12 +9210,12 @@ aside .links a.active
 .contacts_info .sub_title
 {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 56px;
 
     margin-bottom: 32px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -9245,14 +9241,14 @@ aside .links a.active
 
     margin-bottom: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
 .contacts_info .data .val
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     position: relative;
@@ -9300,7 +9296,7 @@ aside .links a.active
 
     cursor: pointer;
     white-space: nowrap;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
     text-overflow: ellipsis;
 
     border: 1px solid #e9f8f8;
@@ -9489,6 +9485,7 @@ aside .links a.active
 {
     color: var(--text_color);
     font-family: var(--font_family);
+    font-weight: 500;
     line-height: 20px;
 
     display: block;
@@ -9497,7 +9494,7 @@ aside .links a.active
     height: 40px;
     padding: 0 43px 0 15px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border: 1px solid #e9f8f8;
     border-radius: 8px;
@@ -9575,7 +9572,7 @@ aside .links a.active
 
     transition: .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #e9f8f8;
@@ -9620,7 +9617,7 @@ aside .links a.active
     padding: 4px 8px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .forum .tags .more_btn.active
@@ -9639,7 +9636,7 @@ aside .links a.active
     margin-bottom: 32px;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -9731,7 +9728,7 @@ aside .links a.active
 .forum .items .item .name
 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 
     display: block;
@@ -9746,7 +9743,7 @@ aside .links a.active
 
     margin-top: auto;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -10002,7 +9999,7 @@ aside .links a.active
 
     text-align: center;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #0ef3bf;
@@ -10032,7 +10029,7 @@ aside .links a.active
     display: flex;
 
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: space-between;
     align-items: center;
@@ -10289,12 +10286,12 @@ aside .links a.active
 {
     color: #008ff3;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 40px;
 
     margin-bottom: 32px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -10310,7 +10307,7 @@ aside .links a.active
     font-size: 18px;
     line-height: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -10319,7 +10316,7 @@ aside .links a.active
     font-size: 16px;
     line-height: 32px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -10399,7 +10396,7 @@ aside .links a.active
 
     transition: .2s linear;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #e9f8f8;
@@ -10594,7 +10591,7 @@ aside .links a.active
     margin-bottom: 24px;
 
     text-align: center;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -10645,7 +10642,7 @@ aside .links a.active
 
     cursor: pointer;
     text-align: center;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #0e1821;
@@ -10688,7 +10685,7 @@ aside .links a.active
 
     width: calc(66.666% - 48px);
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     align-self: center;
 }
@@ -10769,7 +10766,7 @@ aside .links a.active
     margin-top: 24px;
     padding: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
@@ -10920,7 +10917,6 @@ aside .links a.active
     height: 104px;
 
     border-radius: 24px;
-    
 
     justify-content: center;
     align-items: center;
@@ -11163,7 +11159,8 @@ aside .links a.active
     z-index: 5;
 }
 
-.inspection_stages {
+.inspection_stages
+{
     position: relative;
     z-index: 5;
 }
@@ -11372,14 +11369,16 @@ aside .links a.active
 
 .inspection_stages .slider
 {
+    position: relative;
+    z-index: 10000;
+
     margin-top: 64px;
     margin-bottom: 64px;
     padding: 0 104px 32px;
-    z-index: 10000;
-    position: relative;
 }
 
-.inspection_stages .slider.full{
+.inspection_stages .slider.full
+{
     padding: 0;
 }
 
@@ -11494,7 +11493,7 @@ aside .links a.active
 {
     color: #008ff3;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 }
 
@@ -11605,7 +11604,7 @@ footer .menu
 
     list-style: none;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 footer .menu > * + *
@@ -11644,7 +11643,7 @@ footer .services
     list-style: none;
 
     transition: color .2s linear;
-    letter-spacing: -.02em;
+    letter-spacing: -.24px;
 }
 
 footer .services > * + *
@@ -11679,12 +11678,18 @@ footer .location
     width: 160px;
     max-width: 100%;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 footer .location > * + *
 {
     margin-top: 16px;
+}
+
+
+footer .location .address
+{
+    font-weight: 400;
 }
 
 
@@ -11719,7 +11724,7 @@ footer .phone .label
 
     margin-bottom: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -11733,7 +11738,7 @@ footer .phone a
     vertical-align: top;
     white-space: nowrap;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
     -webkit-background-clip: text;
@@ -11760,7 +11765,7 @@ footer .feedback_btn
     transition: .2s linear;
     text-align: center;
     text-decoration: none;
-    letter-spacing: -.02em;
+    letter-spacing: -.32px;
 
     border-radius: 16px;
     background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
@@ -11804,7 +11809,7 @@ footer .messengers .label
 
     margin-bottom: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -11855,7 +11860,7 @@ footer .copyright
 
     margin-bottom: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.24px;
 
     align-self: center;
 }
@@ -11920,7 +11925,7 @@ footer .bottom_links
 
     margin-top: 8px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.24px;
 
     justify-content: flex-start;
     align-items: center;
@@ -11955,7 +11960,7 @@ footer .notice
     margin-top: 8px;
     margin-left: auto;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -11982,12 +11987,12 @@ footer .notice
 .modal_title
 {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 56px;
 
     margin-bottom: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -11999,7 +12004,7 @@ footer .notice
     margin-top: -16px;
     margin-bottom: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -12021,7 +12026,7 @@ footer .notice
     margin-top: 24px;
     padding: 20px 48px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     border-radius: 16px;
     background: #0e1821;
@@ -12055,7 +12060,7 @@ footer .notice
     margin-bottom: -16px;
     margin-left: -32px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 
     justify-content: flex-start;
     align-items: flex-start;
@@ -13511,7 +13516,7 @@ header .main_menu .sub_menu a:hover
 {
     color: #008ff3;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
 
     letter-spacing: 3px;
@@ -13576,7 +13581,7 @@ header .main_menu .sub_menu a:hover
     font-size: 14px;
     line-height: 20px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .answer_modal_quote
@@ -13587,7 +13592,7 @@ header .main_menu .sub_menu a:hover
 
     margin-top: 4px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .answer_modal_text
@@ -13598,7 +13603,7 @@ header .main_menu .sub_menu a:hover
 
     margin-top: 16px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 
@@ -13623,7 +13628,7 @@ header .main_menu .sub_menu a:hover
 
     margin-top: 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
 }
 
 .order_block_body
@@ -13737,7 +13742,7 @@ header .contacts .time a
 
     padding: 12px 24px;
 
-    letter-spacing: -.02em;
+    letter-spacing: -.28px;
     pointer-events: none;
 
     border-radius: 16px;
@@ -13833,183 +13838,242 @@ header .contacts .time a
     line-height: 161%;
 }
 
-.block_head.mb0{
+.block_head.mb0
+{
     margin-bottom: 0;
 }
 
-.logos_z100{
-    z-index:40;
+.logos_z100
+{
+    z-index: 40;
 }
 
-.text_block_column{
+.text_block_column
+{
     display: flex;
-    gap: 56px;
+
     text-align: inherit;
+
+    gap: 56px;
 }
 
-.text_block_column .column{
+.text_block_column .column
+{
     width: calc(50% - 28px);
 }
 
-.inspection_stages .text_block.big + .text_block.big{
+.inspection_stages .text_block.big + .text_block.big
+{
     margin-top: 32px;
 }
 
-.text_block h4.blue {
+.text_block h4.blue
+{
     color: #008ff3;
 }
 
-.new_form{
-    margin-top: 48px;
+.new_form
+{
     display: flex;
+
+    margin-top: 48px;
 }
 
-.new_form .input{
+.new_form .input
+{
     width: 263px;
-    margin-right: 16px;
     height: 40px;
+    margin-right: 16px;
 }
 
-.new_form .submit_btn{
+.new_form .submit_btn
+{
     color: var(--text_color);
-    transition: box-shadow .2s linear;
-    background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
-    height: 40px;
-    width: auto;
-    padding: 0 24px;
     font-size: 14px;
+
+    width: auto;
+    height: 40px;
+    padding: 0 24px;
+
+    transition: box-shadow .2s linear;
+
     border-radius: 8px;
+    background: linear-gradient(87.9deg, #0ef3bf 0%, #008ff3 100%);
 }
-.new_form .submit_btn:hover{
+.new_form .submit_btn:hover
+{
     box-shadow: -5px 5px 9px rgba(14, 24, 33, .1), 0 0 69px rgba(14, 243, 191, .33);
 }
 
-.wrap_new_form, .wrap_new_form.full .form{
+.wrap_new_form,
+.wrap_new_form.full .form
+{
     width: 100%;
 }
 
-.wrap_new_form.full .wpcf7-form-control-wrap{
+.wrap_new_form.full .wpcf7-form-control-wrap
+{
     width: calc(100% - 206px);
 }
 
-.wrap_new_form.full .new_form .input{
+.wrap_new_form.full .new_form .input
+{
     width: 100%;
 }
-.wrap_new_form.full .new_form{
+.wrap_new_form.full .new_form
+{
     justify-content: space-between;
 }
 
-.squads{
+.squads
+{
     display: flex;
-    gap:48px;
-    flex-wrap: wrap;
+
     margin: 64px 0;
+
+    gap: 48px;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.squads .squad{
+.squads .squad
+{
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     max-width: 464px;
-    aspect-ratio: 1/1;
     padding: 56px;
+
     border-radius: 48px;
     background: #f3fffa;
     box-shadow: 0 0 32px 0 rgba(0, 143, 243, .10);
-    display: flex;
-    flex-direction: column;
+
+    aspect-ratio: 1/1;
     gap: 24px;
     justify-content: center;
 }
 
-.squads .squad .title{
+.squads .squad .title
+{
     font-size: 24px;
-    line-height: 32px; 
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 32px;
 }
 
-.squads .squad .squad_text {
+.squads .squad .squad_text
+{
     text-align: left;
 }
 
 
-.rectangls{
+.rectangls
+{
     display: flex;
-    gap:48px;
-    flex-wrap: wrap;
     flex-direction: column;
+
     margin: 64px 104px;
+
+    gap: 48px;
+    flex-wrap: wrap;
 }
 
-.rectangls .rectangle{
+.rectangls .rectangle
+{
+    position: relative;
+
+    display: flex;
+
     width: 100%;
     padding: 56px;
+
     border-radius: 48px;
     background: #f3fffa;
     box-shadow: 0 0 32px 0 rgba(0, 143, 243, .10);
-    position: relative;
-    display: flex;
 }
 
-.rectangls .rectangle .title{
+.rectangls .rectangle .title
+{
     font-size: 24px;
-    line-height: 32px; 
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 32px;
 }
 
-.rectangls .squad .squad_text {
+.rectangls .squad .squad_text
+{
     text-align: left;
 }
 
-.rectangle_number{
+.rectangle_number
+{
     color: #f3fffa;
     font-size: 20px;
     line-height: 48px;
-    width: 48px;
-    height: 48px;
-    text-align: center;
-    border-radius: 50%;
-    background: #008ff3;
+
     position: absolute;
     left: -24px;
+
+    width: 48px;
+    height: 48px;
+
+    text-align: center;
+
+    border-radius: 50%;
+    background: #008ff3;
 }
 
-.rectangle_wrap{
+.rectangle_wrap
+{
     display: flex;
     flex-direction: column;
+
     gap: 24px;
     justify-content: center;
 }
-.rectangle_img{
-    flex-shrink: 0;
+.rectangle_img
+{
     margin-left: 32px;
+
+    flex-shrink: 0;
 }
 
-.squads_new{
+.squads_new
+{
     display: flex;
-    gap:48px;
-    flex-wrap: wrap;
+
     margin: 64px 0;
+
+    gap: 48px;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.squads_new .squad_new{
+.squads_new .squad_new
+{
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     max-width: calc(100% /3 - 32px);
     padding: 56px;
+
     border-radius: 48px;
     background: #f3fffa;
     box-shadow: 0 0 32px 0 rgba(0, 143, 243, .10);
-    display: flex;
-    flex-direction: column;
+
     gap: 24px;
     justify-content: center;
 }
 
-.squads_new .squad_new .squad_text {
+.squads_new .squad_new .squad_text
+{
     text-align: left;
 }
 
 
-.dark_theme .rectangls .text_block, .squads_new .squad_new .squad_text, .squads .squad .squad_text{
+.dark_theme .rectangls .text_block,
+.squads_new .squad_new .squad_text,
+.squads .squad .squad_text
+{
     color: var(--text_color);
 }

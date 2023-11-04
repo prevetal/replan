@@ -10,6 +10,12 @@
     }
 
 
+    body
+    {
+        font-weight: 600;
+    }
+
+
     .main
     {
         padding-top: 56px;
@@ -78,6 +84,7 @@
     .accordion_item .head .title
     {
         font-size: 16px;
+        font-weight: 600;
         line-height: 24px;
     }
 
@@ -86,6 +93,12 @@
     {
         width: 28px;
         height: 28px;
+    }
+
+
+    .accordion_item .data
+    {
+        font-weight: 500;
     }
 
 
@@ -153,6 +166,7 @@
     .page_title
     {
         font-size: 38px;
+        font-weight: 600;
 
         margin-top: 16px;
     }
@@ -162,9 +176,16 @@
     /*----------------
         Block head
     ----------------*/
+    .block_head .title
+    {
+        font-weight: 600;
+    }
+
+
     .block_head .sub_title
     {
         font-size: 19px;
+        font-weight: 600;
         line-height: 27px;
 
         margin-top: 24px;
@@ -175,9 +196,16 @@
     /*----------------
         Typography
     ----------------*/
+    .text_block
+    {
+        font-weight: 500;
+    }
+
+
     .text_block h1
     {
         font-size: 28px;
+        font-weight: 600;
         line-height: 36px;
 
         margin-bottom: 20px !important;
@@ -186,6 +214,7 @@
     .text_block h2
     {
         font-size: 28px;
+        font-weight: 600;
         line-height: 36px;
 
         margin-bottom: 20px !important;
@@ -194,12 +223,14 @@
     .text_block h3
     {
         font-size: 22px;
+        font-weight: 600;
         line-height: 30px;
     }
 
     .text_block h4
     {
         font-size: 20px;
+        font-weight: 600;
         line-height: 28px;
     }
 
@@ -207,6 +238,7 @@
     .text_block h6
     {
         font-size: 18px;
+        font-weight: 600;
         line-height: 26px;
     }
 
@@ -253,6 +285,7 @@
     .text_block .quote .name
     {
         font-size: 14px;
+        font-weight: 600;
         line-height: 24px;
 
         padding-left: 52px;
@@ -262,6 +295,7 @@
     .text_block .quote .post
     {
         font-size: 12px;
+        font-weight: 600;
         line-height: 16px;
 
         margin-top: 0;
@@ -300,6 +334,11 @@
         margin-bottom: 32px;
     }
 
+    .text_block .get_quike_consult .title
+    {
+        font-weight: 600;
+    }
+
 
     .text_block ul li:before
     {
@@ -327,6 +366,7 @@
     .main_slider .title
     {
         font-size: 34px;
+        font-weight: 600;
         line-height: 42px;
     }
 
@@ -334,6 +374,7 @@
     .main_slider .sub_title
     {
         font-size: 18px;
+        font-weight: 600;
         line-height: 24px;
     }
 
@@ -358,6 +399,16 @@
 
 
 
+    /*-----------
+        Steps
+    -----------*/
+    .steps .item .desc
+    {
+        font-weight: 500;
+    }
+
+
+
     /*----------------
         Coordinate
     ----------------*/
@@ -370,6 +421,7 @@
     .coordinate .item .title
     {
         font-size: 19px;
+        font-weight: 600;
         line-height: 27px;
     }
 
@@ -377,6 +429,7 @@
     .coordinate .item .desc
     {
         font-size: 13px;
+        font-weight: 500;
         line-height: 19px;
 
         margin-top: 8px;
@@ -472,6 +525,7 @@
     .documents .document .name
     {
         font-size: 12px;
+        font-weight: 500;
         line-height: 16px;
     }
 
@@ -556,6 +610,12 @@
     }
 
 
+    .inspection_steps .step .items
+    {
+        font-weight: 500;
+    }
+
+
 
     /*----------------------
         Inspection stages
@@ -599,6 +659,7 @@
     .inspection_stages .stage .name
     {
         font-size: 16px;
+        font-weight: 600;
         line-height: 24px;
     }
 
@@ -623,7 +684,15 @@
     .no_bureaucracy .data .title
     {
         font-size: 22px;
+        font-weight: 600;
         line-height: 30px;
+    }
+
+
+    .no_bureaucracy .data .desc,
+    .no_bureaucracy .link a
+    {
+        font-weight: 500;
     }
 
 
@@ -646,7 +715,14 @@
     .headache .item .title
     {
         font-size: 18px;
+        font-weight: 600;
         line-height: 26px;
+    }
+
+
+    .headache .item .items > *
+    {
+        font-weight: 500;
     }
 
 
@@ -663,6 +739,7 @@
     .logos .item .info
     {
         font-size: 10px;
+        font-weight: 500;
         line-height: 16px;
     }
 
@@ -681,6 +758,7 @@
     .prices .item:hover .price
     {
         font-size: 18px;
+        font-weight: 600;
         line-height: 26px;
     }
 
@@ -698,6 +776,7 @@
     .order_block .title
     {
         font-size: 30px;
+        font-weight: 600;
         line-height: 38px;
     }
 
@@ -721,7 +800,14 @@
     .reviews .review .name
     {
         font-size: 18px;
+        font-weight: 600;
         line-height: 24px;
+    }
+
+
+    .reviews .review .desc
+    {
+        font-weight: 500;
     }
 
 
@@ -750,7 +836,14 @@
     .certs .name
     {
         font-size: 20px;
+        font-weight: 600;
         line-height: 28px;
+    }
+
+
+    .certs .desc
+    {
+        font-weight: 500;
     }
 
 
@@ -799,24 +892,31 @@
         width: 100%;
     }
 
-    .projects .project .img{
+    .projects .project .img
+    {
         border-radius: 16px;
     }
 
 
     .projects .project .duration
     {
+        font-weight: 500;
+
         opacity: .5;
     }
 
-    .projects .project .name + .duration{
+    .projects .project .name + .duration
+    {
         width: 100%;
+
         align-items: flex-start;
     }
 
 
     .projects .project .price
     {
+        font-weight: 500;
+
         margin-left: 20px;
 
         opacity: .5;
@@ -834,16 +934,34 @@
     /*--------------
         Articles
     --------------*/
+    .articles .col .block_title
+    {
+        font-weight: 600;
+    }
+
+
     .articles .sub_title
     {
         font-size: 26px;
+        font-weight: 600;
         line-height: 32px;
+    }
+
+
+    .articles .article .sticker,
+    .articles .article .desc,
+    .articles .article .views,
+    .articles .article .comments_count
+    {
+        font-weight: 500;
     }
 
 
 
     .articles .big_article .date
     {
+        font-weight: 500;
+
         width: 100%;
         margin-bottom: 4px;
     }
@@ -855,10 +973,35 @@
     }
 
 
+    .articles .big_article .views,
+    .articles .big_article .comments_count,
+    .articles .big_article .duration
+    {
+        font-weight: 500;
+    }
+
+
     .articles .big_article .name
     {
         font-size: 20px;
+        font-weight: 600;
         line-height: 26px;
+    }
+
+
+
+    /*---------------
+        Subscribe
+    ---------------*/
+    .subscribe .title
+    {
+        font-weight: 600;
+    }
+
+
+    .subscribe .desc
+    {
+        font-weight: 500;
     }
 
 
@@ -869,7 +1012,14 @@
     .specialists .person .name
     {
         font-size: 18px;
+        font-weight: 600;
         line-height: 26px;
+    }
+
+
+    .specialists .person .desc
+    {
+        font-weight: 500;
     }
 
 
@@ -884,6 +1034,7 @@
     .specialists .add_question .title
     {
         font-size: 22px;
+        font-weight: 600;
         line-height: 28px;
     }
 
@@ -940,6 +1091,7 @@
     .article_info .author .stats
     {
         font-size: 12px;
+        font-weight: 500;
         line-height: 16px;
 
         margin-top: 16px;
@@ -964,6 +1116,7 @@
     .article_info .article_title
     {
         font-size: 32px;
+        font-weight: 600;
         line-height: 40px;
     }
 
@@ -971,6 +1124,8 @@
     .article_info .date,
     .article_info .duration
     {
+        font-weight: 500;
+
         margin-top: 26px;
     }
 
@@ -990,9 +1145,22 @@
     /*----------------
         Error info
     ----------------*/
+    .error_info .code
+    {
+        font-weight: 600;
+    }
+
+
+    .error_info .desc
+    {
+        font-weight: 500;
+    }
+
+
     .error_info .search .title
     {
         font-size: 22px;
+        font-weight: 600;
         line-height: 28px;
     }
 
@@ -1026,6 +1194,19 @@
     }
 
 
+    .search_info .result .date,
+    .search_info .result .type
+    {
+        font-weight: 500;
+    }
+
+
+    .search_info .result .name
+    {
+        font-weight: 600;
+    }
+
+
 
     /*------------------
         Individually
@@ -1033,6 +1214,12 @@
     .individually .data
     {
         padding: 24px;
+    }
+
+
+    .individually .desc
+    {
+        font-weight: 500;
     }
 
 
@@ -1061,6 +1248,7 @@
     .history .year
     {
         font-size: 28px;
+        font-weight: 600;
         line-height: 34px;
     }
 
@@ -1068,6 +1256,7 @@
     .history .title
     {
         font-size: 20px;
+        font-weight: 600;
         line-height: 26px;
 
         margin-top: 12px;
@@ -1103,6 +1292,7 @@
     .comments .block_title
     {
         font-size: 26px;
+        font-weight: 600;
         line-height: 32px;
 
         margin-bottom: 20px;
@@ -1140,6 +1330,13 @@
     }
 
 
+    .comments .comment .date,
+    .comments .comment .text
+    {
+        font-weight: 500;
+    }
+
+
     .comments .comment_wrap .add_comment
     {
         margin-top: 0;
@@ -1168,6 +1365,7 @@
     .contacts_info .sub_title
     {
         font-size: 22px;
+        font-weight: 600;
         line-height: 30px;
 
         margin-bottom: 24px;
@@ -1202,6 +1400,7 @@
     .forum .items .item .name
     {
         font-size: 17px;
+        font-weight: 600;
         line-height: 25px;
     }
 
@@ -1237,6 +1436,7 @@
     .project_info .file
     {
         font-size: 13px;
+        font-weight: 500;
         line-height: 19px;
     }
 
@@ -1262,6 +1462,7 @@
     .project_data .block_title
     {
         font-size: 24px;
+        font-weight: 600;
         line-height: 30px;
     }
 
@@ -1311,6 +1512,12 @@
     .calc .form
     {
         padding: 24px;
+    }
+
+
+    .calc .form .files .exp
+    {
+        font-weight: 500;
     }
 
 
@@ -1474,9 +1681,8 @@
         object-fit: cover;
     }
 
-    .squads_new .squad_new{
+    .squads_new .squad_new
+    {
         max-width: 100%;
     }
-
-    
 }
