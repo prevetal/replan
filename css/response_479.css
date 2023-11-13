@@ -10,10 +10,10 @@
     }
 
 
-    body
+    /* body
     {
         font-weight: 600;
-    }
+    } */
 
 
     .main
@@ -767,13 +767,15 @@
     /*-----------------
         Order block
     -----------------*/
-    .order_block .data
+    .order_block .data,
+    .order_block .data.margin
     {
         padding: 24px;
     }
 
 
-    .order_block .title
+    .order_block .title,
+    .order_block .info .title
     {
         font-size: 30px;
         font-weight: 600;
@@ -902,15 +904,15 @@
     {
         font-weight: 500;
 
-        opacity: .5;
+        /* opacity: .5; */
     }
 
-    .projects .project .name + .duration
+    /* .projects .project .name + .duration
     {
         width: 100%;
 
         align-items: flex-start;
-    }
+    } */
 
 
     .projects .project .price
@@ -1518,6 +1520,286 @@
     .calc .form .files .exp
     {
         font-weight: 500;
+    }
+
+
+
+    /*-----------------------------
+        Lending - First section
+    -----------------------------*/
+    .lending_first_section .data
+    {
+        padding: 24px;
+    }
+
+
+    .lending_first_section .info
+    {
+        margin-top: 16px;
+    }
+
+
+    .lending_first_section .title
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .lending_first_section .sub_title
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+
+    .lending_first_section .form .input
+    {
+        height: 36px;
+
+        border-radius: 8px;
+    }
+
+
+    .lending_first_section .image
+    {
+        width: 88%;
+    }
+
+
+
+    /*--------------------------
+        Lending - advantages
+    --------------------------*/
+    .lending_advantages .data
+    {
+        padding-bottom: 24px;
+    }
+
+
+    .lending_advantages .row
+    {
+        margin-bottom: -24px;
+        margin-left: 0;
+    }
+
+    .lending_advantages .row > *
+    {
+        width: 100%;
+        margin-bottom: 24px;
+        margin-left: 0;
+    }
+
+
+
+    /*-----------------------
+        Lending - what it
+    -----------------------*/
+    .lending_what_it .block_head
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .lending_what_it .data .desc
+    {
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+
+    .lending_what_it .forbidden .title,
+    .lending_what_it .can .title
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+    .lending_what_it .examples
+    {
+        padding-bottom: 24px;
+    }
+
+
+
+    /*---------------------------
+        Lending - Get answers
+    ---------------------------*/
+    .lending_get_answers .data
+    {
+        padding: 24px;
+    }
+
+
+    .lending_get_answers .title
+    {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+
+    .lending_get_answers .person
+    {
+        margin-top: 20px;
+        margin-bottom: -24px;
+    }
+
+
+
+    /*------------------------
+        Lending - Problems
+    ------------------------*/
+    .lending_problems .row
+    {
+        margin-bottom: -24px;
+    }
+
+    .lending_problems .row > *
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    /*----------------------------
+        Lending - Consequences
+    ----------------------------*/
+    .lending_consequences .thumb
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+    .lending_consequences .thumb + *
+    {
+        width: calc(100% - 80px);
+    }
+
+
+
+    /*----------------------
+        Lending  - Steps
+    ----------------------*/
+    .lending_steps .data
+    {
+        padding-top: 24px;
+    }
+
+
+
+    /*------------------------
+        Lending - Projects
+    ------------------------*/
+    .lending_projects .map_wrap .map
+    {
+        width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
+    }
+
+
+    .lending_projects .map_wrap .title
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+
+    /*-------------------------
+        Lending - Documents
+    -------------------------*/
+    .lending_documents .document
+    {
+        padding: 24px;
+    }
+
+
+    .lending_documents .document .desc
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+
+    /*-------------------
+        Lending - FAQ
+    -------------------*/
+    .lending_faq .block_head
+    {
+        margin-bottom: 52px;
+    }
+
+
+    .lending_faq .row > .image
+    {
+        height: 300px;
+        margin-bottom: 24px;
+    }
+
+    .lending_faq .row > .image img
+    {
+        width: 380px;
+    }
+
+
+    .lending_faq .accordion_item .head
+    {
+        padding-right: 36px;
+    }
+
+    .lending_faq .accordion_item .head .icon
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .lending_faq .more a
+    {
+        font-size: 14px;
+
+        padding: 15px;
+    }
+
+
+    .lending_faq .has_question
+    {
+        margin-top: 40px;
+        padding: 24px;
+    }
+
+
+
+    /*---------------------------
+        Lending - Bottom text
+    ---------------------------*/
+    .lending_bottom_text .block_title
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+
+    /*----------------------
+        Lending - Articles
+    ----------------------*/
+    .lending_articles .all_link a:hover span
+    {
+        padding: 0;
+    }
+
+
+
+    /*----------------------
+        Lending - Reviews
+    ----------------------*/
+    .lending_reviews .all_link a:hover span
+    {
+        padding: 0;
     }
 
 

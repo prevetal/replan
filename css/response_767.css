@@ -388,6 +388,11 @@
         padding: 0;
     }
 
+    .page_head.mob_empty
+    {
+        display: none;
+    }
+
 
     .breadcrumbs
     {
@@ -426,6 +431,11 @@
         margin-bottom: 36px;
     }
 
+
+    .block_head .title
+    {
+        font-weight: 600;
+    }
 
     .block_head .title br
     {
@@ -1133,6 +1143,7 @@
     .inspection_stages .stage
     {
         padding: 32px;
+
         border-radius: 24px;
     }
 
@@ -1432,15 +1443,58 @@
     /*-----------------
         Order block
     -----------------*/
+    .order_block .bg
+    {
+        top: -120px;
+        right: auto;
+        bottom: 0;
+        left: -50%;
+
+        width: 200%;
+        height: auto;
+        min-height: 100px;
+        margin: auto;
+    }
+
+
     .order_block .data
     {
         padding: 32px;
     }
 
 
+    .order_block .info
+    {
+        width: 100%;
+    }
+
+
     .order_block .title
     {
         font-size: 34px;
+    }
+
+
+    .order_block .desc
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        margin-top: 12px;
+    }
+
+
+    .order_block .info .title
+    {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 42px;
+    }
+
+
+    .order_block .info + .form
+    {
+        width: 100%;
     }
 
 
@@ -1930,6 +1984,7 @@
     .subscribe .title
     {
         font-size: 24px;
+        font-weight: 600;
         line-height: 30px;
     }
 
@@ -2721,6 +2776,790 @@
 
 
 
+    /*-----------------------------
+        Lending - First section
+    -----------------------------*/
+    .lending_first_section .bg
+    {
+        display: none;
+    }
+
+
+    .lending_first_section .data
+    {
+        border-radius: 0 0 32px 32px;
+    }
+
+
+    .lending_first_section .info
+    {
+        width: 100%;
+        margin-top: 24px;
+
+        order: 2;
+    }
+
+
+    .lending_first_section .title
+    {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+
+    .lending_first_section .sub_title
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        margin-top: 20px;
+    }
+
+
+    .lending_first_section .form .line
+    {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+
+    .lending_first_section .form .input
+    {
+        height: 36px;
+
+        border-radius: 8px;
+    }
+
+
+    .lending_first_section .form .submit
+    {
+        width: 100%;
+    }
+
+
+    .lending_first_section .image
+    {
+        width: 80%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------------------
+        Lending - advantages
+    --------------------------*/
+    .lending_advantages .data
+    {
+        margin-top: -48px;
+        padding-top: 56px;
+
+        border-radius: 0 0 32px 32px;
+    }
+
+
+    .lending_advantages .item .name
+    {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+
+    .lending_advantages .item .desc
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        margin-top: 8px;
+    }
+
+
+
+    /*-----------------------
+        Lending - what it
+    -----------------------*/
+    .lending_what_it .bg
+    {
+        right: auto;
+        bottom: -120px;
+        left: -50%;
+
+        width: 200%;
+        height: auto;
+        min-height: 100px;
+        margin: auto;
+    }
+
+
+    .lending_what_it .data
+    {
+        width: 100%;
+    }
+
+
+    .lending_what_it .data .row
+    {
+        margin-top: 32px;
+    }
+
+    .lending_what_it .data .row > *
+    {
+        width: 100%;
+    }
+
+    .lending_what_it .data .row > * + *
+    {
+        margin-top: 32px;
+    }
+
+
+    .lending_what_it .forbidden .title,
+    .lending_what_it .can .title
+    {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+
+    .lending_what_it .forbidden .items > * + *,
+    .lending_what_it .can .items > * + *
+    {
+        margin-top: 12px;
+    }
+
+
+    .lending_what_it .examples .swiper-slide
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .lending_what_it .examples .thumb
+    {
+        height: 200px;
+    }
+
+
+    .lending_what_it .examples .name
+    {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+
+    .lending_what_it .examples .link
+    {
+        order: 2;
+    }
+
+
+    .lending_what_it .examples .controls .swiper-button-next,
+    .lending_what_it .examples .controls .swiper-button-prev,
+    .lending_what_it .examples .controls .count
+    {
+        display: none;
+    }
+
+    .lending_what_it .examples .swiper-horizontal > .swiper-pagination-bullets,
+    .lending_what_it .examples .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .lending_what_it .examples .swiper-pagination-custom,
+    .lending_what_it .examples .swiper-pagination-fraction
+    {
+        display: flex;
+    }
+
+
+
+    /*---------------------------
+        Lending - Get answers
+    ---------------------------*/
+    .lending_get_answers .bg
+    {
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: -50%;
+
+        width: 200%;
+        height: auto;
+        min-height: 100px;
+        margin: auto;
+    }
+
+
+    .lending_get_answers .info
+    {
+        width: 100%;
+    }
+
+
+    .lending_get_answers .title
+    {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 38px;
+    }
+
+
+    .lending_get_answers ul
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .lending_get_answers ul li:before
+    {
+        top: 8px;
+    }
+
+
+    .lending_get_answers .btn
+    {
+        position: absolute;
+        z-index: 9;
+        right: 0;
+        bottom: 24px;
+        left: 0;
+
+        width: calc(100% - 48px);
+        margin: 0 auto;
+    }
+
+
+    .lending_get_answers .person
+    {
+        position: relative;
+        right: 0;
+
+        width: 100%;
+        height: auto;
+        margin-top: 24px;
+        margin-bottom: -40px;
+    }
+
+
+    .lending_get_answers .person > div
+    {
+        display: none;
+    }
+
+
+
+    /*------------------------
+        Lending - Problems
+    ------------------------*/
+    .lending_problems .row
+    {
+        margin-bottom: -32px;
+        margin-left: 0;
+    }
+
+    .lending_problems .row > *
+    {
+        width: 100%;
+        margin-bottom: 32px;
+        margin-left: 0;
+    }
+
+
+    .lending_problems .item .name
+    {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+
+    .lending_problems .item .desc
+    {
+        margin-top: 12px;
+    }
+
+
+
+    /*-------------------------
+        Lending - Subscribe
+    -------------------------*/
+    .lending_subscribe .form .submit_btn
+    {
+        height: 56px;
+
+        border-radius: 16px;
+    }
+
+
+
+    /*----------------------------
+        Lending - Consequences
+    ----------------------------*/
+    .lending_consequences .block_head .sub_title
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        margin-top: 12px;
+    }
+
+
+    .lending_consequences .thumb
+    {
+        width: 68px;
+        height: 68px;
+    }
+
+    .lending_consequences .thumb + *
+    {
+        width: calc(100% - 88px);
+    }
+
+
+    .lending_consequences .name
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    .lending_consequences .desc
+    {
+        font-size: 13px;
+        line-height: 17px;
+
+        margin-top: 8px;
+    }
+
+
+
+    /*----------------------
+        Lending - Prices
+    ----------------------*/
+    .lending_prices .bg
+    {
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: -50%;
+
+        width: 200%;
+        height: auto;
+        min-height: 100px;
+        margin: auto;
+    }
+
+
+    .lending_prices .block_head .sub_title
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        margin-top: 12px;
+    }
+
+
+    .lending_prices .tabs
+    {
+        margin-bottom: 24px;
+    }
+
+    .lending_prices .tabs .btn
+    {
+        font-size: 14px;
+    }
+
+
+    .lending_prices .tariffs .row
+    {
+        margin-right: -24px;
+        margin-bottom: -24px;
+    }
+
+    .lending_prices .tariffs .row > *,
+    .lending_prices .tariffs .row > *.image
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .lending_prices .tariffs .row > *.image
+    {
+        padding: 0 24px;
+    }
+
+
+    .lending_prices .tariff
+    {
+        min-height: 0;
+    }
+
+
+    .lending_prices .tariff .label
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .lending_prices .tariff .name
+    {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+
+    .lending_prices .tariff .price
+    {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 38px;
+
+        margin-top: 32px;
+        padding-top: 32px;
+    }
+
+    .lending_prices .tariff .price .old
+    {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+
+
+    /*---------------------------
+        Lending - Departments
+    ---------------------------*/
+    .lending_departments .block_head .sub_title
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        margin-top: 12px;
+    }
+
+    .lending_departments .block_head .sub_title br
+    {
+        display: none;
+    }
+
+
+    .lending_departments .swiper
+    {
+        overflow: visible !important;
+
+        margin-bottom: 24px;
+
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .lending_departments .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .lending_departments .swiper-horizontal > .swiper-pagination-bullets,
+    .lending_departments .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .lending_departments .swiper-pagination-custom,
+    .lending_departments .swiper-pagination-fraction
+    {
+        bottom: -24px;
+    }
+
+
+    .lending_departments .data
+    {
+        padding: 24px 24px 0;
+
+        border-radius: 32px;
+        background: rgba(207, 203, 255, .20);
+    }
+
+
+    .lending_departments .info
+    {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+
+    .lending_departments .name
+    {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+
+    .lending_departments .desc
+    {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+
+    .lending_departments .image
+    {
+        position: relative;
+
+        width: 100%;
+    }
+
+
+    .lending_departments .controls .swiper-button-next,
+    .lending_departments .controls .swiper-button-prev,
+    .lending_departments .controls .count
+    {
+        display: none;
+    }
+
+    .lending_departments .swiper-horizontal > .swiper-pagination-bullets,
+    .lending_departments .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .lending_departments .swiper-pagination-custom,
+    .lending_departments .swiper-pagination-fraction
+    {
+        display: flex;
+    }
+
+
+
+    /*------------------------
+        Lending - Projects
+    ------------------------*/
+    .lending_projects .map_wrap .map
+    {
+        width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
+    }
+
+
+    .lending_projects .map_wrap .title
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+
+    /*-------------------------
+        Lending - Documents
+    -------------------------*/
+    .lending_documents .bg
+    {
+        top: 40px;
+        right: auto;
+        left: -50%;
+
+        display: none;
+
+        width: 200%;
+        height: auto;
+        min-height: 100px;
+        margin: 0;
+    }
+
+
+    .lending_documents .block_head .sub_title
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        margin-top: 12px;
+    }
+
+
+    .lending_documents .tabs
+    {
+        margin-bottom: 24px;
+    }
+
+    .lending_documents .tabs .btn
+    {
+        font-size: 14px;
+    }
+
+
+    .lending_documents .document .name
+    {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+
+    .lending_documents .swiper-slide
+    {
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .lending_documents .controls .swiper-button-next,
+    .lending_documents .controls .swiper-button-prev,
+    .lending_documents .controls .count
+    {
+        display: none;
+    }
+
+    .lending_documents .swiper-horizontal > .swiper-pagination-bullets,
+    .lending_documents .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .lending_documents .swiper-pagination-custom,
+    .lending_documents .swiper-pagination-fraction
+    {
+        display: flex;
+    }
+
+
+    .lending_documents .notice
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        padding: 22px;
+    }
+
+    .lending_documents .notice span
+    {
+        width: 100%;
+
+        order: 2;
+    }
+
+    .lending_documents .notice .icon
+    {
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+
+
+
+    /*-------------------
+        Lending - FAQ
+    -------------------*/
+    .lending_faq .block_head
+    {
+        margin-bottom: 52px;
+    }
+
+
+    .lending_faq .row > .image
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .lending_faq .accordion_item .head
+    {
+        padding-right: 44px;
+    }
+
+    .lending_faq .accordion_item .head .icon
+    {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .lending_faq .accordion_item .data
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+    .lending_faq .has_question
+    {
+        width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
+    }
+
+
+    .lending_faq .has_question .data
+    {
+        width: 100%;
+
+        order: 2;
+    }
+
+
+    .lending_faq .has_question .title
+    {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+
+    .lending_faq .has_question .desc
+    {
+        font-size: 12px;
+        line-height: 18px;
+
+        margin-top: 16px;
+    }
+
+
+    .lending_faq .has_question .image
+    {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+
+    .lending_faq .has_question .wtahsapp_link
+    {
+        font-weight: 600;
+    }
+
+
+    .lending_faq .more a span
+    {
+        display: none;
+    }
+
+    .lending_faq .more a span + span
+    {
+        display: block;
+    }
+
+
+
+    /*---------------------------
+        Lending - Bottom text
+    ---------------------------*/
+    .lending_bottom_text .block_title
+    {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+
+    .lending_bottom_text .text_block
+    {
+        padding: 0;
+    }
+
+
+    .lending_bottom_text .spoler_btn
+    {
+        font-weight: 600;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -2957,76 +3796,97 @@
         display: none;
     }
 
-    .text_block_column{
+    .text_block_column
+    {
         display: block;
     }
 
-    .text_block_column .column{
+    .text_block_column .column
+    {
         width: 100%;
     }
 
-    .new_form{
+    .new_form
+    {
         flex-direction: column;
     }
 
-    .new_form .input{
+    .new_form .input
+    {
         width: 100%;
     }
-    .new_form .submit_btn{
+    .new_form .submit_btn
+    {
         margin-top: 16px;
     }
 
-    .wrap_new_form.full .wpcf7-form-control-wrap{
+    .wrap_new_form.full .wpcf7-form-control-wrap
+    {
         width: 100%;
     }
 
-    .squads{
-        gap:24px;
+    .squads
+    {
+        gap: 24px;
     }
 
-    .squads .squad{
+    .squads .squad
+    {
         max-width: 100%;
         padding: 24px;
-        gap:16px;
-        aspect-ratio: 1/0.8;        
+
+        border-radius: 24px;
+
+        gap: 16px;
+        aspect-ratio: 1/.8;
+    }
+
+    .squads .squad .title
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .rectangls .rectangle
+    {
+        flex-direction: column;
+
+        padding: 24px;
+
         border-radius: 24px;
     }
 
-    .squads .squad .title{
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .rectangls .rectangle{
-        padding: 24px;
-        border-radius: 24px;        
-        flex-direction: column;
-    }
-
-    .rectangle_img{
+    .rectangle_img
+    {
         margin: 16px auto 0;
     }
 
-    .rectangle_wrap{
-        gap:16px;
+    .rectangle_wrap
+    {
+        gap: 16px;
     }
 
-    .rectangls .rectangle .title{
+    .rectangls .rectangle .title
+    {
         font-size: 16px;
         line-height: 24px;
     }
 
-    .rectangle_number{
+    .rectangle_number
+    {
         position: initial;
     }
 
-    .squads_new{
-        gap:24px;
+    .squads_new
+    {
+        gap: 24px;
     }
 
-    .squads_new .squad_new{
-        padding: 24px;
+    .squads_new .squad_new
+    {
         max-width: calc(100% /2 - 12px);
+        padding: 24px;
+
         border-radius: 24px;;
     }
 }

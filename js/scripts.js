@@ -9,7 +9,6 @@ headerWrap = document.querySelector('.header_wrap')
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '270' == event.detail.contactFormId ) {
 		    Fancybox.close()
@@ -265,9 +264,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 						$(swiper.$el).find('.count .total').text(totalSlides)
 
-						if(totalSlides==1)
-						{
-							$(".reviews .controls .swiper-button-prev, .reviews .controls .swiper-button-next, .reviews .controls .count").hide()
+						if(totalSlides == 1) {
+							$(swiper.$el).find('.controls').hide()
 						}
 					})
 				},
@@ -412,15 +410,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 						$(swiper.$el).find('.count .total').text(totalSlides)
 
-						if(totalSlides==1)
-						{
-							$(".articles .controls .swiper-button-prev, .articles .controls .swiper-button-next, .articles .controls .count").hide()
+						if(totalSlides == 1) {
+							$(swiper.$el).find('.controls .swiper-button-prev').hide()
 						}
 					})
 				},
 				activeIndexChange: swiper => {
 					setTimeout(() => $(swiper.$el).find('.count .current').text((swiper.snapIndex + 1)))
-
 				}
 			}
 		}
@@ -767,6 +763,189 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Лендинг - Что это - Карусель примеров
+	const lendingWhatItSliders = [],
+		lendingWhatIt = document.querySelectorAll('.lending_what_it .swiper')
+
+	lendingWhatIt.forEach(function (el, i) {
+		el.classList.add('lending_what_it_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			slidesPerView: 1,
+			spaceBetween: 24,
+			on: {
+				init: swiper => {
+					setTimeout(() => {
+						let totalSlides = swiper.snapGrid.length
+
+						$(swiper.$el).find('.count .total').text(totalSlides)
+
+						if(totalSlides == 1) {
+							$(swiper.$el).find('.count .controls').hide()
+						}
+					})
+				},
+				activeIndexChange: swiper => {
+					setTimeout(() => $(swiper.$el).find('.count .current').text((swiper.snapIndex + 1)))
+				}
+			}
+		}
+
+		lendingWhatItSliders.push(new Swiper('.lending_what_it_s' + i, options))
+	})
+
+
+
+	// Лендинг - У качественного сервиса есть лицо
+	const lendingDepartmentsSliders = [],
+		lendingDepartments = document.querySelectorAll('.lending_departments .swiper')
+
+	lendingDepartments.forEach(function (el, i) {
+		el.classList.add('lending_departments_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			autoHeight: true,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 12
+				},
+				768: {
+					slidesPerView: 1,
+					spaceBetween: 24
+				}
+			},
+			on: {
+				init: swiper => {
+					setTimeout(() => {
+						let totalSlides = swiper.slides.length - 2
+
+						$(swiper.$el).find('.count .total').text(totalSlides)
+					})
+				},
+				activeIndexChange: swiper => {
+					setTimeout(() => {
+						$(swiper.$el).find('.count .current').text((swiper.realIndex + 1))
+					})
+				}
+			}
+		}
+
+		lendingDepartmentsSliders.push(new Swiper('.lending_departments_s' + i, options))
+	})
+
+
+	// Лендинг - Документы
+	const lendingDocumentsSliders = [],
+		lendingDocumentsSlider = document.querySelectorAll('.lending_documents .swiper')
+
+	lendingDocumentsSlider.forEach(function (el, i) {
+		el.classList.add('lending_documents_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			autoHeight: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 12
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 48
+				},
+				1024: {
+					slidesPerView: 3,
+					spaceBetween: 48
+				}
+			},
+			on: {
+				init: swiper => {
+					setTimeout(() => {
+						let totalSlides = swiper.snapGrid.length
+
+						$(swiper.$el).find('.count .total').text(totalSlides)
+
+						if(totalSlides == 1) {
+							$(swiper.$el).find('.count .controls').hide()
+						}
+					})
+				},
+				activeIndexChange: swiper => {
+					setTimeout(() => $(swiper.$el).find('.count .current').text((swiper.snapIndex + 1)))
+				}
+			}
+		}
+
+		lendingDocumentsSliders.push(new Swiper('.lending_documents_s' + i, options))
+	})
+
+
 	// Табы
 	var locationHash = window.location.hash
 
@@ -784,6 +963,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			$(this).addClass('active')
 			$activeTabContent.addClass('active')
+
+			$parent.find('.tabs').animate({ scrollLeft: $parent.find('.tabs').scrollLeft() + $(this).position().left - 24 }, 300)
 		}
 	})
 
@@ -807,7 +988,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.responsive_menu').responsiveMenu({
 		containerClass: 'main_menu',
 		itemClass: 'item',
-		linkText: '<svg class="icon"><use xlink:href="https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_menu"></use></svg>'
+		// linkText: '<svg class="icon"><use xlink:href="https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_menu"></use></svg>'
 	})
 
 	$('header .responsive_menu').mouseleave(function() {
@@ -827,27 +1008,29 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 		e.preventDefault();
 	})
-	const clipboard = new ClipboardJS('header .contacts .time a')
 
-	clipboard.on('success', (e) => {
-		$("html").addClass("copied");
 
-		$("html").mousemove(function(y){
-			$(".time").find('.info').css({
-				left: y.clientX+20,
-				top: y.clientY+20
-			})
-		})
+	// const clipboard = new ClipboardJS('header .contacts .time a')
 
-		$(".time").find('.info').addClass("show");
+	// clipboard.on('success', (e) => {
+	// 	$("html").addClass("copied");
 
-		setTimeout(() => {
-			$("html").removeClass('copied');
-			$(".time").find('.info').removeClass("show");
-			$( "html" ).off("mousemove");
-		}, 3000);
-		e.clearSelection()
-	})
+	// 	$("html").mousemove(function(y){
+	// 		$(".time").find('.info').css({
+	// 			left: y.clientX+20,
+	// 			top: y.clientY+20
+	// 		})
+	// 	})
+
+	// 	$(".time").find('.info').addClass("show");
+
+	// 	setTimeout(() => {
+	// 		$("html").removeClass('copied');
+	// 		$(".time").find('.info').removeClass("show");
+	// 		$( "html" ).off("mousemove");
+	// 	}, 3000);
+	// 	e.clearSelection()
+	// })
 
 
 	// Логотипы
@@ -1062,14 +1245,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Mode toggle
 	$('header .mode .btn').click(function(e) {
 		e.preventDefault()
-		if($(this).hasClass("dark"))
-		{
-			deleteCookie('dark');
-		}
-		else
-		{
-			setCookie('dark', '1', {'max-age': 360000});
-		}
+
+		// $(this).hasClass('dark')
+		// 	? deleteCookie('dark')
+		// 	: setCookie('dark', '1', {'max-age': 360000})
+
 		$(this).toggleClass('dark')
 		$('html').toggleClass('dark_theme')
 	})
@@ -1215,7 +1395,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).addClass('active')
 	})
 
-	$(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
+	// $(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
 
 	$(".menu-item-has-children .hide").removeClass("hide");
 
@@ -1245,6 +1425,19 @@ document.addEventListener('DOMContentLoaded', function () {
 			autoStart: false,
 		}
 	})
+
+
+	// Лендинг - Спойлер в тексте
+	$('.lending_bottom_text .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+		$(this).closest('.lending_bottom_text').find('.text_block').toggleClass('hide')
+	})
+
+
+	// Лендинг - Цены
+	$('.lending_prices .table').each((key, value) => lendingPricesHeight(value))
 })
 
 
@@ -1350,6 +1543,10 @@ window.addEventListener('resize', function () {
 
 		// Специалисты
 		initSpecialistsSliders()
+
+
+		// Лендинг - Цены
+		$('.lending_prices .table').each((key, value) => lendingPricesHeight(value))
 
 
 		// Моб. версия
@@ -1649,4 +1846,49 @@ for(var i in img)
     {
         return false;
     }
+}
+
+
+
+// Лендинг - Цены
+function lendingPricesHeight(table) {
+	$(table).find('.labels > *, .features > *').height('auto')
+
+	let tableFeatures = $(table).find('.features'),
+		tableLabels = $(table).find('.labels'),
+		sizes = new Object()
+
+	tableLabels.each(function () {
+		$(this).find('> *').each(function () {
+			if (sizes[$(this).index()]) {
+				if ($(this).outerHeight() > sizes[$(this).index()]) {
+					sizes[$(this).index()] = $(this).outerHeight()
+				}
+			} else {
+				sizes[$(this).index()] = $(this).outerHeight()
+			}
+		})
+	})
+
+	tableFeatures.each(function () {
+		$(this).find('> *').each(function () {
+			if (sizes[$(this).index()]) {
+				if ($(this).outerHeight() > sizes[$(this).index()]) {
+					sizes[$(this).index()] = $(this).outerHeight()
+				}
+			} else {
+				sizes[$(this).index()] = $(this).outerHeight()
+			}
+		})
+	})
+
+	$.each(sizes, (key, data) => {
+		tableLabels.each(function () {
+			$(this).find('> *').eq(key).innerHeight(data)
+		})
+
+		tableFeatures.each(function () {
+			$(this).find('> *').eq(key).innerHeight(data)
+		})
+	})
 }
