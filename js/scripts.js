@@ -9,6 +9,17 @@ headerWrap = document.querySelector('.header_wrap')
 
 
 document.addEventListener('DOMContentLoaded', function () {
+
+	if ($(window).width() > 768) {
+		$(".menu-item-has-children > a").addClass("sub_link");
+		let html_el = $('.new_sub_menu');
+		$('.new_sub_menu').remove()
+		$(".sub_menu").after(html_el);
+		$('.new_sub_menu').show();
+	}
+
+
+
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		if ( '270' == event.detail.contactFormId ) {
 		    Fancybox.close()
@@ -37,10 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Основной слайдер на главной
 	let mainSlider = document.querySelector('.main_slider .swiper')
+	let countSlidesMain = document.querySelectorAll('.main_slider .swiper-slide')
+
 
 	if (mainSlider) {
 		new Swiper('.main_slider .swiper', {
-			loop: true,
+			loop: countSlidesMain==1 ? true : false,
 			speed: 750,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -139,6 +152,44 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		stepsSliders.push(new Swiper('.steps_s' + i, options))
+	})
+
+
+	// Карусель в выпадающем меню
+	const subMenuSliders = [],
+		subMenus = document.querySelectorAll('header .main_menu .new_sub_menu .swiper')
+
+	subMenus.forEach(function (el, i) {
+		el.classList.add('new_sub_menu_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			spaceBetween: 20,
+			slidesPerView: 1,
+			autoplay: {
+				delay: 10000,
+				disableOnInteraction: false
+			}
+		}
+
+		subMenuSliders.push(new Swiper('.new_sub_menu_s' + i, options))
 	})
 
 
@@ -381,6 +432,11 @@ document.addEventListener('DOMContentLoaded', function () {
 				loadOnTransitionStart: true,
 				loadPrevNext: true
 			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -489,7 +545,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		el.classList.add('text_slider_s' + i)
 
 		let options = {
-			loop: true,
+			loop: false,
 			speed: 100,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -524,22 +580,22 @@ document.addEventListener('DOMContentLoaded', function () {
 					}
 				}
 			},
-			on: {
+			/*on: {
 				init: swiper => {
-					/*setTimeout(() => {
+					setTimeout(() => {
 						$(swiper.$el).find('.swiper-button-next, .swiper-button-prev').css(
 							'top', $(swiper.$el).find('img').outerHeight() * 0.5
 						)
-					})*/
+					})
 				},
 				resize: swiper => {
-					/*setTimeout(() => {
+					setTimeout(() => {
 						$(swiper.$el).find('.swiper-button-next, .swiper-button-prev').css(
 							'top', $(swiper.$el).find('img').outerHeight() * 0.5
 						)
-					})*/
+					})
 				}
-			}
+			}*/
 		}
 
 		textSliders.push(new Swiper('.text_slider_s' + i, options))
@@ -751,7 +807,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			centeredSlides: true,
 			speed: $(window).width() > 768 ? 5000 : 2500,
 			autoplay: {
-			  delay: 1
+				delay: 1
 			},
 			loop: true,
 			slidesPerView:'auto',
@@ -798,17 +854,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			on: {
 				init: swiper => {
 					setTimeout(() => {
-						let totalSlides = swiper.snapGrid.length
-
-						$(swiper.$el).find('.count .total').text(totalSlides)
-
-						if(totalSlides == 1) {
-							$(swiper.$el).find('.count .controls').hide()
-						}
+						$(swiper.el).find('.swiper-button-next, .swiper-button-prev').css(
+							'top', $(swiper.el).find('.thumb').outerHeight() * 0.5
+						)
 					})
 				},
-				activeIndexChange: swiper => {
-					setTimeout(() => $(swiper.$el).find('.count .current').text((swiper.snapIndex + 1)))
+				resize: swiper => {
+					setTimeout(() => {
+						$(swiper.el).find('.swiper-button-next, .swiper-button-prev').css(
+							'top', $(swiper.el).find('.thumb').outerHeight() * 0.5
+						)
+					})
 				}
 			}
 		}
@@ -828,7 +884,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let options = {
 			loop: true,
 			speed: 500,
-			autoHeight: true,
+			autoHeight: false,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
@@ -849,6 +905,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				clickable: true,
 				bulletActiveClass: 'active'
 			},
+			autoplay: {
+				delay: 10000,
+				disableOnInteraction: false
+			},
 			breakpoints: {
 				0: {
 					slidesPerView: 1,
@@ -860,6 +920,11 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			},
 			on: {
+				beforeInit: swiper => {
+					setTimeout(() => {
+						setHeight(swiper.el.querySelectorAll('.info'))
+					}, 1000);
+				},
 				init: swiper => {
 					setTimeout(() => {
 						let totalSlides = swiper.slides.length - 2
@@ -867,12 +932,19 @@ document.addEventListener('DOMContentLoaded', function () {
 						$(swiper.$el).find('.count .total').text(totalSlides)
 					})
 				},
+				resize: swiper => {
+					setTimeout(() => {
+						setHeight(swiper.el.querySelectorAll('.info'))
+					}, 1000);
+				},
 				activeIndexChange: swiper => {
 					setTimeout(() => {
 						$(swiper.$el).find('.count .current').text((swiper.realIndex + 1))
 					})
 				}
 			}
+
+
 		}
 
 		lendingDepartmentsSliders.push(new Swiper('.lending_departments_s' + i, options))
@@ -925,6 +997,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			},
 			on: {
+				beforeInit: swiper => {
+					setTimeout(() => {
+						setHeight(swiper.el.querySelectorAll('.name'))
+					}, 1);
+				},
+				resize: swiper => {
+					setTimeout(() => {
+						setHeight(swiper.el.querySelectorAll('.name'))
+					}, 1000);
+				},
 				init: swiper => {
 					setTimeout(() => {
 						let totalSlides = swiper.snapGrid.length
@@ -988,7 +1070,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.responsive_menu').responsiveMenu({
 		containerClass: 'main_menu',
 		itemClass: 'item',
-		// linkText: '<svg class="icon"><use xlink:href="https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_menu"></use></svg>'
+		linkText: '<svg class="icon"><use xlink:href="https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_menu"></use></svg>'
 	})
 
 	$('header .responsive_menu').mouseleave(function() {
@@ -1010,35 +1092,44 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// const clipboard = new ClipboardJS('header .contacts .time a')
+	 const clipboard = new ClipboardJS('header .contacts .time a')
 
-	// clipboard.on('success', (e) => {
-	// 	$("html").addClass("copied");
+	 clipboard.on('success', (e) => {
+	 	$("html").addClass("copied");
 
-	// 	$("html").mousemove(function(y){
-	// 		$(".time").find('.info').css({
-	// 			left: y.clientX+20,
-	// 			top: y.clientY+20
-	// 		})
-	// 	})
+	 	$("html").mousemove(function(y){
+	 		$(".time").find('.info').css({
+	 			left: y.clientX+20,
+	 			top: y.clientY+20
+	 		})
+	 	})
 
-	// 	$(".time").find('.info').addClass("show");
+	 	$(".time").find('.info').addClass("show");
 
-	// 	setTimeout(() => {
-	// 		$("html").removeClass('copied');
-	// 		$(".time").find('.info').removeClass("show");
-	// 		$( "html" ).off("mousemove");
-	// 	}, 3000);
-	// 	e.clearSelection()
-	// })
+	 	setTimeout(() => {
+	 		$("html").removeClass('copied');
+	 		$(".time").find('.info').removeClass("show");
+	 		$( "html" ).off("mousemove");
+	 	}, 3000);
+	 	e.clearSelection()
+	 })
 
 
 	// Логотипы
 	$('.logos .item').mousemove(function(e){
-		$(this).find('.info').css({
-			left: e.offsetX,
-			top: e.offsetY
-		})
+		if ($(window).scrollTop() + $(window).outerHeight() < $(this).offset().top + $(this).outerHeight() + $(this).find('.info').outerHeight()) {
+			$(this).find('.info').css({
+				left: e.offsetX,
+				top: 'auto',
+				bottom: (e.offsetY - $(this).outerHeight()) * -1
+			})
+		} else {
+			$(this).find('.info').css({
+				left: e.offsetX,
+				bottom: 'auto',
+				top: e.offsetY
+			})
+		}
 	})
 
 	$('.logos .item').hover(function(e){
@@ -1246,17 +1337,67 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('header .mode .btn').click(function(e) {
 		e.preventDefault()
 
-		// $(this).hasClass('dark')
-		// 	? deleteCookie('dark')
-		// 	: setCookie('dark', '1', {'max-age': 360000})
+		$(this).hasClass('dark')
+			? deleteCookie('dark')
+			: setCookie('dark', '1', {'max-age': 360000})
 
 		$(this).toggleClass('dark')
 		$('html').toggleClass('dark_theme')
 	})
 
 
+	// Выпадающее меню
+	if ($(window).width() > 767) {
+		$('header .responsive_menu > .item > a.sub_link').mouseenter(function() {
+			$('.overlay').fadeIn(400)
+		})
+
+		$('header .responsive_menu > .item').mouseleave(function() {
+			$('.overlay').fadeOut(400)
+		})
+	}
+
+
+	// Проверка наличия скролла
+	$('header .main_menu .new_sub_menu .categories .scroll').prop('scrollHeight') > $('header .main_menu .new_sub_menu .categories .scroll').height()
+		? $('header .main_menu .new_sub_menu .categories .up_down_btn').fadeIn(300)
+		: $('header .main_menu .new_sub_menu .categories .up_down_btn').hide()
+
+
+	$('header .main_menu .new_sub_menu .categories .up_down_btn').click(function(e) {
+		e.preventDefault()
+
+		let scroll = $(this).closest('.categories').find('.scroll')
+
+		if ($(this).hasClass('up')) {
+			$(this).removeClass('up')
+
+			scroll.animate({ scrollTop: scroll.outerHeight() }, 500)
+		} else {
+			$(this).addClass('up')
+
+			scroll.animate({ scrollTop: 0 }, 500)
+		}
+	})
+
+	$('header .main_menu .new_sub_menu .categories .scroll').scroll(function() {
+		let scroll = $(this),
+			btn = $(this).closest('.categories').find('.up_down_btn')
+
+		// Проверяем, достиг ли скролл верха
+		if (scroll.scrollTop() === 0) {
+			btn.addClass('up')
+		}
+
+		// Проверяем, достиг ли скролл конца
+		if (scroll.scrollTop() + scroll.innerHeight() >= scroll[0].scrollHeight) {
+			btn.removeClass('up')
+		}
+	})
+
+
 	if (is_touch_device() && $(window).width() > 767) {
-		const subMenus = document.querySelectorAll('header .main_menu .sub_menu')
+		const subMenus = document.querySelectorAll('header .main_menu .new_sub_menu')
 
 		// Подменю на тач скрине
 		$('header .main_menu .item > a.sub_link').addClass('touch_link')
@@ -1285,8 +1426,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
-
-
 	// Отправка форм
 	$('.custom_submit').submit(function(e) {
 		e.preventDefault()
@@ -1310,6 +1449,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Фиксация блока
 	$('.sticky').stick_in_parent({
 		offset_top: header.clientHeight + 24
+	}).on('sticky_kit:bottom', e => {
+		e.target.classList.add('on_bottom')
+	}).on('sticky_kit:unbottom', e => {
+		e.target.classList.remove('on_bottom')
+	})
+
+	$('.sticky2').stick_in_parent({
+		offset_top: header.clientHeight
 	})
 
 
@@ -1339,7 +1486,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).addClass('active')
-		$('.tags > *.hide').removeClass('hide')
+		$('.tags .hide').removeClass('hide')
 	})
 
 
@@ -1395,29 +1542,41 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).addClass('active')
 	})
 
-	// $(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
+	$(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
+
+	$(".responsive_menu .sub_menu .item.menu-item-has-children > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
 
 	$(".menu-item-has-children .hide").removeClass("hide");
 
 	$(".sub_menu").wrapInner("<div class='row'></div>").wrapInner("<div class='cont'></div>");
 
 
-	if (is_touch_device() && $(window).width() < 767) {
-		$(".menu-item-has-children > a").click(function (e) {
+	if (is_touch_device()) {
+		$('body').on('click', '.menu-item-has-children > a', function(e) {
+		//$(".menu-item-has-children > a").click(function (e) {
 			e.preventDefault();
 			$(this).next().addClass("show");
 		});
 
-		$("header .main_menu .sub_menu .row").prepend("<a class='back_menu'><svg class='icon hide'><use xlink:href='https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_arr_ver'></use></svg>Все услуги</a>")
+		$("header .main_menu .level-0 > .sub_menu > .cont > .row").prepend("<a class='back_menu js-menu-back'><svg class='icon hide'><use xlink:href='https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_arr_ver'></use></svg>Назад</a>")
 
-		$('body').on('click', '.back_menu', function (e) {
+		$("header .main_menu .sub_menu .sub_menu .row").prepend("<a class='back_menu js-menu-back-sub'><svg class='icon hide'><use xlink:href='https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_arr_ver'></use></svg>Все услуги</a>")
+
+
+
+		$('body').on('click', '.js-menu-back', function (e) {
 	    	e.preventDefault()
 			$(".sub_menu").removeClass("show");
 		});
+
+		$('body').on('click', '.js-menu-back-sub', function (e) {
+	    	e.preventDefault()
+			$(".sub_menu .sub_menu").removeClass("show");
+		});
 	}
 
-	$(".text_block figure.wp-block-image a").append('<div class="zoom"><svg><use xlink:href="https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_zoom"></use></svg></div>');
-    Fancybox.bind('.text_block figure.wp-block-image a', {
+	/*$(".text_block figure.wp-block-image a, .text_block .wp-block-image figure a").append('<div class="zoom"><svg><use xlink:href="https://replanmos.ru/wp-content/themes/raten/images/sprite.svg#ic_zoom"></use></svg></div>');
+    Fancybox.bind('.text_block figure.wp-block-image a, .text_block .wp-block-image figure a', {
 		Image: {
 			zoom: false,
 		},
@@ -1432,11 +1591,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).toggleClass('active')
-		$(this).closest('.lending_bottom_text').find('.text_block').toggleClass('hide')
+		$(this).closest('.lending_bottom_text').find('.text_block:nth-child(3)').toggleClass('hide')
 	})
 
 
 	// Лендинг - Цены
+	$('.lending_prices .table').each((key, value) => lendingPricesHeight(value))*/
+
 	$('.lending_prices .table').each((key, value) => lendingPricesHeight(value))
 })
 
@@ -1449,9 +1610,9 @@ window.addEventListener('load', () => {
 
 	headerWrap.style.height = header.clientHeight + 'px'
 
-	headerInit && window.scrollY > 0
+	/*headerInit && window.scrollY > 0
 		? header.classList.add('fixed')
-		: header.classList.remove('fixed')
+		: header.classList.remove('fixed')*/
 
 
 	// Проекты - Теги
@@ -1471,9 +1632,9 @@ window.addEventListener('load', () => {
 
 window.addEventListener('scroll', function () {
 	// Fix. header
-	typeof headerInit !== 'undefined' && headerInit && window.scrollY > 0
+	/*typeof headerInit !== 'undefined' && headerInit && window.scrollY > 0
 		? header.classList.add('fixed')
-		: header.classList.remove('fixed')
+		: header.classList.remove('fixed')*/
 
 	typeof headerInit !== 'undefined' && headerInit && window.scrollY > 0 && windowOffsetTop > window.pageYOffset
 		? header.classList.add('show')
@@ -1517,8 +1678,14 @@ window.addEventListener('resize', function () {
 		WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
 
 
+		// Проверка наличия скролла
+		$('header .main_menu .new_sub_menu .categories .scroll').prop('scrollHeight') > $('header .main_menu .new_sub_menu .categories .scroll').height()
+			? $('header .main_menu .new_sub_menu .categories .up_down_btn').fadeIn(300)
+			: $('header .main_menu .new_sub_menu .categories .up_down_btn').hide()
+
+
 		// Fix. header
-		headerInit = false
+		/*headerInit = false
 
 		setTimeout(() => {
 			headerInit = true
@@ -1529,7 +1696,7 @@ window.addEventListener('resize', function () {
 			headerInit && window.scrollY > 0
 				? header.classList.add('fixed')
 				: header.classList.remove('fixed')
-		}, 100)
+		}, 100)*/
 
 
 		// Проекты - Теги

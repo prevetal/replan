@@ -102,9 +102,44 @@
         width: calc(100% - 288px);
     }
 
+
     header .main_menu .item + .item
     {
         margin-left: 24px;
+    }
+
+
+    header .main_menu .new_sub_menu
+    {
+        padding-bottom: 24px;
+    }
+
+
+    header .main_menu .new_sub_menu .categories
+    {
+        width: 100%;
+    }
+
+
+    header .main_menu .new_sub_menu .categories .scroll
+    {
+        max-height: 480px;
+    }
+
+
+    header .main_menu .new_sub_menu .categories .up_down_btn
+    {
+        bottom: -20px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+
+    header .main_menu .new_sub_menu .slider
+    {
+        width: 100%;
+        margin-top: 48px;
     }
 
 
@@ -867,9 +902,10 @@
 
     .specialists .person .slogan
     {
-        color: #f32100;
         font-size: 15px;
         line-height: 21px;
+
+        color: #f32100;
     }
 
 
@@ -889,10 +925,10 @@
 
     .specialists .person .email a
     {
-        color: #008ff3;
-
         margin-right: auto;
         margin-left: auto;
+
+        color: #008ff3;
     }
 
 
@@ -1148,21 +1184,20 @@
     ------------------*/
     .article_info aside
     {
+        order: 2;
+
         margin-top: 40px;
         margin-bottom: 0;
-
-        order: 2;
     }
 
 
     .article_info .author
     {
         display: flex;
-
-        justify-content: space-between;
-        align-items: center;
         align-content: center;
+        align-items: center;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
 
@@ -1194,11 +1229,10 @@
     .article_info .author .stats > *
     {
         display: flex;
-
-        justify-content: flex-start;
-        align-items: center;
         align-content: center;
+        align-items: center;
         flex-wrap: wrap;
+        justify-content: flex-start;
     }
 
 
@@ -1211,8 +1245,8 @@
 
     .article_info .article_title
     {
-        font-size: 60px;
-        line-height: 68px;
+        font-size: 40px;
+        line-height: 48px;
     }
 
 
@@ -1628,9 +1662,9 @@
 
     .project_info .data
     {
-        width: 100%;
-
         order: 2;
+
+        width: 100%;
     }
 
 
@@ -1694,14 +1728,13 @@
     .project_data .features
     {
         display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
 
         margin-bottom: -24px;
         margin-left: -24px;
-
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-wrap: wrap;
     }
 
     .project_data .features > *
@@ -1911,13 +1944,6 @@
     }
 
 
-    .lending_what_it .examples .controls .count
-    {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-
 
     /*---------------------------
         Lending - Get answers
@@ -2004,17 +2030,16 @@
     .lending_consequences .item
     {
         display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         padding: 0;
 
         border-radius: 0;
         background: none;
         box-shadow: none;
-
-        justify-content: space-between;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-wrap: wrap;
     }
 
 
@@ -2027,10 +2052,10 @@
 
     .lending_consequences .thumb + *
     {
+        align-self: center;
+
         width: calc(100% - 100px);
         margin-left: auto;
-
-        align-self: center;
     }
 
 
@@ -2081,10 +2106,11 @@
 
     .lending_prices .tariffs .row
     {
-        margin-bottom: -24px;
-
         flex-wrap: wrap;
+
+        margin-bottom: -24px;
     }
+
 
     .lending_prices .tariffs .row > *
     {
@@ -2092,7 +2118,6 @@
         margin-bottom: 24px;
         margin-left: 24px;
     }
-
 
     .lending_prices .tariffs .row > *.image
     {
@@ -2396,5 +2421,20 @@
     .dark_theme .specialists
     {
         color: #0e1821;
+    }
+
+    .documents_new .data
+    {
+        width: 464px;
+    }
+
+    .documents_new
+    {
+        gap: 20px;
+    }
+
+    .documents_new .image
+    {
+        width: calc(100% - 484px);
     }
 }

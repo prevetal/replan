@@ -290,20 +290,31 @@
     }
 
 
-    header .main_menu .sub_menu
-    {
-        left: -24px;
-
-        width: 100vw;
-        margin-top: 16px;
-    }
-
-
     header .main_menu .dropdown
     {
         right: -24px;
 
         padding: 24px;
+    }
+
+
+    header .main_menu .new_sub_menu
+    {
+        padding: 24px 24px 48px;
+
+        border-radius: 24px;
+    }
+
+
+    header .main_menu .new_sub_menu .categories .row
+    {
+        margin-left: -40px;
+    }
+
+    header .main_menu .new_sub_menu .categories .row > *
+    {
+        width: calc(50% - 40px);
+        margin-left: 40px;
     }
 
 
@@ -955,7 +966,6 @@
 
     .logos .item .info
     {
-        color: #0e1821;
         font-size: 12px;
         line-height: 18px;
 
@@ -968,6 +978,7 @@
         width: 100%;
         margin: 0;
 
+        color: #0e1821;
         border-radius: 24px;
         background: #e9f8f8;
         box-shadow: 1px 2px 4px rgba(14, 24, 33, .05);
@@ -1543,8 +1554,8 @@
 
     .article_info .article_title
     {
-        font-size: 68px;
-        line-height: 76px;
+        font-size: 40px;
+        line-height: 48px;
     }
 
 
@@ -1573,7 +1584,6 @@
     .article_info .tags a:hover
     {
         color: #0e1845;
-
         background: #e9f8f8;
     }
 
@@ -1627,7 +1637,6 @@
     .search_info .tags a:hover
     {
         color: #0e1845;
-
         background: #e9f8f8;
     }
 
@@ -1850,7 +1859,6 @@
     .forum .tags a:hover
     {
         color: #0e1845;
-
         background: #e9f8f8;
     }
 
@@ -2118,10 +2126,10 @@
 
     .lending_first_section .image
     {
+        align-self: center;
+
         width: calc(100% - 472px);
         margin-right: -72px;
-
-        align-self: center;
     }
 
 
@@ -2263,12 +2271,12 @@
     }
 
 
-    .lending_what_it .examples .controls .count
+    .lending_what_it .examples .swiper-horizontal > .swiper-pagination-bullets,
+    .lending_what_it .examples .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .lending_what_it .examples .swiper-pagination-custom,
+    .lending_what_it .examples .swiper-pagination-fraction
     {
-        font-size: 17px;
-        line-height: 23px;
-
-        width: 80px;
+        top: 272px;
     }
 
 
@@ -2476,6 +2484,12 @@
         margin-left: 24px;
     }
 
+    .lending_prices .tariffs .row > *.image
+    {
+        width: calc(66.666% - 24px);
+        min-width: calc(66.666% - 24px);
+    }
+
 
     .lending_prices .tariff
     {
@@ -2542,42 +2556,6 @@
     }
 
 
-
-    .lending_prices .table .row
-    {
-        margin-bottom: -40px;
-        margin-left: -24px;
-    }
-
-
-    .lending_prices .table .row > *
-    {
-        width: calc(100% - 24px);
-        margin-bottom: 40px;
-        margin-left: 24px;
-    }
-
-
-    .lending_prices .table .row > *.labels
-    {
-        width: calc(25% - 24px);
-        min-width: calc(25% - 24px);
-    }
-
-    .lending_prices .table .row > *.labels.big
-    {
-        width: calc(33.333% - 24px);
-        min-width: calc(33.333% - 24px);
-    }
-
-
-    .lending_prices .tariffs .row > *.image
-    {
-        width: calc(66.666% - 24px);
-        min-width: calc(66.666% - 24px);
-    }
-
-
     .lending_prices .table .labels
     {
         padding-bottom: 120px;
@@ -2590,9 +2568,27 @@
     }
 
 
+    .lending_prices .table .cols .fixed_bg
+    {
+        height: 123px;
+    }
+
+
     .lending_prices .table .col
     {
         padding: 24px;
+    }
+
+    .lending_prices .table .col + .col
+    {
+        margin-left: 24px;
+    }
+
+
+    .lending_prices .table .head
+    {
+        height: 123px;
+        margin: -24px;
     }
 
 
@@ -2619,7 +2615,7 @@
 
     .lending_prices .table .features
     {
-        padding-top: 40px;
+        padding-top: 48px;
     }
 
 
@@ -2627,11 +2623,6 @@
     {
         margin-top: 24px;
         padding-top: 25px;
-    }
-
-    .lending_prices .table .features > * + *:before
-    {
-        width: calc(100% + 72px);
     }
 
 

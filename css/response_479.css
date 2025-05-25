@@ -345,6 +345,11 @@
         top: 11px;
     }
 
+    .text_block ol ul li:before
+    {
+        top: 0;
+    }
+
 
 
     /*-----------------
@@ -508,12 +513,12 @@
 
     .documents .document .thumb
     {
+        align-self: center;
+
         width: 56px;
         height: 56px;
 
         border-radius: 16px;
-
-        align-self: center;
     }
 
     .documents .document .thumb + *
@@ -869,14 +874,13 @@
     .projects .items > *
     {
         display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
 
         width: 100%;
         margin-left: 0;
-
-        justify-content: flex-start;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
     }
 
 
@@ -1047,10 +1051,10 @@
     ---------*/
     .faq .form
     {
+        order: 2;
+
         width: 100%;
         margin-top: 40px;
-
-        order: 2;
     }
 
 
@@ -1445,10 +1449,10 @@
 
     .project_info .file img
     {
+        align-self: flex-start;
+
         width: 24px;
         height: 30px;
-
-        align-self: flex-start;
     }
 
     .project_info .file span
@@ -1619,6 +1623,47 @@
     .lending_what_it .examples
     {
         padding-bottom: 24px;
+    }
+
+
+    .lending_what_it .examples .swiper-button-next,
+    .lending_what_it .examples .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+    .lending_what_it .examples .thumb
+    {
+        justify-content: flex-start;
+
+        height: 169px;
+        padding: 0;
+    }
+
+
+    .lending_what_it .examples .name
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        margin-top: 16px;
+    }
+
+
+    .lending_what_it .examples .desc
+    {
+        font-size: 10px;
+        line-height: 16px;
+
+        margin-top: 16px;
+    }
+
+
+    .lending_what_it .examples .link a
+    {
+        font-size: 14px;
+        line-height: 16px;
     }
 
 
@@ -1830,43 +1875,43 @@
 
     footer .services
     {
-        margin-top: 24px;
-
         order: 2;
+
+        margin-top: 24px;
     }
 
 
     footer .logo + .line
     {
+        order: 3;
+
         margin-top: 24px;
         margin-bottom: 0;
-
-        order: 3;
     }
 
 
     footer .logo
     {
+        order: 4;
+
         margin-top: 24px;
         margin-bottom: 0;
-
-        order: 4;
     }
 
 
     footer .location
     {
-        margin-top: 24px;
-
         order: 5;
+
+        margin-top: 24px;
     }
 
 
     footer .contacts
     {
-        margin-top: 24px;
-
         order: 6;
+
+        margin-top: 24px;
     }
 
 
@@ -1933,12 +1978,13 @@
 
     .asnwer_modal_title
     {
-        color: #0e1821;
         font-size: 16px;
         line-height: 24px;
 
         margin-top: 8px;
         margin-bottom: 16px;
+
+        color: #0e1821;
     }
     .answer_modal_text
     {
@@ -1966,5 +2012,27 @@
     .squads_new .squad_new
     {
         max-width: 100%;
+    }
+
+    .document_new
+    {
+        margin-top: -12px;
+    }
+
+
+
+    .lending_documents .notice
+    {
+        margin-top: 24px;
+    }
+
+    header .main_menu .item:hover > a .icon
+    {
+        transform: rotate(-90deg);
+    }
+
+    header .main_menu .item:hover > a
+    {
+        color: currentColor;
     }
 }
