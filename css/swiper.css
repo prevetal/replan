@@ -1,7 +1,7 @@
 .swiper-button-next,
 .swiper-button-prev
 {
-    top: 0;
+    top: auto;
     bottom: 0;
 
     display: flex;
@@ -10,26 +10,31 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 40px;
-    height: 40px;
-    margin: auto;
+    width: 36px;
+    height: 36px;
+    margin: 0;
 
     transition: .2s linear;
     transform: none;
 
-    opacity: .7;
-    color: #363636;
+    opacity: 1;
+    color: var(--text_color);
+    border: 1.5px solid;
+    border-radius: 12px;
 }
+
 
 .swiper-button-prev
 {
-    left: 0;
+    left: 24px;
 }
 
 .swiper-button-next
 {
-    right: 0;
+    right: auto;
+    left: 68px;
 }
+
 
 .swiper-button-next:after,
 .swiper-button-prev:after
@@ -43,20 +48,14 @@
 {
     display: block;
 
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
 }
+
 
 .swiper-button-next .icon
 {
     transform: rotate(180deg);
-}
-
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover
-{
-    opacity: 1;
 }
 
 
@@ -91,53 +90,86 @@
 .swiper-pagination-fraction
 {
     position: absolute;
-    bottom: -46px;
+    right: 0;
+    bottom: -36px;
     left: 0;
 
     display: flex;
     align-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
 
-    width: 100%;
-    height: 8px;
+    width: 1200px;
+    max-width: 100%;
+    height: 20px;
+    margin: 0 auto;
+    padding: 8px 0;
 
     pointer-events: none;
+
+    gap: 8px;
 }
 
 .swiper-pagination-bullet
 {
+    position: relative;
+
     display: block;
 
-    width: 8px;
-    height: 8px;
+    width: 100%;
+    height: 4px;
 
-    transition: .2s linear;
     pointer-events: auto;
 
-    opacity: .3;
-    border-radius: 50%;
-    background: #0e1821;
-}
-
-.swiper-pagination-bullet + .swiper-pagination-bullet
-{
-    margin-left: 16px !important;
-}
-
-.swiper-pagination-bullet:hover,
-.swiper-pagination-bullet.active
-{
     opacity: 1;
+    border-radius: 0;
+    background: rgba(191, 178, 255, .3);
 }
+
+
+.swiper-pagination-bullet:before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 0;
+    height: 100%;
+
+    content: '';
+
+    opacity: .7;
+    background: #bfb2ff;
+}
+
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
 {
     margin: 0;
 }
 
-.swiper[dir='rtl'] .swiper-pagination-bullet + .swiper-pagination-bullet
+
+.swiper-horizontal > .swiper-scrollbar
 {
-    margin-right: 16px !important;
+    position: absolute;
+    z-index: 50;
+    right: 24px;
+    bottom: 16px;
+    left: auto;
+
+    width: calc(100% - 152px);
+    height: 4px;
+
+    border-radius: 4px;
+    background: rgba(148, 148, 148, .1);
+}
+
+
+.swiper-scrollbar-drag
+{
+    border-radius: 4px;
+    background: #fff;
 }

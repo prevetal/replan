@@ -3,22 +3,9 @@
     /*-------------------
         Global styles
     -------------------*/
-    :root
-    {
-        --font_size_title: 25px;
-        --font_size_title_small: 20px;
-    }
-
-
-    /* body
-    {
-        font-weight: 600;
-    } */
-
-
     .main
     {
-        padding-top: 56px;
+        padding-top: 60px;
     }
 
 
@@ -40,34 +27,31 @@
 
 
 
+    /*--------------
+        All link
+    --------------*/
+    .all_link
+    {
+        margin-top: 24px;
+
+        gap: 8px;
+    }
+
+
+    .all_link .more_btn,
+    .all_link a
+    {
+        font-weight: 600;
+    }
+
+
+
     /*----------
         Tabs
     ----------*/
     .tab_content.active
     {
         padding: 24px;
-    }
-
-
-
-    /*--------------
-        All link
-    --------------*/
-    .all_link
-    {
-        margin-top: 32px;
-    }
-
-
-    .all_link a span
-    {
-        padding: 20px;
-    }
-
-
-    .all_link a:hover span
-    {
-        padding: 19px;
     }
 
 
@@ -83,9 +67,10 @@
 
     .accordion_item .head .title
     {
-        font-size: 16px;
         font-weight: 600;
         line-height: 24px;
+
+        color: #008ff3;
     }
 
 
@@ -176,19 +161,37 @@
     /*----------------
         Block head
     ----------------*/
+    .block_head,
+    .block_head.small_m
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .block_head.big_m
+    {
+        margin-bottom: 36px;
+    }
+
+
     .block_head .title
     {
+        font-size: var(--font_size_title_small);
         font-weight: 600;
     }
 
 
     .block_head .sub_title
     {
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 27px;
-
         margin-top: 24px;
+
+        letter-spacing: -.32px;
+    }
+
+
+    .block_head .sub_title.mob_hide
+    {
+        display: none;
     }
 
 
@@ -352,16 +355,42 @@
 
 
 
-    /*-----------------
-        Main slider
-    -----------------*/
-    .main_slider .cont
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .checkbox
     {
-        padding-top: 32px;
-        padding-bottom: 88px;
+        font-size: 10px;
+
+        min-height: 20px;
+        padding-left: 28px;
     }
 
 
+    .form .checkbox .check
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .form .checkbox .check .icon
+    {
+        width: 12px;
+        height: 9px;
+    }
+
+
+    .form .agree
+    {
+        margin-top: 12px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
     .main_slider .data
     {
         text-align: left;
@@ -370,46 +399,132 @@
 
     .main_slider .title
     {
-        font-size: 34px;
+        font-size: var(--font_size_title);
         font-weight: 600;
-        line-height: 42px;
+        line-height: calc(100% + 8px);
     }
 
 
     .main_slider .sub_title
     {
-        font-size: 18px;
+        font-size: 10px;
         font-weight: 600;
-        line-height: 24px;
+        line-height: calc(100% + 4px);
+
+        margin-top: 12px;
+        padding: 2px 12px;
+    }
+
+
+    .main_slider .desc
+    {
+        line-height: calc(100% + 6px);
+
+        width: 100%;
     }
 
 
     .main_slider .btn
     {
-        margin-top: 268px;
+        font-weight: 600;
+
+        width: 100%;
     }
 
 
     .main_slider .img
     {
-        height: 216px;
+        width: calc(100% + 48px);
+        margin: 0 -24px 22px;
+    }
+
+
+    .main_slider .swiper-horizontal > .swiper-pagination-bullets,
+    .main_slider .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .main_slider .swiper-pagination-custom,
+    .main_slider .swiper-pagination-fraction
+    {
+        top: 8px;
+
+        height: 4px;
+    }
+
+
+    .main_slider .swiper-pagination-bullet
+    {
+        background: rgba(0, 143, 243, .1);
+    }
+
+
+    .main_slider .swiper-pagination-bullet:before
+    {
+        background: #008ff3;
     }
 
 
 
-    .main_slider .bg
+    /*-----------------
+        About block
+    -----------------*/
+    .about_block .action
     {
-        top: 120px;
+        order: 2;
+
+        margin-top: 24px;
+        padding: 31px 23px;
+
+        gap: 16px;
+    }
+
+
+    .about_block .action .title
+    {
+        line-height: calc(100% + 8px);
+
+        text-align-last: left;
+    }
+
+
+    .about_block .action .link a
+    {
+        font-size: 16px;
     }
 
 
 
-    /*-----------
-        Steps
-    -----------*/
-    .steps .item .desc
+    /*--------------
+        Services
+    --------------*/
+    .services .service
     {
-        font-weight: 500;
+        padding: 23px;
+    }
+
+
+    .services .service .name
+    {
+        font-size: 16px;
+    }
+
+
+    .services .service .link
+    {
+        top: 20px;
+        right: 20px;
+    }
+
+
+    .services .service .thumb
+    {
+        right: -60px;
+
+        height: 108px;
+    }
+
+
+    .services .all_link
+    {
+        display: none;
     }
 
 
@@ -417,40 +532,367 @@
     /*----------------
         Coordinate
     ----------------*/
-    .coordinate .item + .item
+    .coordinate .items
     {
-        margin-top: 32px;
+        gap: 36px;
     }
 
 
     .coordinate .item .title
     {
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 27px;
+        line-height: calc(100% + 12px);
     }
 
 
     .coordinate .item .desc
     {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 19px;
+        line-height: calc(100% + 4px);
 
-        margin-top: 8px;
+        margin-top: 4px;
     }
 
 
     .coordinate .item .image
     {
-        margin-top: 16px;
+        margin-top: 4px;
     }
 
 
-    .coordinate .subscribe
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .data
     {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        padding-top: 39px;
+    }
+
+
+    .action_block .info.small_w
+    {
+        width: 100%;
+
+        gap: 16px;
+    }
+
+
+    .action_block .title
+    {
+        line-height: calc(100% + 8px);
+    }
+
+
+    .action_block .desc
+    {
+        line-height: calc(100% + 4px);
+
+        gap: 4px;
+    }
+
+
+    .action_block .desc > *:before
+    {
+        top: 6px;
+    }
+
+
+    .action_block .image
+    {
+        height: 280px;
+    }
+
+
+
+    /*--------------
+        Problems
+    --------------*/
+    .problems .item
+    {
+        gap: 4px;
+    }
+
+
+    .problems .item .info
+    {
+        font-weight: 600;
+        line-height: calc(100% + 4px);
+    }
+
+
+    .problems .item .link .icon
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .problems .item .link span
+    {
+        display: none;
+    }
+
+
+    .problems .item .thumb
+    {
+        right: 23px;
+        bottom: 23px;
+
+        width: 128px;
+        height: 84px;
+    }
+
+
+
+    /*-----------------
+        Order block
+    -----------------*/
+    .order_block .data
+    {
+        padding: 23px;
+    }
+
+
+    .order_block .title
+    {
+        font-size: var(--font_size_title_small);
+        font-weight: 600;
+        line-height: calc(100% + 8px);
+    }
+
+
+    .order_block .desc
+    {
+        line-height: calc(100% + 4px);
+    }
+
+
+    .order_block .form .submit_btn,
+    .order_block .wtahsapp_link a
+    {
+        font-weight: 600;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .swiper
+    {
+        background: linear-gradient(0deg, rgba(191, 178, 255, .30) 0%, rgba(191, 178, 255, .30) 100%), #fff;
+    }
+
+
+    .certs .data
+    {
+        padding: 23px;
+    }
+
+
+    .certs .name
+    {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: calc(100% + 12px);
+    }
+
+
+    .certs .link
+    {
+        display: block;
+    }
+
+
+    .certs .desc
+    {
+        line-height: calc(100% + 4px);
+    }
+
+
+
+    /*-----------
+        Logos
+    -----------*/
+    .logos .item
+    {
+        height: auto;
+        min-height: 88px;
+    }
+
+
+    .logos .item:nth-child(3) ~ .item
+    {
+        display: none;
+    }
+
+
+    .logos .item .info
+    {
+        position: relative;
+
+        padding: 0;
+
+        transition: none;
+
+        color: var(--text_color);
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+    }
+
+
+    .logos .item .info .logo
+    {
+        height: 40px;
+    }
+
+
+    .logos .item .info .logo img
+    {
+        display: none;
+    }
+
+    .logos .item .info .logo img + img
+    {
+        display: block;
+    }
+
+
+    .logos .item:hover > img
+    {
+        display: none;
+    }
+
+
+    .logos .item:hover .info
+    {
+        z-index: 3;
+
+        display: block;
+    }
+
+
+    .logos .item:nth-child(3) ~ .item.show
+    {
+        display: block;
+    }
+
+
+    .logos .spoler_btn
+    {
+        display: flex;
+    }
+
+
+    .logos .bg
+    {
+        display: none;
+    }
+
+
+
+    /*---------------------
+        Quality service
+    ---------------------*/
+    .quality_service .thumbs
+    {
+        display: none;
+    }
+
+
+    .quality_service .swiper
+    {
+        overflow: visible !important;
+
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding-bottom: 32px;
+
+        border: none;
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .quality_service .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .quality_service .swiper-pagination
+    {
+        display: flex;
+    }
+
+
+    .quality_service .data
+    {
+        padding: 23px;
+
+        border: 1px solid #0ef3bf;
+        border-radius: 32px;
+        background: linear-gradient(76deg, rgba(14, 243, 191, .05) 21.51%, rgba(0, 143, 243, .05) 121.91%);
+    }
+
+
+    .quality_service .name
+    {
+        font-size: 16px;
+    }
+
+
+    .quality_service .desc
+    {
+        line-height: calc(100% + 4px);
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .swiper
+    {
+        padding-bottom: 32px;
+    }
+
+
+    .reviews .swiper-slide
+    {
+        width: calc(100vw - 48px);
+    }
+
+
+    .reviews .swiper-button-next,
+    .reviews .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+    .reviews .swiper-pagination
+    {
+        display: flex;
+    }
+
+
+    .reviews .review .desc
+    {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+
+    .reviews .all_link,
+    .reviews .vk_link
+    {
+        display: none;
     }
 
 
@@ -709,230 +1151,38 @@
 
 
     /*--------------
-        Headache
-    --------------*/
-    .headache .item > div
-    {
-        padding: 24px 24px 100px;
-    }
-
-
-    .headache .item .title
-    {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 26px;
-    }
-
-
-    .headache .item .items > *
-    {
-        font-weight: 500;
-    }
-
-
-
-    /*-----------
-        Logos
-    -----------*/
-    .logos .swiper-slide
-    {
-        width: calc(100vw - 48px);
-    }
-
-
-    .logos .item .info
-    {
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 16px;
-    }
-
-
-
-    /*------------
-        Prices
-    ------------*/
-    .prices .item
-    {
-        padding: 24px;
-    }
-
-    .prices .item .name,
-    .prices .item .price,
-    .prices .item:hover .price
-    {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 26px;
-    }
-
-
-
-    /*-----------------
-        Order block
-    -----------------*/
-    .order_block .data,
-    .order_block .data.margin
-    {
-        padding: 24px;
-    }
-
-
-    .order_block .title,
-    .order_block .info .title
-    {
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 38px;
-    }
-
-
-
-    /*-------------
-        Reviews
-    -------------*/
-    .reviews .swiper-slide
-    {
-        visibility: visible;
-
-        width: calc(100vw - 48px);
-
-        pointer-events: auto;
-
-        opacity: 1;
-    }
-
-
-    .reviews .review .name
-    {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 24px;
-    }
-
-
-    .reviews .review .desc
-    {
-        font-weight: 500;
-    }
-
-
-    .reviews .controls
-    {
-        margin-top: 32px;
-    }
-
-
-
-    /*-----------
-        Certs
-    -----------*/
-    .certs .swiper
-    {
-        margin-bottom: 32px;
-    }
-
-
-    .certs .data
-    {
-        padding: 24px;
-    }
-
-
-    .certs .name
-    {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-    }
-
-
-    .certs .desc
-    {
-        font-weight: 500;
-    }
-
-
-    .certs .thumb
-    {
-        width: 112px;
-        height: 148px;
-        margin-left: 0;
-    }
-
-
-
-    /*--------------
         Projects
     --------------*/
+    .projects .block_head .sub_title
+    {
+        margin-top: 12px;
+    }
+
+
     .projects .items
     {
+        margin-bottom: -24px;
         margin-left: 0;
     }
+
 
     .projects .items > *
     {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
         width: 100%;
+        margin-bottom: 24px;
         margin-left: 0;
     }
 
 
-    .projects .project .thumb
+    .projects .project .info
     {
-        width: 100%;
+        padding: 16px 24px;
     }
 
-
-    .projects .project .name
-    {
-        font-size: 16px;
-        line-height: 22px;
-
-        width: 100%;
-    }
 
     .projects .project .img
     {
-        border-radius: 16px;
-    }
-
-
-    .projects .project .duration
-    {
-        font-weight: 500;
-
-        /* opacity: .5; */
-    }
-
-    /* .projects .project .name + .duration
-    {
-        width: 100%;
-
-        align-items: flex-start;
-    } */
-
-
-    .projects .project .price
-    {
-        font-weight: 500;
-
-        margin-left: 20px;
-
-        opacity: .5;
-    }
-
-
-    .projects .project .link
-    {
-        width: 100%;
-        margin-top: 12px;
+        padding-bottom: 79.412%;
     }
 
 
@@ -999,6 +1249,12 @@
     /*---------------
         Subscribe
     ---------------*/
+    .subscribe .data
+    {
+        padding: 23px;
+    }
+
+
     .subscribe .title
     {
         font-weight: 600;
@@ -1007,7 +1263,13 @@
 
     .subscribe .desc
     {
-        font-weight: 500;
+        font-weight: 600;
+    }
+
+
+    .subscribe .form .submit_btn
+    {
+        height: 48px;
     }
 
 
@@ -1869,12 +2131,17 @@
 
     footer .menu
     {
+        font-size: 14px;
+        font-weight: 600;
+
         order: 1;
     }
 
 
     footer .services
     {
+        font-weight: 600;
+
         order: 2;
 
         margin-top: 24px;
@@ -1885,7 +2152,7 @@
     {
         order: 3;
 
-        margin-top: 24px;
+        margin-top: 20px;
         margin-bottom: 0;
     }
 
@@ -1903,7 +2170,25 @@
     {
         order: 5;
 
-        margin-top: 24px;
+        margin-top: 20px;
+    }
+
+
+    footer .location .label
+    {
+        display: none;
+    }
+
+
+    footer .location > * + *
+    {
+        margin: 0;
+    }
+
+
+    footer .location .choose_btn
+    {
+        margin-top: 16px;
     }
 
 
@@ -1911,7 +2196,7 @@
     {
         order: 6;
 
-        margin-top: 24px;
+        margin-top: 20px;
     }
 
 
@@ -1921,8 +2206,12 @@
     }
 
 
+    footer .callback_btn,
     footer .feedback_btn
     {
+        font-size: 14px;
+        font-weight: 600;
+
         width: 100%;
     }
 
@@ -1933,9 +2222,9 @@
     }
 
 
-    footer .bottom_links
+    footer .copyright
     {
-        margin-top: 24px;
+        line-height: 16px;
     }
 
 

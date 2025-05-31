@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (mainSlider) {
 		new Swiper('.main_slider .swiper', {
 			loop: countSlidesMain==1 ? true : false,
+			loopAdditionalSlides: 1,
 			speed: 750,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -66,92 +67,82 @@ document.addEventListener('DOMContentLoaded', function () {
 				clickable: true,
 				bulletActiveClass: 'active'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			autoplay: {
-				delay: 7000,
 				disableOnInteraction: false
 			},
 			on: {
 				init: swiper => {
 					setHeight(swiper.el.querySelectorAll('.data'))
+
+					$(swiper.el).find('.swiper-pagination-bullet').eq(swiper.realIndex).addClass('animate_first')
+
+					swiper.params.autoplay.delay = 5000
+					swiper.autoplay.start()
 				},
 				resize: swiper => {
 					setHeight(swiper.el.querySelectorAll('.data'))
-				}
+				},
+				beforeTransitionStart: swiper => setTimeout(() => {
+					$(swiper.el).find('.swiper-pagination-bullet').removeClass('animate_first animate')
+					$(swiper.el).find('.swiper-pagination-bullet').eq(swiper.realIndex).addClass('animate')
+				})
 			}
 		})
 	}
 
 
-	// Карусель 3 шага
-	const stepsSliders = [],
-		steps = document.querySelectorAll('.steps .swiper')
+	// Last articles
+	const lastArticlesSliders = [],
+		lastArticles = document.querySelectorAll('.last_articles .swiper')
 
-	steps.forEach(function (el, i) {
-		el.classList.add('steps_s' + i)
+	lastArticles.forEach(function (el, i) {
+		el.classList.add('last_articles_s' + i)
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
 			},
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'bullets',
-				clickable: true,
-				bulletActiveClass: 'active'
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
 			},
+			slidesPerView: 'auto',
 			breakpoints: {
 				0: {
-					spaceBetween: 16,
-					slidesPerView: 'auto',
-				},
-				480: {
-					spaceBetween: 24,
-					slidesPerView: 'auto',
+					slidesPerGroup: 1,
+					spaceBetween: 8
 				},
 				1024: {
-					spaceBetween: 24,
-					slidesPerView: 3,
+					slidesPerGroup: 3,
+					spaceBetween: 24
 				},
-				1248: {
-					spaceBetween: 48,
-					slidesPerView: 3,
+				1280: {
+					slidesPerGroup: 3,
+					spaceBetween: 32
 				}
 			},
 			on: {
 				init: swiper => {
-					setHeight(swiper.el.querySelectorAll('.item .name'))
-					setHeight(swiper.el.querySelectorAll('.item .desc'))
+					setHeight(swiper.el.querySelectorAll('.article, .more_link'))
 				},
 				resize: swiper => {
-					let itemName = swiper.el.querySelectorAll('.item .name'),
-						itemDesc = swiper.el.querySelectorAll('.item .desc')
+					let items = swiper.el.querySelectorAll('.article, .more_link')
 
-					itemName.forEach(el => el.style.height = 'auto')
-					itemDesc.forEach(el => el.style.height = 'auto')
+					items.forEach(el => el.style.height = 'auto')
 
-					setHeight(itemName)
-					setHeight(itemDesc)
+					setHeight(items)
 				}
 			}
 		}
 
-		stepsSliders.push(new Swiper('.steps_s' + i, options))
+		lastArticlesSliders.push(new Swiper('.last_articles_s' + i, options))
 	})
 
 
@@ -164,17 +155,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -202,18 +187,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
-			initialSlide: 1,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -234,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					spaceBetween: 24,
 					slidesPerView: 2
 				},
-				1248: {
+				1280: {
 					spaceBetween: 40,
 					slidesPerView: 2
 				}
@@ -265,7 +243,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		el.classList.add('reviews_s' + i)
 
 		let options = {
-			loop: false,
+			loop: true,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -274,55 +253,25 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
 				clickable: true,
 				bulletActiveClass: 'active'
 			},
+			slidesPerView: 'auto',
 			breakpoints: {
 				0: {
-					slidesPerView: 'auto',
 					spaceBetween: 16
 				},
 				768: {
-					slidesPerView: 2,
-					slidesPerGroup: 2,
 					spaceBetween: 24
 				},
 				1024: {
-					slidesPerView: 3,
-					slidesPerGroup: 3,
 					spaceBetween: 24
 				},
-				1248: {
-					slidesPerView: 3,
-					slidesPerGroup: 3,
+				1280: {
 					spaceBetween: 48
-				}
-			},
-			on: {
-				init: swiper => {
-					setTimeout(() => {
-						let totalSlides = swiper.snapGrid.length
-
-						$(swiper.$el).find('.count .total').text(totalSlides)
-
-						if(totalSlides == 1) {
-							$(swiper.$el).find('.controls').hide()
-						}
-					})
-				},
-				activeIndexChange: swiper => {
-					setTimeout(() => $(swiper.$el).find('.count .current').text((swiper.snapIndex + 1)))
-
 				}
 			}
 		}
@@ -340,7 +289,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: true,
-			speed: 500,
+			loopAdditionalSlides: 1,
+			speed: 750,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
@@ -348,18 +298,15 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
+			lazy: true,
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
 				clickable: true,
 				bulletActiveClass: 'active'
+			},
+			autoplay: {
+				disableOnInteraction: false
 			},
 			breakpoints: {
 				0: {
@@ -374,41 +321,124 @@ document.addEventListener('DOMContentLoaded', function () {
 					slidesPerView: 1,
 					spaceBetween: 24
 				},
-				1248: {
-					slidesPerView: 1,
-					spaceBetween: 48
-				}
 			},
 			on: {
 				init: swiper => {
-					setTimeout(() => {
-						let totalSlides = swiper.slides.length - 2
+					setTimeout(() => $(swiper.el).find('.count .total').text(swiper.slides.length))
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.data')), 1000);
 
-						$(swiper.$el).find('.count .total').text(totalSlides)
-					})
-					setTimeout(() => {
-						setHeight(swiper.el.querySelectorAll('.data'))
-					}, 1000);
+					const certs = $(swiper.el).closest('.certs')
 
+					certs.find('.thumbs .btn').eq(swiper.realIndex).addClass('active animate_first')
+
+					swiper.params.autoplay.delay = 5000
+					swiper.autoplay.start()
 				},
 				resize: swiper => {
-					setTimeout(() => {
-						setHeight(swiper.el.querySelectorAll('.data'))
-					}, 1000);
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.data')), 1000);
 				},
 				activeIndexChange: swiper => {
-					setTimeout(() => {
-						$(swiper.$el).find('.count .current').text((swiper.realIndex + 1))
+					setTimeout(() => $(swiper.el).find('.count .current').text((swiper.realIndex + 1)))
+				},
+				beforeTransitionStart: swiper => setTimeout(() => {
+					const certs = $(swiper.el).closest('.certs')
 
-						$(swiper.$el).find('.bg').removeClass('active')
-						$(swiper.$el).find('.bg' + (swiper.realIndex + 1)).addClass('active')
-					})
-
-				}
+					certs.find('.thumbs .btn').removeClass('active animate_first animate')
+					certs.find('.thumbs .btn').eq(swiper.realIndex).addClass('active animate')
+				})
 			}
 		}
 
-		certsSliders.push(new Swiper('.certs_s' + i, options))
+		const slider = new Swiper('.certs_s' + i, options)
+
+		certsSliders.push(slider)
+
+		const certs = $(el).closest('.certs')
+
+		certs.find('.thumbs .btn').click(function(e) {
+			slider.slideTo($(this).data('slide-index'))
+		})
+	})
+
+
+	// Quality service
+	const qualityServiceSliders = [],
+		qualityServiceSlider = document.querySelectorAll('.quality_service .swiper')
+
+	qualityServiceSlider.forEach(function (el, i) {
+		el.classList.add('quality_service_s' + i)
+
+		let options = {
+			loop: true,
+			loopAdditionalSlides: 1,
+			speed: 750,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			lazy: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			autoplay: {
+				disableOnInteraction: false
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 'auto',
+					spaceBetween: 16
+				},
+				480: {
+					slidesPerView: 'auto',
+					spaceBetween: 24
+				},
+				768: {
+					slidesPerView: 1,
+					spaceBetween: 24
+				},
+			},
+			on: {
+				init: swiper => {
+					setTimeout(() => $(swiper.el).find('.count .total').text(swiper.slides.length))
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.data')), 1000);
+
+					const qualityService = $(swiper.el).closest('.quality_service')
+
+					qualityService.find('.thumbs .btn').eq(swiper.realIndex).addClass('active animate_first')
+
+					swiper.params.autoplay.delay = 5000
+					swiper.autoplay.start()
+				},
+				resize: swiper => {
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.data')), 1000);
+				},
+				activeIndexChange: swiper => {
+					setTimeout(() => $(swiper.el).find('.count .current').text((swiper.realIndex + 1)))
+				},
+				beforeTransitionStart: swiper => setTimeout(() => {
+					const qualityService = $(swiper.el).closest('.quality_service')
+
+					qualityService.find('.thumbs .btn').removeClass('active animate_first animate')
+					qualityService.find('.thumbs .btn').eq(swiper.realIndex).addClass('active animate')
+				})
+			}
+		}
+
+		const slider = new Swiper('.quality_service_s' + i, options)
+
+		qualityServiceSliders.push(slider)
+
+		const qualityService = $(el).closest('.quality_service')
+
+		qualityService.find('.thumbs .btn').click(function(e) {
+			slider.slideTo($(this).data('slide-index'))
+		})
 	})
 
 
@@ -421,17 +451,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
@@ -453,7 +477,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					slidesPerGroup: 3,
 					spaceBetween: 24
 				},
-				1248: {
+				1280: {
 					slidesPerView: 3,
 					slidesPerGroup: 3,
 					spaceBetween: 48
@@ -462,17 +486,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			on: {
 				init: swiper => {
 					setTimeout(() => {
-						let totalSlides = swiper.snapGrid.length
+						$(swiper.el).find('.count .total').text(swiper.slides.length)
 
-						$(swiper.$el).find('.count .total').text(totalSlides)
-
-						if(totalSlides == 1) {
-							$(swiper.$el).find('.controls .swiper-button-prev').hide()
+						if(swiper.slides.length === 1) {
+							$(swiper.el).find('.controls .swiper-button-prev').hide()
 						}
 					})
 				},
 				activeIndexChange: swiper => {
-					setTimeout(() => $(swiper.$el).find('.count .current').text((swiper.snapIndex + 1)))
+					setTimeout(() => $(swiper.el).find('.count .current').text((swiper.realIndex + 1)))
 				}
 			}
 		}
@@ -489,18 +511,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		el.classList.add('project_thumb_s' + i)
         let numOfSlides
 		let options = {
-			loop: true,
+			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
@@ -515,10 +531,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			slidesPerView: 1,
 			on: {
 				beforeInit: swiper => {
-					numOfSlides = $(swiper.$el).find(".swiper-slide").length;
+					numOfSlides = $(swiper.el).find(".swiper-slide").length;
     				/*if(numOfSlides==1)
 					{
-						$(swiper.$el).addClass("not_navi");
+						$(swiper.el).addClass("not_navi");
 					}*/
 				}
 			}
@@ -537,7 +553,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Сдайжер в тексте
+	// Слайдер в тексте
 	const textSliders = [],
 		textSlider = document.querySelectorAll('.text_block .slider .swiper')
 
@@ -546,17 +562,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
-			speed: 100,
+			loopAdditionalSlides: 1,
+			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
@@ -583,15 +593,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			/*on: {
 				init: swiper => {
 					setTimeout(() => {
-						$(swiper.$el).find('.swiper-button-next, .swiper-button-prev').css(
-							'top', $(swiper.$el).find('img').outerHeight() * 0.5
+						$(swiper.el).find('.swiper-button-next, .swiper-button-prev').css(
+							'top', $(swiper.el).find('img').outerHeight() * 0.5
 						)
 					})
 				},
 				resize: swiper => {
 					setTimeout(() => {
-						$(swiper.$el).find('.swiper-button-next, .swiper-button-prev').css(
-							'top', $(swiper.$el).find('img').outerHeight() * 0.5
+						$(swiper.el).find('.swiper-button-next, .swiper-button-prev').css(
+							'top', $(swiper.el).find('img').outerHeight() * 0.5
 						)
 					})
 				}
@@ -611,17 +621,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: el.querySelectorAll('.swiper-slide').length > el.getAttribute('data-slides-count') ? true : false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -659,6 +663,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -701,6 +706,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -729,17 +735,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	if ($('.history').length) {
 		const years = new Swiper('.history .years .swiper', {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			breakpoints: {
 				0: {
 					spaceBetween: 16,
@@ -762,19 +762,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		new Swiper('.history > .swiper', {
 			loop: false,
-			speed: 750,
+			loopAdditionalSlides: 1,
+			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			spaceBetween: 24,
 			slidesPerView: 1,
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
@@ -800,6 +794,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		el.classList.add('projects_map_s' + i)
 
 		let options = {
+			loopAdditionalSlides: 1,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
@@ -828,6 +823,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -841,13 +837,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				type: 'bullets',
 				clickable: true,
 				bulletActiveClass: 'active'
-			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
 			},
 			slidesPerView: 1,
 			spaceBetween: 24,
@@ -883,21 +872,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: true,
+			loopAdditionalSlides: 1,
 			speed: 500,
-			autoHeight: false,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
-			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
 			},
 			pagination: {
 				el: '.swiper-pagination',
@@ -921,26 +903,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			on: {
 				beforeInit: swiper => {
-					setTimeout(() => {
-						setHeight(swiper.el.querySelectorAll('.info'))
-					}, 1000);
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.info')), 1000);
 				},
 				init: swiper => {
-					setTimeout(() => {
-						let totalSlides = swiper.slides.length - 2
-
-						$(swiper.$el).find('.count .total').text(totalSlides)
-					})
+					setTimeout(() => $(swiper.el).find('.count .total').text(swiper.slides.length))
 				},
 				resize: swiper => {
-					setTimeout(() => {
-						setHeight(swiper.el.querySelectorAll('.info'))
-					}, 1000);
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.info')), 1000);
 				},
 				activeIndexChange: swiper => {
-					setTimeout(() => {
-						$(swiper.$el).find('.count .current').text((swiper.realIndex + 1))
-					})
+					setTimeout(() => $(swiper.el).find('.count .current').text((swiper.realIndex + 1)))
 				}
 			}
 
@@ -960,6 +932,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let options = {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -974,13 +947,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				type: 'bullets',
 				clickable: true,
 				bulletActiveClass: 'active'
-			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
 			},
 			breakpoints: {
 				0: {
@@ -998,28 +964,22 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			on: {
 				beforeInit: swiper => {
-					setTimeout(() => {
-						setHeight(swiper.el.querySelectorAll('.name'))
-					}, 1);
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.name')), 1);
 				},
 				resize: swiper => {
-					setTimeout(() => {
-						setHeight(swiper.el.querySelectorAll('.name'))
-					}, 1000);
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.name')), 1000);
 				},
 				init: swiper => {
 					setTimeout(() => {
-						let totalSlides = swiper.snapGrid.length
+						$(swiper.el).find('.count .total').text(swiper.slides.length)
 
-						$(swiper.$el).find('.count .total').text(totalSlides)
-
-						if(totalSlides == 1) {
-							$(swiper.$el).find('.count .controls').hide()
+						if(swiper.slides.length === 1) {
+							$(swiper.el).find('.count .controls').hide()
 						}
 					})
 				},
 				activeIndexChange: swiper => {
-					setTimeout(() => $(swiper.$el).find('.count .current').text((swiper.snapIndex + 1)))
+					setTimeout(() => $(swiper.el).find('.count .current').text((swiper.realIndex + 1)))
 				}
 			}
 		}
@@ -1092,54 +1052,67 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	 const clipboard = new ClipboardJS('header .contacts .time a')
+	// const clipboard = new ClipboardJS('header .contacts .time a')
 
-	 clipboard.on('success', (e) => {
-	 	$("html").addClass("copied");
+	// clipboard.on('success', (e) => {
+	//  	$("html").addClass("copied");
 
-	 	$("html").mousemove(function(y){
-	 		$(".time").find('.info').css({
-	 			left: y.clientX+20,
-	 			top: y.clientY+20
-	 		})
-	 	})
+	//  	$("html").mousemove(function(y){
+	//  		$(".time").find('.info').css({
+	//  			left: y.clientX+20,
+	//  			top: y.clientY+20
+	//  		})
+	//  	})
 
-	 	$(".time").find('.info').addClass("show");
+	//  	$(".time").find('.info').addClass("show");
 
-	 	setTimeout(() => {
-	 		$("html").removeClass('copied');
-	 		$(".time").find('.info').removeClass("show");
-	 		$( "html" ).off("mousemove");
-	 	}, 3000);
-	 	e.clearSelection()
-	 })
+	//  	setTimeout(() => {
+	//  		$("html").removeClass('copied');
+	//  		$(".time").find('.info').removeClass("show");
+	//  		$( "html" ).off("mousemove");
+	//  	}, 3000);
+	//  	e.clearSelection()
+	//  })
 
 
 	// Логотипы
-	$('.logos .item').mousemove(function(e){
-		if ($(window).scrollTop() + $(window).outerHeight() < $(this).offset().top + $(this).outerHeight() + $(this).find('.info').outerHeight()) {
-			$(this).find('.info').css({
-				left: e.offsetX,
-				top: 'auto',
-				bottom: (e.offsetY - $(this).outerHeight()) * -1
-			})
-		} else {
-			$(this).find('.info').css({
-				left: e.offsetX,
-				bottom: 'auto',
-				top: e.offsetY
-			})
-		}
-	})
+	if (WW > 479) {
+		$('.logos .item').mousemove(function(e){
+			if ($(window).scrollTop() + $(window).outerHeight() < $(this).offset().top + $(this).outerHeight() + $(this).find('.info').outerHeight()) {
+				$(this).find('.info').css({
+					left: e.offsetX,
+					top: 'auto',
+					bottom: (e.offsetY - $(this).outerHeight()) * -1
+				})
+			} else {
+				$(this).find('.info').css({
+					left: e.offsetX,
+					bottom: 'auto',
+					top: e.offsetY
+				})
+			}
+		})
 
-	$('.logos .item').hover(function(e){
+		$('.logos .item').hover(function(e){
+			e.preventDefault()
+
+			$(this).find('.info').addClass('show')
+		})
+
+		$('.logos .item').mouseleave(function(){
+			$(this).find('.info').removeClass('show')
+		})
+	}
+
+
+	$('.logos .spoler_btn').click(function(e) {
 		e.preventDefault()
 
-		$(this).find('.info').addClass('show')
-	})
+		$(this).toggleClass('active')
 
-	$('.logos .item').mouseleave(function(){
-		$(this).find('.info').removeClass('show')
+		$(this).hasClass('active')
+			? $('.logos .item').addClass('show')
+			: $('.logos .item').removeClass('show')
 	})
 
 
@@ -1165,18 +1138,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	if ($('.project_info .images').length) {
 		const projectThumbs = new Swiper('.project_info .thumbs .swiper', {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			slidesPerView: 5,
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			spaceBetween: 16,
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -1192,19 +1159,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		const projectSlider = new Swiper('.project_info .big .swiper', {
 			loop: false,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			spaceBetween: 16,
 			slidesPerView: 1,
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			thumbs: {
 				swiper: projectThumbs
 			},
@@ -1542,9 +1503,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).addClass('active')
 	})
 
-	$(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
+	// $(".responsive_menu > .item > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
 
-	$(".responsive_menu .sub_menu .item.menu-item-has-children > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
+	// $(".responsive_menu .sub_menu .item.menu-item-has-children > a").wrapInner("<span></span>").append('<svg class="icon hide"><use xlink:href="'+myajax.template_url+'/images/sprite.svg#ic_arr_ver"></use></svg>');
 
 	$(".menu-item-has-children .hide").removeClass("hide");
 
@@ -1599,6 +1560,41 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.lending_prices .table').each((key, value) => lendingPricesHeight(value))*/
 
 	$('.lending_prices .table').each((key, value) => lendingPricesHeight(value))
+
+
+	// Headaches
+	$('.headaches .item.first').mouseenter(function() {
+		$('.headaches .row').removeClass('show_second')
+		$('.headaches .row').addClass('show_first')
+	})
+
+	$('.headaches .item.second').mouseenter(function() {
+		$('.headaches .row').removeClass('show_first')
+		$('.headaches .row').addClass('show_second')
+	})
+
+	$('.headaches').mouseleave(function() {
+		$('.headaches .row').removeClass('show_first show_second')
+	})
+
+
+	// Projects
+	$('.projects .head .mini_modal_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).addClass('active').next().fadeIn(300)
+		$('.overlay').fadeIn(200)
+	})
+
+
+	$('.overlay').click(function(e) {
+		e.preventDefault()
+
+		$('.projects .head .mini_modal_btn').removeClass('active')
+		$('.projects .head .mini_modal').fadeOut(200)
+
+		$('.overlay').fadeOut(200)
+	})
 })
 
 
@@ -1617,9 +1613,6 @@ window.addEventListener('load', () => {
 
 	// Проекты - Теги
 	initProjectsTagsSliders()
-
-	// Все инстанции
-	initLogosSliders()
 
 	// Бюрократия
 	initNoBureaucracySliders()
@@ -1702,9 +1695,6 @@ window.addEventListener('resize', function () {
 		// Проекты - Теги
 		initProjectsTagsSliders()
 
-		// Все инстанции
-		initLogosSliders()
-
 		// Бюрократия
 		initNoBureaucracySliders()
 
@@ -1714,24 +1704,6 @@ window.addEventListener('resize', function () {
 
 		// Лендинг - Цены
 		$('.lending_prices .table').each((key, value) => lendingPricesHeight(value))
-
-
-		// Моб. версия
-		if (!fakeResize) {
-			fakeResize = true
-			fakeResize2 = false
-
-			document.getElementsByTagName('meta')['viewport'].content = 'width=device-width, initial-scale=1, maximum-scale=1'
-		}
-
-		if (!fakeResize2) {
-			fakeResize2 = true
-
-			if (windowW < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
-		} else {
-			fakeResize = false
-			fakeResize2 = true
-		}
 	}
 })
 
@@ -1781,61 +1753,6 @@ function initProjectsTagsSliders() {
 
 
 
-// Все инстанции
-logosSliders = []
-
-function initLogosSliders() {
-	if ($(window).width() < 1248) {
-		if ($('.logos .row').length) {
-			$('.logos .row > *').addClass('swiper-slide')
-			$('.logos .row').addClass('swiper-wrapper').removeClass('row')
-
-			$('.logos .swiper').each(function (i) {
-				$(this).addClass('logos_s' + i)
-
-				let options = {
-					loop: false,
-					speed: 500,
-					watchSlidesProgress: true,
-					slideActiveClass: 'active',
-					slideVisibleClass: 'visible',
-					slidesPerView: 'auto',
-					spaceBetween: 16,
-					pagination: {
-						el: '.swiper-pagination',
-						type: 'bullets',
-						clickable: true,
-						bulletActiveClass: 'active'
-					},
-					on: {
-						init: swiper => {
-							setHeight(swiper.el.querySelectorAll('.item .info'))
-						},
-						resize: swiper => {
-							let itemInfo = swiper.el.querySelectorAll('.item .info')
-
-							itemInfo.forEach(el => el.style.height = 'auto')
-
-							setHeight(itemInfo)
-						}
-					}
-				}
-
-				logosSliders.push(new Swiper('.logos_s' + i, options))
-			})
-		}
-	} else {
-		logosSliders.forEach(element => element.destroy(true, true))
-
-		logosSliders = []
-
-		$('.logos .swiper-wrapper').addClass('row').removeClass('swiper-wrapper')
-		$('.logos .row > *').removeClass('swiper-slide')
-	}
-}
-
-
-
 // Бюрократия
 noBureaucracySliders = []
 
@@ -1850,6 +1767,7 @@ function initNoBureaucracySliders() {
 
 				let options = {
 					loop: false,
+					loopAdditionalSlides: 1,
 					speed: 500,
 					watchSlidesProgress: true,
 					slideActiveClass: 'active',
@@ -1905,6 +1823,7 @@ function initSpecialistsSliders() {
 
 				let options = {
 					loop: false,
+					loopAdditionalSlides: 1,
 					speed: 500,
 					watchSlidesProgress: true,
 					slideActiveClass: 'active',
@@ -1957,17 +1876,11 @@ function initAjaxProject()
         let numOfSlides
 		let options = {
 			loop: true,
+			loopAdditionalSlides: 1,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
@@ -1982,10 +1895,10 @@ function initAjaxProject()
 			slidesPerView: 1,
 			on: {
 				beforeInit: swiper => {
-					numOfSlides = $(swiper.$el).find(".swiper-slide").length;
+					numOfSlides = $(swiper.el).find(".swiper-slide").length;
     				/*if(numOfSlides==1)
 					{
-						$(swiper.$el).addClass("not_navi");
+						$(swiper.el).addClass("not_navi");
 					}*/
 				}
 			}
